@@ -21,6 +21,5 @@ Prepare database
 ## Change Later
 
 - person "bibliography" will need to be altered in the future to point at works, rather than freeform text field
-- university / graduation has degree mixed between university name and graduation date fields! this is difficult to process correctly and should be standardized
-- university / graduation often listed as single line with two degrees, would prefer to duplicate (aka: UNL -- 2006 (BA) [new line] UNL -- 2008 (MA))
+
 - do university dates need to be freeform entry (1960s, ranges, etc)? or is YYYY acceptable?

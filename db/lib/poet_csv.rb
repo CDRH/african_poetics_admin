@@ -18,6 +18,19 @@ class PoetCsv
 
   private
 
+  def create_university(edu)
+    uni = University.find_or_create_by(name: edu[0])
+    # split location to city, country, region (TODO region not in spreadsheet)
+    city, country, region = edu[1].split(", ") if edu[1]
+    uni.location = Location.find_or_create_by(
+      city: city,
+      country: country,
+      region: region
+    )
+    uni.save
+    uni
+  end
+
   def education_empty?(edu)
     edu[0] == "[none]" && edu[1] == "[none]" && edu[2] == "[none]"
   end
@@ -27,43 +40,26 @@ class PoetCsv
       "Poet University Name",
       "Poet University Place",
       "Poet University Date Graduated",
+      "Poet University Degree",
       same_length: false
     )
     educations.each do |edu|
       next if education_empty?(edu)
 
-      # lookup / create university first
-      # TODO going to need to standardize how the degrees are listed
-      # before this can be accurately seeded
-      uni = University.find_or_create_by(name: edu[0])
-      # split location to city, country, region (TODO region not in spreadsheet)
-      city, country, region = edu[1].split(", ") if edu[1]
-      uni.location = Location.find_or_create_by(city: city, country: country, region: region)
-      uni.save
+      uni = create_university(edu)
+      grad_date = edu[2].to_i == 0 ? nil : edu[2]
+      degree = edu[3]
 
-      grad = edu[2][/^\d{4}/] if edu[2]
-      # look for degree in two fields
-      degree = edu[2][/\((.*)\)/,1] if edu[2]
-      if !degree
-        degree = edu[0][/\((.*)\)/,1] if edu[0]
-      end
       education = Education.create(
         year_started: nil,
-        year_ended: edu[2],
-        # TODO only getting the first year listed, which means leaving out
-        # fancy things like "1950s" or "1928-1930" type listings
-        graduated: grad,
-        # TODO going to be grabbing the rest of the string, essentially
-        # which isn't what we ultimately want
+        year_ended: grad_date,
+        graduated: !!grad_date,
         degree: degree,
       )
       education.person = person
       education.university = uni
       education.save
     end
-    # TODO Poet University Name
-    # TODO Poet University Place
-    # TODO Poet University Date Graduated
   end
 
   def nationalities(row)

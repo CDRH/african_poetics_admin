@@ -1,42 +1,47 @@
-Poet ID,"Poet Name (Last name, first name[Alternate])",Poet Gender,DOB (YYYY-MM-DD),DOD (YYYY-MM-DD),Poet Nationality (Country Name) ,Poet University Name,Poet University Place,Poet University Date Entered,Poet University Date Graduated,In CAP,Poet BIB,Poet  PUB,PUB TYPE,Notes,BIO INFO
-ACH30NG,"Achebe, Chinua [Albert Chinualumogu]",M,1930-11-16,2013-03-21,Nigeria,University College [University of Ibadan],"Ibadan, Nigeria",,1953,,"Collected Poems (2002), Another Africa (1997), and Christmas in Biafra and Other Poems (1973). He was awarded the Commonwealth Poetry Prize in 1972 for his first collection, Beware, Soul-Brother, and Other Poems.",,,," Accessed 10/23/2019
+Poet ID,"Poet Name (Last name, first name[Alternate])",Poet Gender,DOB (YYYY-MM-DD),DOD (YYYY-MM-DD),Poet Nationality (Country Name) ,Poet University Name,Poet University Place,Poet University Date Entered,Poet University Date Graduated,Poet University Degree,In CAP,Poet BIB,Poet  PUB,PUB TYPE,Notes,BIO INFO
+ACH30NG,"Achebe, Chinua [Albert Chinualumogu]",M,1930-11-16,2013-03-21,Nigeria,University College [University of Ibadan],"Ibadan, Nigeria",,1953,[unknown],,"Collected Poems (2002), Another Africa (1997), and Christmas in Biafra and Other Poems (1973). He was awarded the Commonwealth Poetry Prize in 1972 for his first collection, Beware, Soul-Brother, and Other Poems.",,,," Accessed 10/23/2019
 https://www.britannica.com/biography/Chinua-Achebe
 
 https://www.poetryfoundation.org/poets/chinua-achebe"
-ADA33SA,"Adams, Perseus [Peter Robert Charles]",M,1933-03-11,Alive,South Africa,University of Cape Town,"Cape Town, South Africa",,1952,Y,"The Land at My Door. Cape Town, Human and Rousseau, 1965.
+ADA33SA,"Adams, Perseus [Peter Robert Charles]",M,1933-03-11,Alive,South Africa,University of Cape Town,"Cape Town, South Africa",,1952,[unknown],Y,"The Land at My Door. Cape Town, Human and Rousseau, 1965.
 Grass for the Unicorn. Cape Town, Juta, 1975.
 Cries & Silences: Selected Poems. Randburg, South Africa, Baobab Books, 1996.
 Critical Study: In Momentum: On Recent South African Writing, edited by M.J. Daymond, J.U. Jacobs, and Margaret Lenta, Pietermaritzburg, South Africa, University of Natal Press, 1984.",,,,"Accessed 10/23/2019
 https://www.encyclopedia.com/arts/culture-magazines/adams-perseus 
 
 https://www.encyclopedia.com/arts/culture-magazines/adams-perseus"
-AIG35NG,"Aig-Imoukhuede, Frank",M,1935-01-08,Alive,Nigeria,University College [University of Ibadan],"Ibadan, Nigeria",,1961,," “Pidgin Stew and Sufferhead: the pidgin (and other) poems of Frank Aig-Imoukhuede,” Ibadan [Nigeria] : Heinemann Educational Books (Nig.), 1982.",,,,"Accessed 10/23/2019
+AIG35NG,"Aig-Imoukhuede, Frank",M,1935-01-08,Alive,Nigeria,University College [University of Ibadan],"Ibadan, Nigeria",,1961,[unknown],," “Pidgin Stew and Sufferhead: the pidgin (and other) poems of Frank Aig-Imoukhuede,” Ibadan [Nigeria] : Heinemann Educational Books (Nig.), 1982.",,,,"Accessed 10/23/2019
 http://icobainternational.org/index.php?active=page&pgcat=aboutus&spgcat=awardee_view&cid=9"
-ALD##??,"Alder, Alice Mabel",F,,,South Africa,,,,,,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,"bio information unknown
+ALD##??,"Alder, Alice Mabel",F,[none],[none],South Africa,[none],[none],,[none],[none],,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,"bio information unknown
 *Can't discover if she is South African by nationality, but worked to develop, along with the Veldsingers Club in Johannesburg, a South African poetic tradition.
 ","Accessed 10/24/2019
 She is mentioned in this book: https://books.google.com/books?id=nGfMAgAAQBAJ&pg=PA1660&lpg=PA1660&dq=alice+mabel+alder&source=bl&ots=JjOv5TvT7e&sig=ACfU3U2Va5LzY4DmHmYP6OnpRFq2MSx9-g&hl=en&sa=X&ved=2ahUKEwje0fmhpbXlAhUCM6wKHUS6DrcQ6AEwAHoECAkQAQ#v=onepage&q=alice%20mabel%20alder&f=false"
-ALL##??,"Allhusen, Beatrice",F,,,South Africa,,,,,,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,"bio information unknown
+ALL##??,"Allhusen, Beatrice",F,[none],[none],South Africa,[none],[none],,[none],[none],,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,"bio information unknown
 *Can't discover if she is South African by nationality, but worked to develop, along with the Veldsingers Club in Johannesburg, a South African poetic tradition.
 ","Accessed 10/24/2019
 
 mentioned here: https://www.jstor.org/stable/40239020?seq=1#page_scan_tab_contents
 
 "
-AWO35GH,"Awoonor, Kofi",M,1935-03-13,2013-09-21,Ghana,"University College of Ghana (BA)
-University College, London (MA)
-SUNY Stony Brook (PhD)","Ghana
-London
-New York",,"1960 (BA)
-1970 (MA)
-1972 (PhD)",,"Rediscovery and Other Poems (1964), Night of My Blood (1971), Ride Me, Memory (1973), The House by the Sea (1978), The Latin American and Caribbean Notebook (1992), and a volume of collected poems, Until the Morning After (1987).",,,,"Accessed 10/24/2019
+AWO35GH,"Awoonor, Kofi",M,1935-03-13,2013-09-21,Ghana,"University College of Ghana
+University College, London
+SUNY Stony Brook","Accra, Ghana
+London, England
+New York, NY, USA",,"1960
+1970
+1972","BA
+MA
+PhD
+",,"Rediscovery and Other Poems (1964), Night of My Blood (1971), Ride Me, Memory (1973), The House by the Sea (1978), The Latin American and Caribbean Notebook (1992), and a volume of collected poems, Until the Morning After (1987).",,,,"Accessed 10/24/2019
 
 https://www.poetryfoundation.org/poets/kofi-awoonor
 
 https://www.britannica.com/biography/Kofi-Awoonor"
 AYL35SA,"Aylen, Leo",M,1935-02-15,Alive,South Africa,"New College, Oxford
-Bristol University (PhD)",Oxford,,"1959 (MA)
-1962 (PhD) ",,"The Day The Grass Came (Muswell Press)
+Bristol University","Oxford, England
+Bristol, England",,"1959
+1962","BA/MA
+PhD",,"The Day The Grass Came (Muswell Press)
 Dancing the Impossible: New & Selected Poems (Poetry Salzburg)
 Jumping-Shoes (Sidgwick & Jackson)
 Red Alert: this is a god warning (Sidgwick & Jackson)
@@ -50,26 +55,39 @@ http://www.leoaylen.com/
 
 International Who's Who in Poetry 2004
 By Europa Publications"
-BLA59SA,"Blane, William",M,1859,1936-03-11,South Africa,[none],[none],,[none],,"The Silent Land, pub in London 1906.
+BEG71GB,"Begbie, Harold",M,1871,1929,England,[none],[none],,[none],[none],," The Political Struwwelpeter, 1899
+* The Story of Baden-Powell: 'The Wolf That Never Sleeps', 1900
+* Bundy in the Greenwood, 1902
+* Clara in Blunderland, 1902 (New edition 2010, ISBN 978-1-904808-49-7)
+* Lost in Blunderland, 1903 (New edition 2010, ISBN 978-1-904808-50-3)
+* The life of William Booth, the Founder of the Salvation Army, 1920
+* The Bed-Book of Happiness, 1914
+* The Mirrors of Downing Street: Some Political Reflections by a Gentleman with a Duster, 1921
+* Painted Windows: Studies in Religious Personality, 1922",,,"[From PoemHunter.com]: Edward Harold Begbie (1871–1929), also known as Harold Begbie, was an English author and journalist who published nearly 50 books and poems and contributed to periodicals. Besides studies of the Christian religion, Begbie wrote numerous other books, including political satire, comedy, fiction, science fiction, plays and poetry.","Accessed 02/28/2020
+
+https://www.poemhunter.com/harold-begbie/biography/
+
+http://forgottenpoetsofww1.blogspot.com/2015/11/harold-begbie.html"
+BLA59SA,"Blane, William",M,1859,1936-03-11,South Africa,[none],[none],,[none],[none],,"The Silent Land, pub in London 1906.
 
 The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,bio information unknown,"Accessed 10/24/2019
 
 mentioned here: https://books.google.com/books?id=4hFVAAAAYAAJ&pg=PA465&lpg=PA465&dq=william+blane+africa&source=bl&ots=IV3znTbRCf&sig=ACfU3U2amw0bnkomgI_O9a1x7pyBAI_Yig&hl=en&sa=X&ved=2ahUKEwi6jteZq7XlAhUDi6wKHeSLAGsQ6AEwAnoECAkQAQ#v=onepage&q=william%20blane%20africa&f=false
 
 https://www.gracesguide.co.uk/William_Blane"
-BLU24IT,"Blum, Peter",M,1925-05-04,1990-12-05,"Trieste, Kingdom of Italy",University of Cape Town,"Cape Town, South Africa",,,,"Steenbok tot poolsee (1955) Tafelberg: Cape Town. ISBN 978-0-624-01581-9
+BLU24IT,"Blum, Peter",M,1925-05-04,1990-12-05,"Trieste, Kingdom of Italy",University of Cape Town,"Cape Town, South Africa",,[none],[unknown],,"Steenbok tot poolsee (1955) Tafelberg: Cape Town. ISBN 978-0-624-01581-9
 
 Enklaves van die lig (1958) Human & Rousseau: Cape Town. ISBN 978-0-7981-3478-1",,,emigrated to Union of South Africa as a child with his family.,"Accessed 10/24/2019
 
 https://en.wikipedia.org/wiki/Peter_Blum"
-BOL13CO,"Bolamba, Antoine-Roger",M,1913-07-27,2002-07-02,Republic of the Congo,[none],[none],,[none],,"Premiers Essais (First Attempts), 1947. 
+BOL13CO,"Bolamba, Antoine-Roger",M,1913-07-27,2002-07-02,Republic of the Congo,[none],[none],,[none],[none],,"Premiers Essais (First Attempts), 1947. 
 
 Esanzo: Chants pour mon pays (Esanzo: Songs for my Country), 1956. ",,,,"Accessed 10/24/2019
 
 https://en.wikipedia.org/wiki/Antoine-Roger_Bolamba
 
 http://www.bibliomonde.com/auteur/antoine-roger-bolamba-2963.html"
-BRE28GH,"Brew, Kwesi",M,1928-05-27,2007-07-30,Ghana,University College of the Gold Coast [University of Ghana] (BA),Ghana,,1953,,"Pergamon Poets 2: Poetry from Africa, with others, edited by Howard Sergeant. Oxford, Pergamon Press, 1968.
+BRE28GH,"Brew, Kwesi",M,1928-05-27,2007-07-30,Ghana,University College of the Gold Coast [University of Ghana],Ghana,,1953,BA,,"Pergamon Poets 2: Poetry from Africa, with others, edited by Howard Sergeant. Oxford, Pergamon Press, 1968.
 
 The Shadows of Laughter. London, Longman, 1968.
 
@@ -80,7 +98,7 @@ Return of No Return and Other Poems. Accra, Ghana, Afram, 1995.
 The Clan of the Leopard and Other Poems. Accra, Ghana, Anansesem, 1996.",,,,"Accessed 10/24/2019
 
 https://www.encyclopedia.com/arts/culture-magazines/brew-oh-kwesi"
-BRE39SA,"Breytenbach, Breyten",M,1939-09-16,Alive,South Africa,University of Cape Town,"Cape Town, South Africa",,1959,,"The Iron Cow Must Sweat (1964) 
+BRE39SA,"Breytenbach, Breyten",M,1939-09-16,Alive,South Africa,University of Cape Town,"Cape Town, South Africa",,1959,[unknown],,"The Iron Cow Must Sweat (1964) 
 
 Footscript(1976)
 
@@ -92,7 +110,7 @@ International Who's Who in Poetry 2004
 By Europa Publications
 
 "
-BRU24RH,"Brutus, Dennis",M,1924-11-28,2009-12-26,Colony of Southern Rhodesia,University of the Witwatersrand,"Johannesburg, South Africa",,1947,,"Salutes and Censures (1985), Stubborn Hope (1978), and Letter to Martha and Other Poems from a South African Prison (1969). Poetry and Protest: A Dennis Brutus Reader (2006) was edited by Aisha Karim and Lee Sustar, and The Dennis Brutus Tapes: Essays at Autobiography (2011) was edited by Bernth Lindfors
+BRU24RH,"Brutus, Dennis",M,1924-11-28,2009-12-26,Colony of Southern Rhodesia,University of the Witwatersrand,"Johannesburg, South Africa",,1947,[unknown],,"Salutes and Censures (1985), Stubborn Hope (1978), and Letter to Martha and Other Poems from a South African Prison (1969). Poetry and Protest: A Dennis Brutus Reader (2006) was edited by Aisha Karim and Lee Sustar, and The Dennis Brutus Tapes: Essays at Autobiography (2011) was edited by Bernth Lindfors
 .",,,"*Born in Colony of Southern Rhodesia, called South African poet","Accessed 10/25/2019
 
 https://www.britannica.com/biography/Dennis-Brutus
@@ -101,8 +119,8 @@ https://www.poetryfoundation.org/poets/dennis-brutus
 
 International Who's Who in Poetry 2004
 By Europa Publications"
-BUT18SA,"Butler, Guy",M,1918-01-21,2001-04-26,South Africa,University of Oxford ,"Oxford, UK
-",,1947,,"Stranger to Europe (1952)
+BUT18SA,"Butler, Guy",M,1918-01-21,2001-04-26,South Africa,University of Oxford ,"Oxford, England
+",,1947,[unknown],,"Stranger to Europe (1952)
 South of the Zambezi
 Selected Poems. Ad. Donker. 1989. ISBN 978-0-86852-105-3.
 Songs and Ballads (1978)
@@ -110,31 +128,37 @@ Oxford Book of South African Verse (1959)
 Collected Poems. David Philip Publishers. 1999. ISBN 978-0-86486-439-0. ",,,,"Accessed 10/25/2019
 
 https://www.britannica.com/biography/Guy-Butler"
-BYR##??,"Byron, Mary",F,,,South Africa,,,,,,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,bio information unknown. she is mentioned alongside the other Veldsingers' poets.,"Accessed 10/25/2019
+BYR##??,"Byron, Mary",F,[none],[none],South Africa,[none],[none],,[none],[none],,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,bio information unknown. she is mentioned alongside the other Veldsingers' poets.,"Accessed 10/25/2019
 
 https://books.google.com/books?id=nGfMAgAAQBAJ&pg=PA1660&lpg=PA1660&dq=alice+mabel+alder&source=bl&ots=JjOv5TvT7e&sig=ACfU3U2Va5LzY4DmHmYP6OnpRFq2MSx9-g&hl=en&sa=X&ved=2ahUKEwje0fmhpbXlAh"
-CAM01SA,"Campbell, Roy",M,1901-10-2,1957-04-23,South Africa,Univeristy of Natal,"Natal, South Africa",,1954 (honorary),,"Campbell’s first long poem, The Flaming Terrapin (1924), which won him immediate recognition, exalts the instinctive vital force that brings forth intelligent human effort out of apathy and disillusionment. The Wayzgoose (1928) is a satire on South African intellectuals; and The Georgiad (1931) is a savage attack on the Bloomsbury group in England. Campbell’s lyrical works include Adamastor (1930), Flowering Reeds (1933), and Talking Bronco (1946). Campbell translated, brilliantly, a number of Spanish, Portuguese, and French writers and wrote two autobiographical books, Broken Record (1934) and Light on a Dark Horse (1951).",,,,"Accessed 10/25/2019
+CAM01SA,"Campbell, Roy",M,1901-10-2,1957-04-23,South Africa,Univeristy of Natal,"Natal, South Africa",,1954,honorary,,"Campbell’s first long poem, The Flaming Terrapin (1924), which won him immediate recognition, exalts the instinctive vital force that brings forth intelligent human effort out of apathy and disillusionment. The Wayzgoose (1928) is a satire on South African intellectuals; and The Georgiad (1931) is a savage attack on the Bloomsbury group in England. Campbell’s lyrical works include Adamastor (1930), Flowering Reeds (1933), and Talking Bronco (1946). Campbell translated, brilliantly, a number of Spanish, Portuguese, and French writers and wrote two autobiographical books, Broken Record (1934) and Light on a Dark Horse (1951).",,,,"Accessed 10/25/2019
 
 https://www.britannica.com/biography/Roy-Campbell
 
 https://legacy.lib.utexas.edu/taro/uthrc/00552/hrc-00552.html"
-CEL65SA,"Celliers, Jan",M,1865-01-12,1940-06-01,South Africa,,,,,,"Celliers was one of the three outstanding Afrikaans-language poets who wrote in the immediate wake of the Second Boer War; together with Totius and C. Louis Leipoldt, Celliers' youthful poetry writes of the devastation of the war in the youthful language of Afrikaans. His best poems appear in the 1908 collection Die Vlakte en ander gedigte (""The Plains and Other Poems). ",,,,"Accessed 10/25/2019
+CEL65SA,"Celliers, Jan",M,1865-01-12,1940-06-01,South Africa,[none],[none],,[none],"[none]
+",,"Celliers was one of the three outstanding Afrikaans-language poets who wrote in the immediate wake of the Second Boer War; together with Totius and C. Louis Leipoldt, Celliers' youthful poetry writes of the devastation of the war in the youthful language of Afrikaans. His best poems appear in the 1908 collection Die Vlakte en ander gedigte (""The Plains and Other Poems). ",,,,"Accessed 10/25/2019
 
 Bibliography information from Wikipedia; biographical information here: 
 https://www.sahistory.org.za/people/jan-celliers"
 CHI49MA,"Chipasula, Frank",M,1949-10-16,Alive,Republic of Malawi,"University of Zambia
-Yale University (MA) 
-Brown Univeristy (PhD)","Lusaka, Zambia
+Yale University
+Brown Univeristy","Lusaka, Zambia
 New Haven, CT, USA
 Providence, RI, USA",,"1976
 1982
-1987",," Visions and Reflections (1972), O Earth, Wait for Me (1984), and Whispers in the Wings: New and Selected Poems (2001).",,,,"Accessed 10/25/2019
+1987","BA
+MA
+PhD
+",," Visions and Reflections (1972), O Earth, Wait for Me (1984), and Whispers in the Wings: New and Selected Poems (2001).",,,,"Accessed 10/25/2019
 
 https://www.poetryfoundation.org/poets/frank-chipasula
 
 https://cola.siu.edu/africanastudies/faculty-staff/faculty/chipasula.php"
-CLA35NI,"Clark, John Pepper",M,1935-04-06,Alive,Nigeria,"University of Ibadan
-Princeton University (Institute of African Studies fellowship) ","Ibadan, Nigeria",,1960,,"Poems. Ibadan, Mbari, 1962.
+CLA35NI,"Clark, John Pepper [J. P.]",M,1935-04-06,Alive,Nigeria,"University of Ibadan
+Princeton University (Institute of African Studies fellowship) ","Ibadan, Nigeria
+Princeton, NJ, USA",,"1960
+[unknown]",[unknown],,"Poems. Ibadan, Mbari, 1962.
 
 A Reed in the Tide: A Selection of Poems. London, Longman, 1965; New York, Humanities Press, 1970.
 
@@ -152,21 +176,25 @@ https://www.encyclopedia.com/arts/culture-magazines/clark-john-pepper
 
 https://www.britannica.com/biography/John-Pepper-Clark"
 CLO26SA,"Clouts, Sydney",M,1926,1982,South Africa,"University of Cape Town
-Rhodes University",South Africa,,,,"One Life [1966]
+Rhodes University","Cape Town, South Africa
+Grahamstown, South Africa",,"1950
+[none]","[unknown]
+[unknown]",,"One Life [1966]
 
 Sydney Clouts: Collected Poems (1984)",,,,"Accessed 10/25/2019
 
 https://dryadpress.co.za/sydney-clouts/"
 COE40SA,"Coetzee, John Maxwell",M,1940-02-09,Alive,South Africa,"University of Cape Town
 University of Texas, Austin","Cape Town, South Africa
-Austin, TX, USA",,"1960s
-1972",,,,,Could not find evidence he actually has ever produced a poem; potentially delete.,"Accessed 10/25/2019
+Austin, TX, USA",,"1960
+1972","[unknown]
+[unknown]",,[none],,,Could not find evidence he actually has ever produced a poem; potentially delete.,"Accessed 10/25/2019
 
 https://www.sahistory.org.za/people/john-maxwell-coetzee"
-COP13SA,"Cope, Jack",M,1913-06-03,1991-05-01,South Africa,,,,,,three poetry collections; can't find the titles/publication dates,,,Famous for his short stories and novels. Relationship with Ingrid Jonker.,"Accessed 10/25/2019
+COP13SA,"Cope, Jack [Robert Knox]",M,1913-06-03,1991-05-01,South Africa,[none],[none],,[none],[none],,three poetry collections; can't find the titles/publication dates,,,Famous for his short stories and novels. Relationship with Ingrid Jonker.,"Accessed 10/25/2019
 
 https://www.britannica.com/biography/Jack-Cope"
-COU42SA,"Couzyn, Jeni",F,1942-07-26,Alive,South Africa,University of Natal,South Africa,,1963,,"Flying. London, Workshop Press, 1970.
+COU42SA,"Couzyn, Jeni",F,1942-07-26,Alive,South Africa,University of Natal,South Africa,,1963,[unknown],,"Flying. London, Workshop Press, 1970.
 Monkeys' Wedding. London, Cape, 1972; revised edition, Vancouver, Douglas and McIntyre, and London, Heinemann, 1978.
 House of Changes. London, Heinemann, 1978.
 
@@ -182,7 +210,15 @@ Christmas in Africa. London, Heinemann, 1975.
 
 https://www.encyclopedia.com/arts/culture-magazines/couzyn-jeni"
 CRI69GB,"Cripps, Arthur Shearley",M,1869-06-10,1952-08-01,England,"Trinity College
-Cuddesdon Theological College","Oxford, England",,,,"Titania and Other Poems (1900)
+Trinity College
+Cuddesdon Theological College ","Oxford, England
+Oxford, England
+Oxford, England",,"1891
+1897
+1893","BA
+MA
+[Unknown]
+",,"Titania and Other Poems (1900)
 Jonathan: A Song of David (1902)
 Magic Casements (1905)
 Lyra Evangelistica: Missionary Verses of Mashonaland (1909)
@@ -198,13 +234,10 @@ Africa: Verses (1939)
 
 http://www.poetry-archive.com/c/cripps_arthur_shearly_bibliography.html
 
-http://masvingo.anglican.org/arthur-shearly-cripps/"
-CRO58??,"Crouch, Edward Heath",M,1858,1920,,,,,,,"ed.) A Treasury of South African Poetry and Verse (1907)
-(ed.) Sonnets Of South Africa (1911)
-(ed.) Gold Dust (1917)",,,"Editor, potentially no poetry produced on his own; compiled poetry of South Africa. Can't find most biographical information.","Accessed 10/26/2019
+http://masvingo.anglican.org/arthur-shearly-cripps/
 
-https://en.wikisource.org/wiki/Author:Edward_Heath_Crouch"
-CUL33SA,"Cullinan, Patrick",M,1933-05-25,2011-04-14,South Africa,Magalen College,"Oxford, England",,,,"The Horizon Forty Miles Away. Polygraph (1963)
+https://books.google.com/books?id=2TSOpxKysqMC&pg=PA143&lpg=PA143&dq=Cripps,+Arthur+Shearly+trinity+college&source=bl&ots=0i19KCfqJB&sig=ACfU3U2rRfz95m1S40BEUhCcB7Nxr5-eHQ&hl=en&sa=X&ved=2ahUKEwjtv5jG7vDnAhXIna0KHV7cBxUQ6AEwCHoECBkQAQ#v=onepage&q=Cripps%2C%20Arthur%20Shearly%20trinity%20college&f=false"
+CUL33SA,"Cullinan, Patrick",M,1933-05-25,2011-04-14,South Africa,Magdalen College Oxford,"Oxford, England",,1953,[unknown],,"The Horizon Forty Miles Away. Polygraph (1963)
 Today is not Different. David Philip (1978)
 The White Hail in the Orchard. David Philip (1984)
 I Sing Where I Stand: Versions from the Afrikaans of Phil du Plessis: Poesie 1892-1984. Vooraand (1985)
@@ -223,7 +256,7 @@ https://en.wikipedia.org/wiki/Patrick_Cullinan
 
 https://www.artprintsa.com/Patrick-Cullinan-Selected-Poems.html"
 CUR07SA,"Currey, Ralph Nixon [R. N.]
-",M,1907-12-14,2001-11-18,South Africa,Wadham College,"Oxford, England",,1930,,"Tiresias and Other Poems. London, Oxford University Press 1940.
+",M,1907-12-14,2001-11-18,South Africa,Wadham College,"Oxford, England",,1930,[unknown],,"Tiresias and Other Poems. London, Oxford University Press 1940.
 This Other Planet. London, Routledge, 1945.
 
 Indian Landscape: A Book of Descriptive Poems. London, Routledge, 1947.
@@ -233,11 +266,32 @@ The Africa We Knew. Cape Town, David Philip, 1973.
 Collected Poems and Translations. Oxford, James Currey, forthcoming.",,,,"Accessed 10/26/2019
 
 https://www.encyclopedia.com/arts/culture-magazines/currey-ralph-nixon"
-DAD16CI,"Dadie, Bernard",M,1916-01-10,2019-03-09,Ivory Coast,,,,,,Afrique debout (1950; “Africa Upright”),,,,"Accessed 10/26/2019
+DAD16CI,"Dadie, Bernard",M,1916-01-10,2019-03-09,Ivory Coast,Ecole Normale William-Ponty,"Kolda, Senegal",,1936,[unknown],,"Afrique debout (1950)
+Légendes africaines (1954)
+Le pagne noir (1955)
+La ronde des jours (1956)
+Climbié (1956)
+Un Nègre à Paris (1959)
+Patron de New York (1964)
+Hommes de tous les continents (1967)
+La ville où nul ne meurt (1969)
+Monsieur Thôgô-Gnini (1970)
+Les voix dans le vent (1970)
+Béatrice du Congo (1970)
+Îles de tempête (1973)
+Papassidi maître-escroc (1975)
+Mhoi cheul (1979)
+Opinions d'un nègre (1979)
+Les belles histoires de Kacou Ananzè
+Commandant Taureault et ses nègres (1980)
+Les jambes du fils de Dieu (1980)
+Carnets de prison (1981) – details his time in prison
+Les contes de Koutou-as-Samala (1982)",,,"A playwright and poet, most notably a playwright.","Accessed 10/26/2019
 
 https://www.britannica.com/biography/Bernard-Binlin-Dadie"
-DAV##??,"Davis, Philip Rufus",M,,,,,,,,,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,Biographical information unknown. Part of the South African Veldsingers' Club.,
-DEL16SA,"Delius, Anthony [Ronald St. Martin]",M,1916-06-11,1989,South Africa,Rhodes University,"Grahamstown, South Africa",,1938,,"An Unknown Border. Cape Town, Balkema, 1954.
+DAV##??,"Davis, Philip Rufus",M,[none],[none],[none],[none],[none],,[none],[none],,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,Biographical information unknown. Part of the South African Veldsingers' Club.,
+DEL16SA,"Delius, Anthony [Ronald St. Martin]",M,1916-06-11,1989,South Africa,Rhodes University,"Grahamstown, South Africa",,1938,"[unknown]
+",,"An Unknown Border. Cape Town, Balkema, 1954.
 
 The Last Division. Cape Town, Human and Rousseau, 1959.
 
@@ -246,7 +300,7 @@ A Corner of the World: Thirty-Four Poems. Cape Town, Human and Rousseau, 1962.
 Black South-Easter. Grahamstown, New Coin, 1966.",,,"Co-founder, 1947, and editor and political correspondent, Port Elizabeth Saturday Post (later Evening Post); parliamentary correspondent, Cape Times, Cape Town, 1951–54 and 1958–67. ","Accessed 10/29/2019
 
 https://www.encyclopedia.com/arts/culture-magazines/delius-anthony-ronald-st-martin"
-DIA28SE,"Diakhate, Lamine",M,1928-09-16,1987,Senegal,Universities of Katibougou,Sudan,,,,"La joie d’un Continent. Editions P.A.B, (Alès 1954) .[poems]
+DIA28SE,"Diakhate, Lamine",M,1928-09-16,1987,Senegal,École Normale de Katibougou,"Katibougou, Mali",,[none],[unknown],,"La joie d’un Continent. Editions P.A.B, (Alès 1954) .[poems]
 
 « Pour la Jeune Fille de Soie Noire », Présence Africaine 2e série no. 3 ( avril – septembre, 1955), 48. [poem]
 
@@ -261,20 +315,20 @@ Terres Médianes. Editions Saint-Germain-des-Pres (Paris 1984). [poem]",,,"As a 
 https://www.oxfordreference.com/view/10.1093/acref/9780198661252.001.0001/acref-9780198661252-e-1361
 
 https://en.wikipedia.org/wiki/Lamine_Diakhate"
-DIO06SE,"Diop, Birago",M,1906-12-11,1989-11-25,Senegal,University of Toulouse,France,,1933,,"Lures and Glimmers (Leurres et Lueurs, 1960)",,,Involved in the Negritude movement; met Senghor.,"Accessed 1/15/2020
+DIO06SE,"Diop, Birago",M,1906-12-11,1989-11-25,Senegal,University of Toulouse,France,,1933,[unknown],,"Lures and Glimmers (Leurres et Lueurs, 1960)",,,Involved in the Negritude movement; met Senghor.,"Accessed 1/15/2020
 
 https://www.britannica.com/biography/Birago-Diop
 
 https://www.poetryfoundation.org/poets/birago-diop"
-DIO27SE,"Diop, David Mandessi",M,1927-07-09,1960-08-29,Senegal,,,,,,Coups de pilon (1956),,,"Born and lived most of his life in France, though considered a French West African poet known for his contribution to the Négritude literary movement. Considered the most ""extreme"" of the Negritude writers. Died in a plane crash at 33, published only one collection of poetry.","Accessed 10/29/2019
+DIO27SE,"Diop, David Mandessi",M,1927-07-09,1960-08-29,Senegal,[none],[none],,[none],[none],,Coups de pilon (1956),,,"Born and lived most of his life in France, though considered a French West African poet known for his contribution to the Négritude literary movement. Considered the most ""extreme"" of the Negritude writers. Died in a plane crash at 33, published only one collection of poetry.","Accessed 10/29/2019
 
 https://poets.org/poet/david-diop
 
 https://www.britannica.com/biography/David-Diop"
-DRI39SA,"Driver, C. J. [Jonty]",M,1939,Alive,South Africa,"University of Cape Town (BA)
-Oxford University (MA)
-","Cape Town, South Africa
-Oxford, England",,1964,,"Selected Poems, 1960-2004, (2005)
+DRI39SA,"Driver, C. J. [Jonty]",M,1939,Alive,South Africa,"University of Cape Town
+Oxford University","Cape Town, South Africa
+Oxford, England",,1964,"BA
+MA",,"Selected Poems, 1960-2004, (2005)
 
 Elegy for a Revolutionary, (Faber & Faber)
 
@@ -289,28 +343,33 @@ Citizen Elsewhere, 2013, Happenstance Press",,,"Interrogated and held by South A
 https://www.jontydriver.co.uk/biography/
 
 https://www.sahistory.org.za/people/jonty-driver"
-DUG10GB,"Dugmore, H. H. ",M,1810,1896,England,,,,,,,,,"Born in England, moved to South Africa at age 10. From Wikipedia: ""Dugmore became fluent in the Xhosa language, and spent the next twenty years undertaking missionary work. He was jointly responsible for the first translation of the Bible into the Xhosa language, and composed a large number of Xhosa hymns, some of which are still sung today.""","Accessed 10/29/2019
+DUG10GB,"Dugmore, H. H. ",M,1810,1896,England,[none],[none],,[none],"[none]
+",,[none],,,"Born in England, moved to South Africa at age 10. From Wikipedia: ""Dugmore became fluent in the Xhosa language, and spent the next twenty years undertaking missionary work. He was jointly responsible for the first translation of the Bible into the Xhosa language, and composed a large number of Xhosa hymns, some of which are still sung today.""","Accessed 10/29/2019
 
 https://en.wikipedia.org/wiki/Henry_Hare_Dugmore
 
 Written about in this book: https://books.google.com/books/about/Life_of_Rev_H_H_Dugmore.html?id=Fl1hmAEACAAJ"
-ECH37NI,"Echeruo, Michael J. C.",M,1937-03-14,Alive,Nigeria,"University College, Ibadan (BA)
-Cornell University (MA and PhD)","Ibadan, Nigeria
+ECH37NI,"Echeruo, Michael J. C.",M,1937-03-14,Alive,Nigeria,"University College, Ibadan
+Cornell University
+Cornell University","Ibadan, Nigeria
+Ithaca, New York, USA
 Ithaca, New York, USA",,"1960
 1963
-1965",,"Mortality. London, Longman, 1968.
+1965","BA
+MA
+PhD
+",,"Mortality. London, Longman, 1968.
 
 Distanced: New Poems. Enugu, I.K., 1975.",,,"Since 1990 William Safire Professor of Modern Letters, Syracuse University, New York. Since 1977 founding president, Nigerian Association for African and Comparative Literature","Accessed 10/29/2019
 
 https://www.encyclopedia.com/arts/culture-magazines/echeruo-michael-joseph-chukwudalu"
-EGL00SA,"Eglington, Charles",M,1918,1972,South Africa,,,,"
-",,"Under the Horizon (collected poems), 1977",,,Could find very little biographical information. ,"Accessed 10/29/2019
+EGL00SA,"Eglington, Charles",M,1918,1972,South Africa,[none],[none],,[none],[none],,"Under the Horizon (collected poems), 1977",,,Could find very little biographical information. ,"Accessed 10/29/2019
 
 https://www.thebookcollector.co.za/shop/africana/under-the-horizon-charles-eglinton/"
-ELH52??,"El Hadj Belarbi, Sheik Benguedda",M,1905-01-25,1932-01-12,,,,,,,,,,Cannot find bio information.,
-EVA##??,"Evans, Hugh John",M,,,South Africa,,,,,,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,Member of Veldsingers' Club; can find no bio information.,
+ELH52??,"El Hadj Belarbi, Sheik Benguedda",M,1905-01-25,1932-01-12,[none],[none],[none],,[none],[none],,[none],,,Cannot find bio information.,
+EVA##??,"Evans, Hugh John",M,[none],[none],South Africa,[none],[none],,[none],[none],,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,Member of Veldsingers' Club; can find no bio information.,
 EYB15SA,"Eybers, Elisabeth",F,1915-02-26,2007-12-01,South Africa,"University of the Witwatersrand
-","Johannesburg, South Africa",,1937,,"Eybers' first collection of poems, Belydenis in die Skemering (""Confession at twilight""), was published in 1936. Her second collection, Die Stil Avontuur (""The silent adventure""), was published in 1939 and was mainly about being a mother.
+","Johannesburg, South Africa",,1937,[unknown],,"Eybers' first collection of poems, Belydenis in die Skemering (""Confession at twilight""), was published in 1936. Her second collection, Die Stil Avontuur (""The silent adventure""), was published in 1939 and was mainly about being a mother.
 
 Die Vrou en ander verse (The woman and other poems) was published in 1945 while her fourth poetry collection, Die Ander Dors (The other thirst) was published in 1946.
 
@@ -329,14 +388,13 @@ More recent works include the bilingual Verbruikersverse/Consumer's verse (1997)
 https://en.wikipedia.org/wiki/Elisabeth_Eybers
 
 https://www.rem.routledge.com/articles/eybers-elisabeth-1915-2007"
-FAI##SA,"Fairlie, A. C. ","
-",,,South Africa,,,,,,Featured in A Treasury of South African Poetry (1907) ,,,Could not find any biographical information; not sure full name.,"Accessed 10/30/2019
+FAI##SA,"Fairlie, A. C. ",[none],[none],[none],South Africa,[none],[none],,[none],[none],,Featured in A Treasury of South African Poetry (1907) ,,,Could not find any biographical information; not sure full name.,"Accessed 10/30/2019
 
 https://en.wikisource.org/wiki/A_Treasury_of_South_African_Poetry_and_Verse/A._C._Fairlie"
-FAL21NI,"Falete, Adebayo",M,1921-12-26,2017-07-23,Nigeria,University of Ibadan,"Ibadan, Nigeria",,1968,,,,,"Cannot find evidence of poetry collection, although he did produce poems.","Accessed 10/30/2019
+FAL21NI,"Falete, Adebayo",M,1921-12-26,2017-07-23,Nigeria,University of Ibadan,"Ibadan, Nigeria",,1968,[unknown],,,,,"Cannot find evidence of poetry collection, although he did produce poems.","Accessed 10/30/2019
 
 https://en.wikipedia.org/wiki/Adebayo_Faleti"
-FAL76GB,"Fallaw, Lance",M,1876,1958,England,University of Durham,"Durham, UK",,sometime before 1900,,"An Ampler Sky: Poems (1909)
+FAL76GB,"Fallaw, Lance",M,1876,1958,England,University of Durham,"Durham, UK",,1898,[unknown],,"An Ampler Sky: Poems (1909)
 
 Silverleaf and Oak: Poems (1906)
 
@@ -345,13 +403,26 @@ Poems here: https://trove.nla.gov.au/list?id=31650",,,"Born in England, moved to
 https://search.informit.com.au/documentSummary;dn=998516017313049;res=IELLCC
 
 https://trove.nla.gov.au/list?id=31650"
-FUG32GB,"Fugard, Sheila",F,1932,Alive,England,University of Cape Town,"Cape Town, South Africa",,,,Threshold (1975) and Mythic Things (1981),,,"Moved to South Africa as a child, though born in England.","Accessed 10/30/2019
+FUG32GB,"Fugard, Sheila",F,1932,Alive,England,University of Cape Town,"Cape Town, South Africa",,[none],[unknown],,Threshold (1975) and Mythic Things (1981),,,"Moved to South Africa as a child, though born in England.","Accessed 10/30/2019
 
 https://www.encyclopedia.com/women/dictionaries-thesauruses-pictures-and-press-releases/fugard-sheila-1932"
-GIB97GB,"Gibbon, Perceval",M,1897-11-04,1936-05-30,Wales,,,,,,"African Items: A Volume of Verse (London: Elliott Stock, 1903). ",,,Served as a journalist for the Rand Daily Mail in South Africa. ,"Accessed 10/30/2019
+GOU81IN,"Gouldsbury, Cullen",M,1881,1916,India,[none],[none],,[none],[none],,"Circe's Garden (1907)
+God's Outpost (1907)
+Maturin's Marriage (1907)
+Rhodesian Rhymes (1909, reprinted as Songs Out of Exile in the UK)
+The Tree of Bitter Fruit (1910)
+The Great Plateau of Northern Rhodesia (1911)
+An African Year (1912)
+More Rhodesian Rhymes (1913, reprinted as From the Outposts in the UK)",,,British officer stationed in Northern Rhodesia. Served and died in WWI.,"Accessed 02/28/2020
+
+https://en.wikisource.org/wiki/Author:Cullen_Gouldsbury
+
+https://www.biblio.com/cullen-gouldsbury/author/77380"
+GIB97GB,"Gibbon, Perceval",M,1897-11-04,1936-05-30,Wales,[none],[none],,[none],"[none]
+",,"African Items: A Volume of Verse (London: Elliott Stock, 1903). ",,,Served as a journalist for the Rand Daily Mail in South Africa. ,"Accessed 10/30/2019
 
 https://rpo.library.utoronto.ca/poets/gibbon-perceval"
-GWA46SA,"Gwala, Pascal",M,1946-10-05,2014-09-06,South Africa,University of Zululand,"Natal, South Africa",,,,"    Jol'iinkomo (1977)
+GWA46SA,"Gwala, Pascal",M,1946-10-05,2014-09-06,South Africa,University of Zululand,"Natal, South Africa",,[none],[unknown],,"    Jol'iinkomo (1977)
     No More Lullabies (1982)",,,"In 1973, Gwala was invited to read with Oswald Mtshali, Mongane (Wally) Serote, Don Mattera, Phil Phetoe, Lefifi Tladi and Mike Dues at Turfloop’s Africa Arts Week, another cultural convention inspired by Black Consciousness","Accessed 10/30/2019
 
 https://www.sahistory.org.za/people/mafika-pascal-gwala
@@ -360,24 +431,27 @@ http://www.scielo.org.za/scielo.php?script=sci_arttext&pid=S0041-476X20150001000
 
 "
 HAM91GB,"Hamilton, William Robert [W. R.]",M,1891,1917,Scotland,"University of Cape Town
-","Cape Town, South Africa",,,,"William Hamilton. Modern Poems. Oxford: B. H. Blackwell, 1917. 011648.eee.17 British Library",,,Died in WWI.,"Accessed 10/30/2019
+","Cape Town, South Africa",,[none],[unknown],,"William Hamilton. Modern Poems. Oxford: B. H. Blackwell, 1917. 011648.eee.17 British Library",,,Died in WWI.,"Accessed 10/30/2019
 
 https://rpo.library.utoronto.ca/poets/hamilton-william
 
-https://pennyspoetry.fandom.com/wiki/William_Robert_Hamilton"
-HAR39SA,"Haresnape, Geoffrey",M,1939,Alive,South Africa,"University of Cape Town (MA)
-University of Sheffield (PhD)","Cape Town, South Africa
-UK",,"1961
-1982",,"Drive of the Tide (Maskew Miller, 1976), New-Born Images (Justified Press, 1999), Mulberries in Autumn (Snailpress 1996) The Living and the Dead (Snailpress, 1996) and Where the Wind Wills (Echoing Green Press 2011). Snailpress published his Selected Poems in 1996.",,,,"Accessed 10/30/2019
+https://pennyspoetry.fandom.com/wiki/William_Robert_Hamilton
+
+https://books.google.com/books?id=2J8bDQAAQBAJ&pg=PT382&lpg=PT382&dq=Hamilton,+William+Robert+university+of+cape+town&source=bl&ots=hB9CeZLdq_&sig=ACfU3U2KHa0BpuI2zlhSL-hzzrUCyOtGyQ&hl=en&sa=X&ved=2ahUKEwinwrPgkPXnAhUBSq0KHVcjBmoQ6AEwCXoECA4QAQ#v=onepage&q=Hamilton%2C%20William%20Robert%20university%20of%20cape%20town&f=false"
+HAR39SA,"Haresnape, Geoffrey",M,1939,Alive,South Africa,"University of Cape Town
+University of Sheffield","Cape Town, South Africa
+Sheffield, UK",,"1961
+1982","MA
+PhD",,"Drive of the Tide (Maskew Miller, 1976), New-Born Images (Justified Press, 1999), Mulberries in Autumn (Snailpress 1996) The Living and the Dead (Snailpress, 1996) and Where the Wind Wills (Echoing Green Press 2011). Snailpress published his Selected Poems in 1996.",,,,"Accessed 10/30/2019
 
 http://www.english.uct.ac.za/geoff-haresnape"
-HAS64SO,"Hasan, Muhammad Abdille",M,1864,1920,Somaliland,,,,,,"Oral poetry. Analyzed in this collection: 
+HAS64SO,"Hasan, Muhammad Abdille",M,1864,1920,Somaliland,[none],[none],,[none],[none],,"Oral poetry. Analyzed in this collection: 
 
 Said S. Samatar, Oral Poetry and Somali Nationalism: The Case of Sayyid Mahammad Abdille Hasan, Cambridge: Cambridge University Press, 1982 (analyzes Mahammad Abdille's poetry and assesses his nationalist and literary contributions to the Somali heritage)
 ",,,Muhammad Abdille Hassan (1864-1920) was a politico-religious leader and poet who is considered the father of Somali nationalism for his inspiration and leadership in a 20-year war against European and Ethiopian imperialism in Somaliland.,"Accessed 10/30/2019
 
 https://biography.yourdictionary.com/muhammad-abdille-hassan"
-HAS79GB,"Hastings, Beatrice",F,1879-01-27,1943-10-30,England,,,,,,On Beatrice Hastings: On the Life & Work of a Lost Modern Master,,,Used several pseudonyms; difficult to trace everything that can be attributed to her. Born in England but spent her childhood in South Africa.,"Accessed 10/30/2019
+HAS79GB,"Hastings, Beatrice",F,1879-01-27,1943-10-30,England,[none],[none],,[none],[none],,On Beatrice Hastings: On the Life & Work of a Lost Modern Master,,,Used several pseudonyms; difficult to trace everything that can be attributed to her. Born in England but spent her childhood in South Africa.,"Accessed 10/30/2019
 
 https://kenyonreview.org/reviews/beatrice-hastings-on-the-life-and-work-of-a-lost-modern-master-738439/
 
@@ -385,10 +459,10 @@ https://www.penguinrandomhouse.co.za/book/beatrice-hastings-literary-life/978014
 
 "
 HO44SA,"Hope, Christopher","M
-",1944-02-26,Alive,South Africa,University of Witwatersrand,"Johannesburg, South Africa",,1960,,"His poems were first published in Whitewashes (1971), but Hope's first significant publication was Cape Drives (1974), which won the Thomas Pringle Prize and a Cholmondeley Award. His published poetry also includes In the Country of the Black Pig (1981) and Englishmen (1985).",,,In the South African Navy beginning 1962.,"Accessed 10/31/2019
+",1944-02-26,Alive,South Africa,University of Witwatersrand,"Johannesburg, South Africa",,1960,[unknown],,"His poems were first published in Whitewashes (1971), but Hope's first significant publication was Cape Drives (1974), which won the Thomas Pringle Prize and a Cholmondeley Award. His published poetry also includes In the Country of the Black Pig (1981) and Englishmen (1985).",,,In the South African Navy beginning 1962.,"Accessed 10/31/2019
 
 https://literature.britishcouncil.org/writer/christopher-hope"
-HOR34SA,"Horn, Peter Rudolph Gisela",M,1934-12-07,Alive,South Africa,University of Witwatersrand,"Johannesburg, South Africa",,,,"    Voices from the Gallows Trees. (Poems) Ophir (1969)[15]
+HOR34SA,"Horn, Peter Rudolph Gisela",M,1934-12-07,Alive,South Africa,University of Witwatersrand,"Johannesburg, South Africa",,1970,[unknown],,"    Voices from the Gallows Trees. (Poems) Ophir (1969)[15]
     Walking through our sleep. (Poems) Ravan Press (1974)[16]
     Silence in Jail. (Poems: banned). Scribe Press (1979)
     The Civil War Cantos. (Poems: banned) Scribe Press (1987)[17][18]
@@ -399,7 +473,7 @@ HOR34SA,"Horn, Peter Rudolph Gisela",M,1934-12-07,Alive,South Africa,University 
     Poems. Translated into Bangla by Aminur Rahman. Montreal, Dhaka, London: SACAC, KATHAK 2003",,,Born in Czech Republic; he and his family emigrated to South Africa after he completed high school. Considered a South African poet.,"Accessed 10/31/2019
 
 https://www.paperbackswap.com/Peter-Horn/author/"
-HUN39SA,"Hunter, William Elijah",M,1839,1913,South Africa,,,,,,"    Poems (1860)
+HUN39SA,"Hunter, William Elijah",M,1839,1913,South Africa,[none],[none],,[none],[none],,"    Poems (1860)
     A Treasury of South African Poetry and Verse (1907) edited by Edward Heath Crouch
         The Nightingale
         Written on Recovery from Sickness, 1906
@@ -407,18 +481,19 @@ HUN39SA,"Hunter, William Elijah",M,1839,1913,South Africa,,,,,,"    Poems (1860)
     The Nightingale, and Other Poems (1908)",,,Very little biographical information found.,"Accessed 10/31/2019
 
 https://en.wikisource.org/wiki/Author:William_Elijah_Hunter"
-IBE43NI,"Ibekwe, Chinweizu ",M,1943-04-25,Alive,Nigeria,"Massachusetts Institute of Technology (BS)
-State University of New York at Buffalo (PhD)","Cambridge, MA, USA
+IBE43NI,"Ibekwe, Chinweizu ",M,1943-04-25,Alive,Nigeria,"Massachusetts Institute of Technology
+State University of New York at Buffalo","Cambridge, MA, USA
 Buffalo, NY, USA",,"1967
-1976",,"Energy Crisis and other poems, Nok Publishers, 1978
+1976","BS
+PhD",,"Energy Crisis and other poems, Nok Publishers, 1978
 Toward the Decolonization of African Literature, Vol. 1: African Fiction and Poetry and Their Critics (with Onwuchekwa Jemie and Ihechukwu Madubuike), Howard University Press, 1983. ISBN 978-0882581224
 Invocations and Admonitions: 49 poems and a triptych of parables, Pero Press, 1986. ISBN 978-9782358875",,,,"Accessed 10/25/2019
 
 http://www.worldafropedia.com/wiki/index.php?title=Chinweizu&mobileaction=toggle_view_mobile"
-MOR##??,"Morrison-Jacobs, David",M,,,South Africa,,,,,,The White Patrol. South African And Other Poems.,,,Very little biographical information found.,"Accessed 10/31/2019
+MOR##??,"Morrison-Jacobs, David",M,[none],[none],South Africa,[none],[none],,[none],[none],,The White Patrol. South African And Other Poems.,,,Very little biographical information found.,"Accessed 10/31/2019
 
 https://www.abebooks.com/White-Patrol-South-African-Poems-Morrison-Jacobs/20165460465/bd"
-JAC24AN,"Jactino, Antonio  [Orlando Tavora]",M,1924-09-28,1991-06-23,Angola,,,,,,"SELECTED POEMS  
+JAC24AN,"Jactino, Antonio  [Orlando Tavora]",M,1924-09-28,1991-06-23,Angola,[none],[none],,[none],[none],,"SELECTED POEMS  
   ""O grande desafio"" (Portuguese; ""The great challenge"")
     ""Poema da alienação"" (""Poem of alienation"")
     ""Carta dum contratado"" (""Letter of a contract worker"")
@@ -429,31 +504,29 @@ JAC24AN,"Jactino, Antonio  [Orlando Tavora]",M,1924-09-28,1991-06-23,Angola,,,,,
     ""Ah! Se pudésseis aqui ver poesia que não há!"" (""Ah! If you could see that there is no poetry here!"")",,,"The son of Portuguese settlers in Angola, Jacinto became associated with militant movements against Portuguese colonial rule and was arrested in 1961. He was sent to São Paulo Prison in Luanda and then served 14 years in the notorious prison camp at Tarrafal in the Cape Verde Islands.","Accessed 10/31/2019
 
 https://www.britannica.com/biography/Antonio-Jacinto"
-JON33SA,"Jonker, Ingrid",F,1933-09-19,1965-07-19,South Africa,,,,,,"The first collection of poems by Jonker to be published was Ontvlugting (Escape), in 1956. After delays caused by the apprehension of nervous publishers, her second collection of poems, Rook en Oker (Smoke and Ochre), was published in 1963. ",,,"Jonker was an active member of Die Sestigers, a group of anti-establishment writers and poets, which included Breyten Breytenbach, Andre Brink, Adam Small and Bartho Smit, who had taken it upon themselves to challenge the conservative literary norms of the time.
-
-Jonker completed suicide at the age of 31.","Accessed 10/31/2019
-
-https://www.sahistory.org.za/people/ingrid-jonker
-
-https://allpoetry.com/Ingrid-Jonker
-
-"
-KAR##NI,"Karibo, Minji",M,,,Nigeria,University of Ibadan,"Ibadan, Nigeria",,late 1950s to early 1960s,,,,,Published in The Horn magazine at University of Ibadan.,"Accessed 10/31/2019
+KAR##NI,"Karibo, Minji",M,[none],[none],Nigeria,University of Ibadan,"Ibadan, Nigeria",,late 1950s to early 1960s,[unknown],,[none],,,Published in The Horn magazine at University of Ibadan.,"Accessed 10/31/2019
 
 https://findingafricaseminar.wordpress.com/2019/05/07/bower-on-translocality-small-magazines-and-nigerian-poetry/"
-KIR24SA,"Kirsch, Olga",F,1924,1997,South Africa,University of Witwatersrand,"Johannesburg, South Africa",,,,"The first of her seven books published in Afrikaans, Die soeklig (the projector) was written while she was still studying in South Africa and the second, Mure van die hart (Walls of the heart), in 1948, was written on the year of her departure for Israel. With the exception of a few poems in English in the Jewish Frontier, she did not publish anything after leaving South Africa.[2]
+KIP65IN,"Kipling, Rudyard",M,1865-12-30,1936-01-18,India,[none],[none],,[none],[none],,"Schoolboy Lyrics (1881)
+Echoes (1884) – with his sister, Alice (‘Trix’)
+Departmental Ditties (1886)
+Barrack-Room Ballads (1890)
+The Seven Seas (1896)
+An Almanac of Twelve Sports (1898, with illustrations by William Nicholson)
+The Five Nations (1903)
+Collected Verse (1907)
+Songs from Books (1912)
+The Years Between (1919)
+Rudyard Kipling's Verse: Definitive Edition (1940)",,,"Traveled around the world; born in Bombay, raised as a youth in England, returned to India in young adulthood. Traveled to South Africa multiple times. He was actively involved in the Boer War in South Africa as a war correspondent.  Nobel Prize for literature in 1907. Died of a painful illness.","Accessed 02/28/2020
 
-Only about a quarter of a century later, in 1972, her third book was published, titled Negentien gedigte, (Nineteen poems), which Daniel Hugo refers as her ""second beginning"". In 1990, she published her first book of poetry in English. She continued to write in English, and was actively involved with the Israel Association of Writers in English. Though well known as a poet in South Africa, she failed to achieve the same degree of fame in Israel or the English-speaking world. ",,,"Kirsch wrote mostly in Afrikaans rather than English, publishing eight books of poetry in that language, as well as a volume of selected poems (she was only the second female Afrikaans poet to be published). 
+https://www.poetryfoundation.org/poets/rudyard-kipling
 
-In the same way as Elisabeth Eybers, well before Breyten Breytenbach or Sheila Cussons, her life was marked by the exile and the difficulty of writing in Afrikaans away from South Africa. She remained a close friend of Elisabeth Eybers, and they visited each other in the Netherlands and Israel. ","Accessed 10/31/2019
+https://en.wikipedia.org/wiki/Rudyard_Kipling"
+KOL54GB,"Kolbe, F. C. ",M,1854-09-28,1936-01-12,England,"South African College, Cape Town","Cape Town, South Africa",,1874,[unknown],,"""CORONATION ODE"" and ""TABLE MOUNTAIN."", both featured in A Treasury of South African Poetry and Verse edited by Edward Heath Crouch",,,Mentioned in the 1901 South African Poetry review (line 181). One of the first 6 graduates to receive a BA through the University of the Cape of Good Hope.,"Accessed 02/28/2020
 
-https://en.wikipedia.org/wiki/Olga_Kirsch
-
-http://www.scielo.org.za/scielo.php?script=sci_arttext&pid=S0041-476X2017000100004"
-KOL##SA,"Kolbe, J. C. ",,,,South Africa,,,,,,,,,Could not find any biographical information. Mentioned in the 1901 South African Poetry review (line 181).,
+https://www.s2a3.org.za/bio/Biograph_final.php?serial=1559"
 KRI10SA,"Krige, Uys","M
-",1910-02-10,1987-08-10,South Africa,University of Stellenbosch,"Stellenbosch, South Africa",,"
-",,"    Kentering (Change), 1935
+",1910-02-10,1987-08-10,South Africa,University of Stellenbosch,"Stellenbosch, South Africa",,1931,[unknown],,"    Kentering (Change), 1935
     Rooidag (Red day), 1940
     Oorlogsgedigte (War poems), 1942
     Hart sonder hawe (Heart without harbour), 1949
@@ -463,11 +536,11 @@ KRI10SA,"Krige, Uys","M
 https://www.britannica.com/biography/Uys-Krige
 
 https://www.sahistory.org.za/people/mattheus-uys-krige"
-KRO52SA,"Krog, Antjie",F,1952-10-23,Alive,South Africa,"University of the Orange Free State (BA)
-University of Pretoria (MA)
-","Bloemfontein, Free State, South Africa
+KRO52SA,"Krog, Antjie",F,1952-10-23,Alive,South Africa,"University of the Orange Free State
+University of Pretoria","Bloemfontein, Free State, South Africa
 Pretoria, South Africa",,"1973
-1976",,"    Dogter van Jefta (Daughter of Jephta) (1970)
+1976","BA
+MA",,"    Dogter van Jefta (Daughter of Jephta) (1970)
     Januarie-suite (January Suite) (1972)
     Beminde Antarktika (Beloved Antarctica) (1974)
     Mannin (Difficult to translate: the name of Eve given in Biblical terms if Adam being ""man"", Eve was called ""wo-man"") (1974)
@@ -486,8 +559,10 @@ https://www.poetryinternational.org/pi/poet/5372/Antjie-Krog
 
 https://www.sahistory.org.za/people/antjie-krog"
 KUN30SA,"Kunene, Mazisi","M
-",1930-05-30,2006-08-11,South Africa,"University of Natal (BA)
-University of Natal (MA)","Natal, South Africa",,1959,,"    Zulu Poems. New York, Africana Publishing Corporation, 1970
+",1930-05-30,2006-08-11,South Africa,"University of Natal
+University of Natal","Natal, South Africa
+Natal, South Africa",,1959,"BA
+MA",,"    Zulu Poems. New York, Africana Publishing Corporation, 1970
     Emperor Shaka the Great: A Zulu Epic. London, Heinemann, 1979 (transcription and translation of traditional epic)
     Anthem of the Decades: A Zulu Epic Dedicated to the Women of Africa. London, Heinemann, 1981
     The Ancestors and the Sacred Mountain: Poems. London, Heinemann, 1982
@@ -503,13 +578,13 @@ https://www.britannica.com/biography/Mazisi-Kunene
 
 https://www.sahistory.org.za/people/mazisi-raymond-kunene"
 LAI46GH,"Laing, Kojo","M
-",1946-07-01,2017-04-20,Ghana,Glasgow University,Scotland,,1968,,"Godhorse. Oxford, Heinemann, 1989.",,,,"Accessed 11/2/2019
+",1946-07-01,2017-04-20,Ghana,Glasgow University,Scotland,,1968,[unknown],,"Godhorse. Oxford, Heinemann, 1989.",,,,"Accessed 11/2/2019
 
 https://www.encyclopedia.com/arts/culture-magazines/laing-kojo
 
 https://www.poetryfoundation.org/poets/kojo-laing"
 LEI80SA,"Leipoldt, C. Louis [Christian Frederik Louis]","M
-",1880-12-28,1947-04-12,South Africa,,,,,,"Oom Gert vertel en ander gedigte (1911; “Uncle Gert’s Story and Other Poems”), Uit drie wêrelddele (1923; “From Three Continents”), and Skoonheidstroos (1932; “The Consolation of Beauty”)",,,"[From Wiki] Together with Jan F. E. Celliers and J. D. du Toit, he was one of the leading figures in the poetry of the Second Afrikaans Movement. Apart from poetry, Leipoldt wrote novels, plays, stories, children's books, cookbooks and a travel diary. He is numbered amongst the greatest of the Afrikaner poets and he was described by D. J. Opperman, himself a noted South African poet, as ""our most versatile artist"".","Accessed 11/2/2019
+",1880-12-28,1947-04-12,South Africa,[none],[none],,[none],[none],,"Oom Gert vertel en ander gedigte (1911; “Uncle Gert’s Story and Other Poems”), Uit drie wêrelddele (1923; “From Three Continents”), and Skoonheidstroos (1932; “The Consolation of Beauty”)",,,"[From Wiki] Together with Jan F. E. Celliers and J. D. du Toit, he was one of the leading figures in the poetry of the Second Afrikaans Movement. Apart from poetry, Leipoldt wrote novels, plays, stories, children's books, cookbooks and a travel diary. He is numbered amongst the greatest of the Afrikaner poets and he was described by D. J. Opperman, himself a noted South African poet, as ""our most versatile artist"".","Accessed 11/2/2019
 
 
 https://en.wikipedia.org/wiki/C._Louis_Leipoldt
@@ -517,7 +592,11 @@ https://en.wikipedia.org/wiki/C._Louis_Leipoldt
 https://www.britannica.com/biography/C-Louis-Leipoldt
 "
 LER25SA,"Lerner, Laurence","M
-",1925-12-12,2016-01-16,South Africa,University of Cape Town,"Cape Town, South Africa",,,,"    Domestic Interior. Hutchinson, 1959
+",1925-12-12,2016-01-16,South Africa,"University of Cape Town
+University of Cape Town","Cape Town, South Africa
+Cape Town, South Africa",,"1944
+1945","BA
+MA",,"    Domestic Interior. Hutchinson, 1959
     The Directions of Memory. Chatto & Windus, 1964
     Selves. Routledge, 1969 ISBN 978-0710064080.
     A.R.T.H.U.R.: the life and opinions of a digital computer. University of Massachusetts Press. 1975. ISBN 978-0-87023-181-0.
@@ -529,17 +608,24 @@ LER25SA,"Lerner, Laurence","M
 
 https://www.poetryarchive.org/poet/laurence-lerner
 
-https://en.wikipedia.org/wiki/Laurence_Lerner"
+https://en.wikipedia.org/wiki/Laurence_Lerner
+
+https://www.encyclopedia.com/arts/culture-magazines/lerner-laurence-david"
 LEW39SA,"Lewin, Hugh","M
-",1939-12-03,2019-01-16,South Africa,Rhodes University,"Grahamstown, South Africa",,,,"Bandiet: Seven Years in a South African Prison, published in the UK in 1974 [Contains poem ""Touch""]",,,,"Accessed 11/2/2019
+",1939-12-03,2019-01-16,South Africa,Rhodes University,"Grahamstown, South Africa",,1960,[unknown],,"Bandiet: Seven Years in a South African Prison, published in the UK in 1974 [Contains poem ""Touch""]",,,,"Accessed 11/2/2019
 
 https://www.sahistory.org.za/people/hugh-lewin
 
-https://www.theguardian.com/world/2019/jan/21/hugh-lewin-obituary"
+https://www.theguardian.com/world/2019/jan/21/hugh-lewin-obituary
+
+http://www.coldtype.net/Assets.04/Essays.04/LewinBook.pdf"
 LIV32MY,"Livingstone, Douglas","M
-",1932-01-05,1996-02-19,Malaysia ,"University of Natal, Ph.D. 
-[honorary poetry degree from Natal]","Natal, South Africa
-",,1989,,"    The Skull in the Mud (1960)
+",1932-01-05,1996-02-19,Malaysia ,"University of Natal
+University of Natal
+","Natal, South Africa
+Natal, South Africa
+",,1989,"PhD
+PhD, honorary",,"    The Skull in the Mud (1960)
     Sjambok and Other Poems from Africa (1964)
     Poems (with Thomas Kinsella and Anne Sexton, 1968)
     Eyes Closed Against the Sun (1970)
@@ -554,10 +640,11 @@ LIV32MY,"Livingstone, Douglas","M
 https://www.encyclopedia.com/arts/culture-magazines/livingstone-douglas-james
 
 https://en.wikipedia.org/wiki/Douglas_Livingstone_(poet)"
-LIY39SS,"Liyong, Taban lo","M
-",1939,Alive,South Sudan,"Howard University (BA)
-University of Iowa (MFA)","Washington D.C., USA
-Iowa City, Iowa, USA",,1968,,"Franz Fanon’s Uneven Ribs (1971)
+LIY39SS,"Liyong, Taban Lo","M
+",1939,Alive,South Sudan,"Howard University
+University of Iowa","Washington D.C., USA
+Iowa City, Iowa, USA",,1968,"BA
+MFA",,"Franz Fanon’s Uneven Ribs (1971)
 Another Nigger Dead (1972)
 Ballads of Underdevelopment (1976)
 Carrying Knowledge Up a Palm Tree (1997)
@@ -572,7 +659,7 @@ https://en.wikipedia.org/wiki/Taban_Lo_Liyong
 
 "
 LUM25CO,"Lumumba, Patrice Hemery","M
-",1925-07-02,1961-01-17,Republic of the Congo,,,,,,"May Our People Triumph: Poem, Speeches & Interviews ",,,"African nationalist leader, the first prime minister of the Democratic Republic of the Congo (June–September 1960). Forced out of office during a political crisis, he was assassinated a short time later.","Accessed 11/2/2019
+",1925-07-02,1961-01-17,Republic of the Congo,[none],[none],,[none],[none],,"May Our People Triumph: Poem, Speeches & Interviews ",,,"African nationalist leader, the first prime minister of the Democratic Republic of the Congo (June–September 1960). Forced out of office during a political crisis, he was assassinated a short time later.","Accessed 11/2/2019
 
 https://www.britannica.com/biography/Patrice-LumumbaLumumba
 
@@ -581,23 +668,47 @@ https://www.sahistory.org.za/people/patrice-emery-lumumba
 https://www.pambazuka.org/governance/patrice-lumumba-poet
 
 "
+MAC23SA,"MacNab, Roy","M
+",1923-09-17,2004,South Africa,"Hilton College
+Jesus College","Natal, South Africa
+Oxford, England",,"[none]
+1955","BA
+MA
+",,"Testament of a South African. London, Fortune Press, 1947.
+
+The Man of Grass and Other Poems. London, St. Catherine Press, 1960.
+
+Winged Quagga, with Reassembling World, by Douglas Reid Skinner. Cape Town, David Philip, 1981.",,,,"Accessed 02/28/2020
+
+https://books.google.com/books?id=JhXmEYWHDHYC&pg=PA208&lpg=PA208&dq=roy+macnab+graduation&source=bl&ots=aEJOfjcv8T&sig=ACfU3U3tSEMxL_-ND-w34eGh2uogntpHmw&hl=en&sa=X&ved=2ahUKEwjLvfCenPXnAhULQ60KHXxsCCMQ6AEwD3oECAgQAQ#v=onepage&q=roy%20macnab%20graduation&f=false
+
+https://www.encyclopedia.com/arts/culture-magazines/macnab-roy-martin-0"
 MAD12SA,"Madge, Charles Henry","M
-",1912-10-10,1996-01-17,South Africa,Magdalene College ,"Cambridge, England",,,,"The Disappearing Castle, his first collection of verse, in 1937. The Father Found (1941) was his last volume of poetry until Of Love, Time, and Places (1994),",,,,"Accessed 11/3/2019
+",1912-10-10,1996-01-17,South Africa,Magdalene College ,"Cambridge, England",,[none],"[unknown]
+",,"The Disappearing Castle, his first collection of verse, in 1937. The Father Found (1941) was his last volume of poetry until Of Love, Time, and Places (1994),",,,,"Accessed 11/3/2019
 
 https://www.jrank.org/literature/pages/4916/Charles-Madge-(Charles-Henry-Madge).html"
 MAN48SA,"Mann, Chris","M
 ",1948-04-06,Alive,South Africa,"University of Witwatersrand
-Oxford University (MA)","Johannesburg, South Africa
-Oxford, England (MA)",,"1971 (MA, English)",," First Poems (Bateleur Press, 1979), New Shades (David Philip,1982), Kites (David Philip, 1992), Mann Alive! (David Philip, 1992), South Africans (University of Natal Press, 1996) and Heartlands (University of Natal Press, 2002). His most recent collection of poetry Rudiments of Grace (Grahamstown: Cathedral of St Michael and St George) was published in 2014.",,,,"Accessed 11/3/2019
+Oxford University","Johannesburg, South Africa
+Oxford, England",,"[none]
+1971","[unknown]
+MA",," First Poems (Bateleur Press, 1979), New Shades (David Philip,1982), Kites (David Philip, 1992), Mann Alive! (David Philip, 1992), South Africans (University of Natal Press, 1996) and Heartlands (University of Natal Press, 2002). His most recent collection of poetry Rudiments of Grace (Grahamstown: Cathedral of St Michael and St George) was published in 2014.",,,,"Accessed 11/3/2019
 
 https://www.seh.ox.ac.uk/people/chris-mann
 
 https://en.wikipedia.org/wiki/Chris_Mann_(poet)
 "
 MAP44MA,"Mapanje, Jack","M
-",1944-03-25,Alive,Republic of Malawi,"Univeristy of Malawi (BA)
-University of London (MA)","Zomba, Malawi
-London, England",,,,"Of Chameleons and Gods, 1981
+",1944-03-25,Alive,Republic of Malawi,"Univeristy of Malawi
+Institute of Education London
+University College London","Zomba, Malawi
+London, England
+London, England",,"[none]
+[none]
+1983","BA
+MPhil
+PhD",,"Of Chameleons and Gods, 1981
 The Chattering Wagtails of Mikuyu Prison, 1993
 The Last of the Sweet Bananas: New and Selected Poems, 2004
 The Beasts of Nalunga, 2007",,,,"Accessed 11/3/2019
@@ -606,7 +717,7 @@ https://www.poetryfoundation.org/poets/jack-mapanje
 
 https://www.poetryarchive.org/poet/jack-mapanje`"
 MAR71SA,"Marais, Eugene","M
-",1871-01-09,1936-03-29,South Africa,,,,,,"[Selected poems]
+",1871-01-09,1936-03-29,South Africa,[none],[none],,[none],[none],,"[Selected poems]
 
     Die Dans Van Die Reen
 
@@ -631,7 +742,8 @@ https://www.poemhunter.com/eugene-marais/biography/
 https://en.wikipedia.org/wiki/Eug%C3%A8ne_Marais"
 MAR52ZI,"Marechera, Dambudzo","M
 ",1952-06-04,1987-08-18,Zimbabwe,"University of Rhodesia
-","Harare, Zimbabwe",,,,"Mindblast, or the Definitive Buddy (1984)
+","Harare, Zimbabwe",,[none],"[unknown]
+",,"Mindblast, or the Definitive Buddy (1984)
 
 Cemetery of Mind (1992),",,,"Zimbabwean novelist who won critical acclaim for his collection of stories entitled The House of Hunger (1978), a powerful account of life in his country under white rule.","Accessed 11/4/2019
 
@@ -639,25 +751,21 @@ https://www.vqronline.org/essay/dambudzo-marechera-life-and-times-african-writer
 
 https://www.britannica.com/biography/Dambudzo-Marechera
 "
-MAT35SA,"Mattero, Don","M
-",1935,,South Africa,,,,,,"Azanian Love Song, Justified Press",,,,"Accessed 01/15/2020
-
-https://www.sahistory.org.za/people/don-mattera"
 MOD23SA,"Modisane, William [Bloke]","M
-",1923-08-23,1986-03-01,South Africa,,,,,,,,,"From Encyclopedia Britannica: Educated in Johannesburg, Modisane served in the 1950s on the editorial staff of Drum magazine—which provided an important forum for a number of African writers, including Richard Rive, Alex La Guma, Es’kia Mphahlele, and Can Themba. ","Accessed 01/29/2020
+",1923-08-23,1986-03-01,South Africa,[none],[none],,[none],[none],,[none],,,"From Encyclopedia Britannica: Educated in Johannesburg, Modisane served in the 1950s on the editorial staff of Drum magazine—which provided an important forum for a number of African writers, including Richard Rive, Alex La Guma, Es’kia Mphahlele, and Can Themba. ","Accessed 01/29/2020
 
 https://www.sahistory.org.za/people/william-bloke-modisane
 
 https://www.britannica.com/biography/Bloke-Modisane"
 MOL55SA,"Moloise, Benjamin","M
-",1955,1985-10-18,South Africa,,,,,,,,,"Black upholsterer and poet, Benjamin Moloise was executed by apartheid government on 18 October 1985. Moloise was accused of murdering a black police officer. The African National Congress claimed responsibility for the murder and repudiated the claim that Moloise was involved. The US and the Soviet Union warned the apartheid government against the execution, but the government still decided to go ahead with it. The execution aroused so much anger in the townships that violence escalated. It spiraled out of control and subsequently reached areas like the Johannesburg CBD which had previously remained sheltered from it. ","Accessed 11/4/2019
+",1955,1985-10-18,South Africa,[none],[none],,[none],[none],,[none],,,"Black upholsterer and poet, Benjamin Moloise was executed by apartheid government on 18 October 1985. Moloise was accused of murdering a black police officer. The African National Congress claimed responsibility for the murder and repudiated the claim that Moloise was involved. The US and the Soviet Union warned the apartheid government against the execution, but the government still decided to go ahead with it. The execution aroused so much anger in the townships that violence escalated. It spiraled out of control and subsequently reached areas like the Johannesburg CBD which had previously remained sheltered from it. ","Accessed 11/4/2019
 
 https://www.sahistory.org.za/dated-event/south-african-black-activist-and-poet-benjamin-moloise-hanged-allegedly-killing-police
 
 
 https://www.sahistory.org.za/people/malesella-benjamin-moloise"
-MOT##SA,"Motjuwadi, Stanley","M
-",,1991,South Africa,,,,,,"[Selected Poems] 
+MOT30SA,"Motjuwadi, Stanley","M
+",1930,1989,South Africa,[none],[none],,[none],[none],,"[Selected Poems] 
 
 Taken for a Ride (featured in In the Country of the Heart: Love Poems from South Africa)
 
@@ -667,7 +775,10 @@ https://www.theguardian.com/politics/1999/nov/20/1"
 MTS40SA,"Mtshali, Oswald Joseph","M
 ",1940-01-17,Alive,South Africa,"University of Iowa
 Columbia University","Iowa City, Iowa, USA
-New York, New York, USA",,,,"Sounds of a Cowhide Drum (1971)
+New York, New York, USA",,"1974
+[none]","[unknown]
+[unknown]
+",,"Sounds of a Cowhide Drum (1971)
 
 Fireflames (1980)
 
@@ -677,27 +788,30 @@ https://www.britannica.com/biography/Oswald-Mbuyiseni-Mtshali
 
 https://www.sahistory.org.za/people/oswald-mbuyiseni-mtshali"
 MUR64GB,"Murray, Charles","M
-",1864-09-27,1941-04-12,Scotland,,,,,,"A Handful of Heather (1893)
+",1864-09-27,1941-04-12,Scotland,[none],[none],,[none],[none],,"A Handful of Heather (1893)
 Hamewith (1900)
 The Sough o' War (1917)
  In the Country Places (1920)",,,"Not from South Africa, but wrote most of his poetry while in South Africa for the Boer War.","Accessed 12/6/2019
 
 https://www.scottishpoetrylibrary.org.uk/poet/charles-murray/"
 NAU10SA,"Naude, Adele",F,1910,1981,"South Africa
-",,,,,,"Pity the Spring (1953)
+",[none],[none],,[none],"[none]
+",,"Pity the Spring (1953)
 No Longer at Ease (1956)
 Only a Setting Forth (1965) 
 Time and Memory (1974)",,,,"Accessed 11/4/2019
 
 https://www.encyclopedia.com/women/dictionaries-thesauruses-pictures-and-press-releases/naude-adele-1910-1981"
 NEA##SA,"Neale, H. Woodhouse [Mome]","M
-",,,South Africa,,,,,,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,Part of the Veldsingers' Club. Could not find biographical information,
+",[none],[none],South Africa,[none],[none],,[none],[none],,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,Part of the Veldsingers' Club. Could not find biographical information,
 NEL##SA,"Nelson, Robert Alexander","M
-",,,South Africa,,,,,,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,Part of the Veldsingers' Club. Could not find biographical information,
+",[none],[none],South Africa,[none],[none],,[none],[none],,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,Part of the Veldsingers' Club. Could not find biographical information,
 NOR42SA,"Nortje, Arthur","M
-",1942-12-16,1970-12-11,South Africa,"University of the Western Cape (BA)
-Jesus College at Oxford (BA/MA)","Cape Town, South Africa
-Oxford, England",,,," Anatomy of Dark: Collected Poems of Arthur Nortje (2000)
+",1942-12-16,1970-12-11,South Africa,"University of the Western Cape
+Jesus College at Oxford","Cape Town, South Africa
+Oxford, England",,"1965
+1967","BA
+BA/MA",," Anatomy of Dark: Collected Poems of Arthur Nortje (2000)
 
 Dead roots: poems, Heinemann, 1973,",,,"Mentor/teacher was Dennis Brutus, who called him “perhaps the best South African poet of our time.” His poems deal extensively with his own personal alienation, being classified as coloured in apartheid South Africa, and his experiences of exile. Died young of a drug overdose.","Accessed 11/7/2019
 
@@ -705,18 +819,24 @@ https://www.sahistory.org.za/article/biography-arthur-nortje-kangkang-yang
 
 https://www.poetryfoundation.org/poets/arthur-nortje"
 NTU42SA,"Ntuli, Pitika","M
-",1942,Alive,South Africa,Pratt Institute,"New York, USA",,,,The Poetry (2014),,,Spent 32 years in exile in Swaziland and the UK. Poet and sculptor.,"Accessed 11/7/2019
+",1942,Alive,South Africa,"Pratt Institute
+Brunel University","New York, USA
+London, England",,"1977
+1985","MFA
+MFA",,The Poetry (2014),,,Spent 32 years in exile in Swaziland and the UK. Poet and sculptor.,"Accessed 11/7/2019
 
 https://www.sahistory.org.za/people/pitika-ntuli
 
-https://badilishapoetry.com/pitika-ntuli/"
+https://badilishapoetry.com/pitika-ntuli/
+
+https://www.pitikantuli.com/biography/"
 OCU42UG,"Oculi, Okello","M
-",1942,Alive,Uganda,Makerere University,"Kampala, Uganda",,1967,,"Orphan (1968)
+",1942,Alive,Uganda,Makerere University,"Kampala, Uganda",,1967,[unknown],,"Orphan (1968)
 Malak: An African Political Poem (1976)",,,,"Accessed 01/15/2019
 
 https://www.britannica.com/biography/Okello-Oculi"
 OFE50NI,"Ofeimun, Odia","M
-",1950-03-16,Alive,Nigeria,University of Ibadan,"Ibadan, Nigeria",,1970,,"    The Poet Lied (1980)
+",1950-03-16,Alive,Nigeria,University of Ibadan,"Ibadan, Nigeria",,1970,[unknown],,"    The Poet Lied (1980)
     A Handle for The Flutist (1986)
     Under African Skies (Lagos: Hornbill House, 1990; ISBN 978-0951677407)
     London Letter and Other Poems (Lagos: Hornbill House, 2000; ISBN 978-9783527041)
@@ -728,9 +848,11 @@ OFE50NI,"Ofeimun, Odia","M
     Nigeria The Beautiful: Poems for Dance Drama (2011)",,,"His work appeared in the anthology Poems of Black Africa, edited by Wole Soyinka.","Accessed 11/7/2019
 
 https://www.poetryinternational.org/pi/poet/27223/Odia-Ofeimun/en/nocache"
-OGU40NI,"Ogundipe-Leslie, Omolara",F,1940-12-27,2019-06-18,Nigeria,"University of Ibadan 
+OGU40NI,"Ogundipe-Leslie, Omolara",F,1940-12-27,2019-06-18,Nigeria,"University College Ibadan 
 Leiden University","Ibadan, Nigeria
-Leiden, Netherlands",,1963,,"Sew the Old Days and Other Poems, 1985
+Leiden, Netherlands",,"1963
+[none]","[unknown]
+[unknown]",,"Sew the Old Days and Other Poems, 1985
 
 Re-Creating Ourselves: African Women & Critical Transformations, 1994 [Poetry and critical essays.]",,,"While at Ibadan, she joined various organizations and clubs, including writing poetry and criticisms for the Mbari Artists, Writers Club, and The Horn. (Interestingly The Horn has seen other literary “big names” including Wole Soyinka and Abiola Irele). Ogundipe was in the leadership of feminist activism and gender studies in Africa for decades. She was the Founder and Director of the Foundation for International Education and Monitoring, which is dedicated to teaching young women the doctrine and virtues of feminist theories and gender equality.","Accessed 11/7/2019
 
@@ -740,7 +862,9 @@ https://en.wikipedia.org/wiki/Molara_Ogundipe"
 OKA21NI,"Okara, Gabriel","M
 ",1921-04-24,2019-03-25,Nigeria,"Yaba Higher College
 Northwestern University","Lagos, Nigeria
-Evanston, Illinois, USA",,1949,,"1978: The Fisherman's Invocation (poems)
+Evanston, Illinois, USA",,"[none]
+1949","[unknown]
+[unknown]",,"1978: The Fisherman's Invocation (poems)
 1981: Little Snake and Little Frog (for children)
 1992: An Adventure to Juju Island (for children)
 2005: The Dreamer, His Vision (poems)
@@ -753,7 +877,7 @@ https://www.jrank.org/literature/pages/5280/Gabriel-Okara-(Gabriel-Inomotimi-Gba
 
 https://www.britannica.com/biography/Gabriel-Okara"
 OKI32NI,"Okigbo, Christopher","M
-",1932-08-16,1967-09,Nigeria,"University College, Ibadan","Ibadan, Nigeria",,1956,,"Heavensgate (1962) 
+",1932-08-16,1967-09,Nigeria,"University College, Ibadan","Ibadan, Nigeria",,1956,[unknown],,"Heavensgate (1962) 
 
 the posthumous collections Labyrinths with Path of Thunder (1971) 
 
@@ -766,13 +890,15 @@ https://www.encyclopedia.com/arts/encyclopedias-almanacs-transcripts-and-maps/ok
 https://www.poetryfoundation.org/poets/christopher-okigbo
 
 https://www.britannica.com/biography/Christopher-Okigbo"
-OPO##GH,"Opoku, A. A. ","M
-",,,Ghana,,,,,,"Poem included in: Poems from Black Africa. Edited by Langston Hughes. Indiana University Press.
+OPO19GH,"Opoku, A. A. ","M
+",1919,[none],Ghana,[none],[none],,[none],[none],,"Poem included in: Poems from Black Africa. Edited by Langston Hughes. Indiana University Press.
  1963.",,,"Cannot find biographical information. Wrote in Twi, translated.","
-"
+Accessed 03/01/2020
+
+https://books.google.com/books?id=gfH2A6AhZ7wC&pg=PA154&lpg=PA154&dq=Opoku,+A.+A.+twi&source=bl&ots=evqnUB6Ufp&sig=ACfU3U3CYuVbau1yXgIUzV4mw7Sv2U3Ftw&hl=en&sa=X&ved=2ahUKEwi57bSLofrnAhVvIjQIHcsyB-8Q6AEwBHoECAsQAQ#v=onepage&q=Opoku%2C%20A.%20A.%20twi&f=false"
 OPP14SA,"Opperman, Diederik Johannes [D. J.]","M
 ",1914-09-29,1985-09-22,"South Africa
-",University of Natal,"Natal, South Africa",,1935,,"    Heilige Beeste (""Holy cows"" 1943)
+",University of Natal,"Natal, South Africa",,1935,[unknown],,"    Heilige Beeste (""Holy cows"" 1943)
     Negester oor Ninevé (""Nine star over Niniveh""
     Joernaal van Jorik (""The Journal of Jorik"" 1949)
     Engel uit die klip (""Angel from the Stone"" 1948)
@@ -789,7 +915,8 @@ PBI31UG,"P'Bitek, Okot","M
 ",1931-06-07,1982-07-20,Uganda,"University of Bristol
 University of Oxford ","Bristol, England
 Oxford, England
-",,1963,,"Song of Lawino (1966)
+",,1963,"[unknown]
+[unknown]",,"Song of Lawino (1966)
 
 Song of Ocol (1970)
 
@@ -799,13 +926,14 @@ https://www.britannica.com/biography/Okot-pBitek
 
 https://www.encyclopedia.com/people/literature-and-arts/miscellaneous-english-literature-20th-cent-biographies/okot-pbitek"
 PAT03SA,"Paton, Alan","M
-",1903-01-11,1988-04-12,South Africa,University of Natal,"Natal, South Africa",,1922,,,,,"Noted as writing poetry, but no specific collections of poetry published.  [From Encyclopedia.com: ""From 1919 to 1922, Paton attended the University of Natal, from which he graduated with degrees in science and education. At this time, Paton began writing poetry and drama.""","Accessed 11/7/2019
+",1903-01-11,1988-04-12,South Africa,University of Natal,"Natal, South Africa",,1922,"[unknown]
+",,,,,"Noted as writing poetry, but no specific collections of poetry published.  [From Encyclopedia.com: ""From 1919 to 1922, Paton attended the University of Natal, from which he graduated with degrees in science and education. At this time, Paton began writing poetry and drama.""","Accessed 11/7/2019
 
 https://www.encyclopedia.com/arts/encyclopedias-almanacs-transcripts-and-maps/paton-alan
 
 https://www.britannica.com/biography/Alan-Stewart-Paton"
 PET32GA,"Peters, Lenrie","M
-",1932-09-01,2009-05-28,Gambia,Trinity College,"Cambridge, England",,1959,,"Poems, Mbari Press, 1964.
+",1932-09-01,2009-05-28,Gambia,Trinity College,"Cambridge, England",,1959,[unknown],,"Poems, Mbari Press, 1964.
 
 Satellites, Heinemann, 1967.
 
@@ -817,19 +945,23 @@ https://www.britannica.com/biography/Lenrie-Peters
 
 https://www.encyclopedia.com/education/news-wires-white-papers-and-books/peters-lenrie-1932"
 PHI21SA,"Philander, P. J. [Peter John]","M
-",1921-11-05,2006,South Africa,,,,,,"Zimbabwe (1968)
+",1921-11-05,2006-02-07,South Africa,University of South Africa,"Pretoria, South Africa",,[none],[none],,"Uurglas (1955)
+
+Zimbabwe (1968)
 
 [Mentioned in: LOUW, W. E. G. ""A New Look In Writing."" Times, 31 May 1960.]",,,Very little biographical information found.,"Accessed 11/7/2019
 
-https://www-jstor-org.libproxy.unl.edu/stable/20109563?seq=1#metadata_info_tab_contents"
-PLA76SA,"Plaatje, Sol","M
-",1876-10-09,1932-06-19,South Africa,,,,,,"Sechuana Proverbs and Their European Equivalents (1916), the Sechuana Phonetic Reader (with the linguist Daniel Jones) in the same year, and the collection Bantu Folk-Tales and Poems ",,,,"Accessed 11/7/2019
+https://www-jstor-org.libproxy.unl.edu/stable/20109563?seq=1#metadata_info_tab_contents
+
+https://books.google.com/books?id=cw5bDwAAQBAJ&pg=PT70&lpg=PT70&dq=Philander,+P.+J.+%5BPeter+John%5D+university&source=bl&ots=l1p6lbXrp7&sig=ACfU3U2FGtHU1CYxpDwp8N-lY5_Fkma4gQ&hl=en&sa=X&ved=2ahUKEwjJp_rtovrnAhVyNX0KHdAXCpAQ6AEwAXoECAkQAQ#v=onepage&q=Philander%2C%20P.%20J.%20%5BPeter%20John%5D%20university&f=false"
+PLA76SA,"Plaatje, Solomon Tshekisho","M
+",1876-10-09,1932-06-19,South Africa,[none],[none],,[none],[none],,"Sechuana Proverbs and Their European Equivalents (1916), the Sechuana Phonetic Reader (with the linguist Daniel Jones) in the same year, and the collection Bantu Folk-Tales and Poems ",,,,"Accessed 11/7/2019
 
 https://www.sahistory.org.za/people/solomon-tshekisho-plaatje
 
 https://www.britannica.com/biography/Solomon-Tshekiso-Plaatje"
 PLO03SA,"Plomer, William","M
-",1903-12-10,1973-09-21,South Africa,,,,,,"    1927. Notes for Poems. Hogarth Press, London (poetry)
+",1903-12-10,1973-09-21,South Africa,[none],[none],,[none],[none],,"    1927. Notes for Poems. Hogarth Press, London (poetry)
 
     1929. The Family Tree. Hogarth, London (poetry)
    
@@ -862,8 +994,23 @@ PLO03SA,"Plomer, William","M
 https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/plomer-william
 
 https://www.britannica.com/biography/William-Charles-Franklyn-Plomer"
-,"Pretorius, S. J. [Sarel Jacob]","M
-",1917-01-07,1995,South Africa,,,,,,,,,Very little biographical information.,"Accessed 11/7/2019
+PRE17SA,"Pretorius, S. J. [Sarel Jacob]","M
+",1917-01-07,1995,South Africa,North-West University,"Potchefstroom, South Africa",,1937,"[unknown]
+",,"Vonke , 1943
+The Worker and Other Poems , 1945
+Reverse , 1948
+The Silent God , 1949
+Gray walls , 1953
+The Mummy , 1963
+Archrobate , 1969
+The battle between heaven and hell , 1972
+Lemma , 1974
+Album , 1967
+Smartlap , 1981
+The Serusite , 1982
+History , 1991
+Almost posthumously , 1995
+Multiplication , 2000",,,Very little biographical information.,"Accessed 11/7/2019
 
 https://af.wikipedia.org/wiki/Sarel_Jacob_Pretorius
 
@@ -872,7 +1019,12 @@ PRI12SA,"Prince, Frank Templeton [F. T.]","M
 ",1912-09-13,2003-08-07,South Africa,"Balliol College
 Oxford University 
 Princeton University","Oxford, England
-Princeton, New Jersey, USA",,,,"Poems (1938) Faber and Faber
+Oxford, England
+Princeton, New Jersey, USA",,"[none]
+[none]
+[none]","[unknown]
+[unknown]
+[unknown]",,"Poems (1938) Faber and Faber
 
 Soldiers Bathing (1954)
 
@@ -898,8 +1050,8 @@ https://www.jrank.org/literature/pages/5451/F-T-Prince-(Frank-Templeton-Prince).
 
 
 "
-PRI80SA,"Pringle, Thomas","M
-",1780-01-05,1834-12-05,South Africa,University of Edinburgh,"Edinburgh, Scotland",,,,"Ephemerides (1828) 
+PRI80GB,"Pringle, Thomas","M
+",1780-01-05,1834-12-05,Scotland,University of Edinburgh,"Edinburgh, Scotland",,1811,[unknown],,"Ephemerides (1828) 
 
 African Sketches (1834)",,,Born in Scotland. He immigrated to South Africa in 1820. He published a newspaper and a magazine in Cape Town.,"Accessed 11/7/2019
 
@@ -908,9 +1060,9 @@ https://www.britannica.com/biography/Thomas-Pringle
 https://rpo.library.utoronto.ca/poets/pringle-thomas
 "
 QUE##??,"Quette, Joe","M
-",,,,,,,,,,,,Reverend. Mentioned in line 8 of the data. No biographical information found; ,
+",[none],[none],[none],[none],[none],,[none],[none],,[none],,,Reverend. Mentioned in line 8 of the data. No biographical information found; ,
 RAB01MAD,"Rabearivelo, Jean-Joseph","M
-",1901-03-04,1937-06-22,Madagascar,,,,,,"    La Coupe de cendres. Antananarivo: G. Pitot de la Beaujardière, 1924.
+",1901-03-04,1937-06-22,Madagascar,[none],[none],,[none],[none],,"    La Coupe de cendres. Antananarivo: G. Pitot de la Beaujardière, 1924.
     Sylves. Antananarivo: Imprimerie de l'Imerina, 1927.
     Volumes. Antananarivo: Imprimerie de l'Imerina, 1928.
     Presque-songes. Antananarivo: Imprimerie de l'Imerina, 1934.
@@ -927,7 +1079,7 @@ https://www.britannica.com/biography/Jean-Joseph-Rabearivelo
 
 https://en.wikipedia.org/wiki/Jean-Joseph_Rabearivelo"
 RAB13MAD,"Rabemananjara, Jacques","M
-",1913-06-23,2005-04-01,Madagascar,,,,,,"    Sur les marches du soir. Gap: Ophrys, 1940.
+",1913-06-23,2005-04-01,Madagascar,[none],[none],,[none],[none],,"    Sur les marches du soir. Gap: Ophrys, 1940.
     Rites millénaires. Paris: Seghers, 1955.
     Antsa. Paris: Présence Africaine, 1956.
     Lamba. Paris: Présence Africaine, 1956.
@@ -941,25 +1093,29 @@ https://www.britannica.com/biography/Jacques-Rabemananjara
 
 https://encyclopedia2.thefreedictionary.com/Jacques+Rabemananjara"
 RAN14MAD,"Ranaivo, Flavien","M
-",1914-05-14,1999-12-20,Madagascar,,,,,,"L’Ombre et le vent (1947; “Shadow and Wind”), Mes chansons de toujours (1955; “My Lifelong Songs”), and Le Retour au bercail (1962; “Return to the Fold”)",,,"From Britannica.com: ""Ranaivo followed Jean-Joseph Rabéarivelo in adapting traditional Malagasy poetry into French, and his crisp and sometimes impudent and slangy use of language reflects the vernacular traditions that inspired him.""","Accessed 11/8/2019
+",1914-05-14,1999-12-20,Madagascar,[none],[none],,[none],[none],,"L’Ombre et le vent (1947; “Shadow and Wind”), Mes chansons de toujours (1955; “My Lifelong Songs”), and Le Retour au bercail (1962; “Return to the Fold”)",,,"From Britannica.com: ""Ranaivo followed Jean-Joseph Rabéarivelo in adapting traditional Malagasy poetry into French, and his crisp and sometimes impudent and slangy use of language reflects the vernacular traditions that inspired him.""","Accessed 11/8/2019
 
 https://www.britannica.com/biography/Flavien-Ranaivo
 
 https://www.oxfordreference.com/view/10.1093/oi/authority.20110803100403525"
 RIV31SA,"Rive, Richard","M
-",1931-03-01,1989-06-04,South Africa,"University of Cape Town (BA)
-Columbia University (MA)
-Magdalen College (PhD)","Cape Town, South Africa
+",1931-03-01,1989-06-04,South Africa,"University of Cape Town
+Columbia University
+Magdalen College","Cape Town, South Africa
 New York, NY, USA
 Oxford, England",,"1949
 1966
-1974",,,,,"Novelist who edited the anthology of poetry Modern African Prose (1964). In 1963 he was given a scholarship organised by Es'kia Mphahlele, the editor of Drum magazine, in which Rive published some of his early writing. Stabbed to death in Cape Town at age 58.","Accessed 11/8/2019
+1974","BA
+MA
+PhD
+",,[none],,,"Novelist who edited the anthology of poetry Modern African Prose (1964). In 1963 he was given a scholarship organised by Es'kia Mphahlele, the editor of Drum magazine, in which Rive published some of his early writing. Stabbed to death in Cape Town at age 58.","Accessed 11/8/2019
 
 https://www.britannica.com/biography/Richard-Rive
 
 https://www.blackpast.org/global-african-history/rive-richard-moore-1931-1989/
 "
-ROU26SA,"Rousseau, Ina",F,1926,2005,South Africa,University of Stellenbosch,"Stellenbosch, South Africa",,,,"1954 Die verlate tuin, Human & Rousseau
+ROU26SA,"Rousseau, Ina",F,1926,2005,South Africa,University of Stellenbosch,"Stellenbosch, South Africa",,[none],"[unknown]
+",,"1954 Die verlate tuin, Human & Rousseau
 1970 Taxa, Human & Rousseau
 1978 Kwiksilwersirkel, Human & Rousseau
 1980 Heuningsteen, Human & Rousseau
@@ -972,7 +1128,7 @@ http://www.humanrousseau.com/Authors/604
 
 https://www.poetryfoundation.org/poets/ina-rousseau"
 RUN64SA,"Runcie, John","M
-",1864,1939,South Africa,,,,,,"[From wikipedia] 
+",1864,1939,South Africa,[none],[none],,[none],[none],,"[From wikipedia] 
     Songs by the Stoep (1905) (external scan)
     A Treasury of South African Poetry and Verse (1907) edited by Edward Heath Crouch
         A Slumber Song
@@ -983,13 +1139,15 @@ RUN64SA,"Runcie, John","M
 
 https://en.wikisource.org/wiki/Author:John_Runcie"
 SAR41NI,"Saro-Wiwa, Ken ","M
-",1941-10-10,1995-11-10,Nigeria,University of Ibadan,"Ibadan, Nigeria",,,,"From wikipedia: ""A collection of handwritten letters by Ken Saro-Wiwa were donated to Maynooth University by Sister Majella McCarron, also in the collection are 27 poems, recordings of visits and meetings with family and friends after Saro-Wiwa's death, a collection of photographs and other documents. """,,,Executed by hanging in after a trial that was condemned by foreign human rights groups on the subject of the deaths of four Ogoni chiefs at a political rally. ,"Accessed 11/8/2019
+",1941-10-10,1995-11-10,Nigeria,University of Ibadan,"Ibadan, Nigeria",,1965,[unknown],,"From wikipedia: ""A collection of handwritten letters by Ken Saro-Wiwa were donated to Maynooth University by Sister Majella McCarron, also in the collection are 27 poems, recordings of visits and meetings with family and friends after Saro-Wiwa's death, a collection of photographs and other documents. """,,,Executed by hanging in after a trial that was condemned by foreign human rights groups on the subject of the deaths of four Ogoni chiefs at a political rally. ,"Accessed 11/8/2019
 
 https://www.britannica.com/biography/Ken-Saro-Wiwa
 
-https://www.dw.com/en/why-nigerian-activist-ken-saro-wiwa-was-executed/a-18837442"
+https://www.dw.com/en/why-nigerian-activist-ken-saro-wiwa-was-executed/a-18837442
+
+https://books.google.com/books?id=d9xaDOHuzgQC&pg=PA303&lpg=PA303&dq=Saro-Wiwa,+Ken+university+of+ibadan+graduate&source=bl&ots=CWJdJD1fx3&sig=ACfU3U3kS-nqB-IR0Lqab_fWZkBHHp-QYQ&hl=en&sa=X&ved=2ahUKEwjWsIjrrPrnAhWSIzQIHabNCBUQ6AEwBHoECAsQAQ#v=onepage&q=Saro-Wiwa%2C%20Ken%20university%20of%20ibadan%20graduate&f=false"
 SCU55SA,"Scully, William Charles [W. C.] ","M
-",1855-10-29,1943-08-25,South Africa,,,,,,"Poems, London, Unwin, 1885
+",1855-10-29,1943-08-25,South Africa,[none],[none],,[none],[none],,"Poems, London, Unwin, 1885
 The Wreck of the Grosvenor, and other South African poems. South Africa, 1886.",,,,"Accessed 11/8/2019
 
 https://en.wikipedia.org/wiki/William_Charles_Scully
@@ -997,13 +1155,13 @@ https://en.wikipedia.org/wiki/William_Charles_Scully
 
 https://openlibrary.org/authors/OL1284398A/W._C._Scully"
 SEL##SA,"Selwyn, W. ","M
-",,,South Africa,,,,,,"Included in ""A Treasury of South African Poetry"" edited by Edward Heath Crouch.
+",[none],[none],South Africa,[none],[none],,[none],[none],,"Included in ""A Treasury of South African Poetry"" edited by Edward Heath Crouch.
 
 Poem title: ""The Cape of Good Hope. (A Patriotic Song)""",,,No biographical information found.,"Accessed 11/8/2019
 
 https://en.wikisource.org/wiki/A_Treasury_of_South_African_Poetry_and_Verse/W._Selwyn"
 SEN06SEN,"Senghor, Léopold Sédar ","M
-",1906-10-09,2001-12-20,Senegal,University of Paris,"Paris, France",,,,"    Prière aux masques (c. 1935 – published in collected works during the 1940s).
+",1906-10-09,2001-12-20,Senegal,University of Paris,"Paris, France",,1935,[unknown],,"    Prière aux masques (c. 1935 – published in collected works during the 1940s).
     Chants d'ombre (1945)
     Hosties noires (1948)
     Anthologie de la nouvelle poésie nègre et malgache (1948)
@@ -1019,7 +1177,7 @@ https://www.poetryfoundation.org/poets/leopold-sedar-senghor
 
 https://www.britannica.com/biography/Leopold-Senghor"
 SEP32SA,"Sepamla, Sydney Sipho","M
-",1932-09-22,2007-01-09,South Africa,Pretoria Normal College,"Pretoria, South Africa",,,,"Hurry Up to It! (1975) 
+",1932-09-22,2007-01-09,South Africa,Pretoria Normal College,"Pretoria, South Africa",,1960s,[unknown],,"Hurry Up to It! (1975) 
 
 The Soweto I Love (1977)
 
@@ -1030,9 +1188,9 @@ From Gorée to Soweto (1988)",,,,"Accessed 11/8/2019
 https://www.sahistory.org.za/people/sydney-sipho-sepamla
 
 https://www.poetryfoundation.org/poets/sipho-sepamla"
-SER44SA,"Serote, Morgane Wally","M
+SER44SA,"Serote, Mongane Wally","M
 ",1944-05-08,Alive,South Africa,"Columbia University
-","New York, NY, USA",,1979,,"Yakhal’inkomo (The Cry of Cattle at the Slaughterhouse, 1972)
+","New York, NY, USA",,1979,[unknown],,"Yakhal’inkomo (The Cry of Cattle at the Slaughterhouse, 1972)
 
 No Baby Must Weep (1975)
 
@@ -1044,9 +1202,10 @@ https://www.sahistory.org.za/people/mongane-wally-serote
 
 https://www.poetryfoundation.org/poets/mongane-wally-serote"
 SKI##SA,"Skinner, Milton Cox","M
-",,,South Africa,,,,,,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,Part of the Veldsinger's Club. Cannot find biographical info.,
+",[none],[none],South Africa,[none],[none],,[none],"[none]
+",,"The Veldsingers' Club. Published by J. M. Dent and Sons, Ltd. Anthology of poets in South Africa living in Johannesburg",,,Part of the Veldsinger's Club. Cannot find biographical info.,
 SLA76SA,"Slater, Francis Carey [F. C.]","M
-",1876,1958,South Africa,University of South Africa [Honorary Degree],"Pretoria, South Africa",,1947,,"    A Treasury of South African Poetry and Verse (1907) edited by Edward Heath Crouch
+",1876,1958,South Africa,University of South Africa,"Pretoria, South Africa",,1947,Honorary,,"    A Treasury of South African Poetry and Verse (1907) edited by Edward Heath Crouch
         The Hogsback Peak
         In the Matoppos
         In a Maize Field
@@ -1071,7 +1230,7 @@ https://www.britannica.com/art/South-African-literature/In-English#ref56899
 
 https://en.wikisource.org/wiki/Author:Francis_Carey_Slater"
 SMA36SA,"Small, Adam","M
-",1936-12-21,2016-06-25,South Africa,University of Cape Town,"Cape Town, South Africa",,1963,,"“Verse van die Liefde” (Love Poems, 1957)  
+",1936-12-21,2016-06-25,South Africa,University of Cape Town,"Cape Town, South Africa",,1963,[unknown],,"“Verse van die Liefde” (Love Poems, 1957)  
 
 “Klein Simbool: Prosaverse” (Little Symbol: Poetry in Prose Form, 1958)
 
@@ -1087,8 +1246,11 @@ https://www.poetryinternational.org/pi/poet/18033/Adam-Small/en/tile
 
 http://theconversation.com/adam-small-south-africas-poet-prophet-and-man-of-the-people-has-gone-home-61758"
 SOL34NI,"Soyinka, Wole","M
-",1934-07-13,Alive,Nigeria,University College of Ibadan and University of Leeds,"Ibadan, Nigeria and Leeds, England
-",,1958,," Idanre, and Other Poems (1967)
+",1934-07-13,Alive,Nigeria,"University College of Ibadan
+University of Leeds","Ibadan, Nigeria
+Leeds, England
+",,1958,"[unknown]
+[unknown]",," Idanre, and Other Poems (1967)
 
 Poems from Prison (1969)
 
@@ -1108,7 +1270,7 @@ https://www.britannica.com/biography/Wole-Soyinka
 https://www.nobelprize.org/prizes/literature/1986/soyinka/biographical/
 "
 THO32SA,"Thomson, William Rodger","M
-",1832,1867,South Africa,,,,,,"
+",1832,1867,South Africa,[none],[none],,[none],[none],,"
 Poems, Essays and Sketches by the late William Rodger Thomson with a Memoir
 
 
@@ -1117,8 +1279,8 @@ Featured in ""A Treasury of South African Poetry"" edited by Edward Heath Crouch
 https://en.wikisource.org/wiki/A_Treasury_of_South_African_Poetry_and_Verse/William_Rodger_Thomson
 
 http://worldcat.org/identities/lccn-n2006036335/"
-UTA31CO,"U'Tamsi, Tchicaya","M
-",1931-08-25,1988-04-22,Republic of the Congo,,,,,,"Le Mauvais Sang (1955)“Bad Blood”)
+UTA31CO,"U Tam'si, Tchicaya","M
+",1931-08-25,1988-04-22,Republic of the Congo,[none],[none],,[none],[none],,"Le Mauvais Sang (1955)“Bad Blood”)
 
 Feu de brousse (1957; Brush Fire)
 
@@ -1139,7 +1301,7 @@ https://www.poetryfoundation.org/poets/tchicaya-u-tam%E2%80%99si
 
 https://www.britannica.com/biography/Tchicaya-U-Tamsi-Congolese-poet"
 VAN94SA,"van den Heever, Toon","M
-",1894,1956,South Africa,,,,,,"    Gerwe uit die erfpag van Skoppensboer, Afrikaanse pers-boekhandel, 1948
+",1894,1956,South Africa,[none],[none],,[none],[none],,"    Gerwe uit die erfpag van Skoppensboer, Afrikaanse pers-boekhandel, 1948
 
     Die speelman van Dorestad, APB, 1949
 
@@ -1149,7 +1311,7 @@ https://af.wikipedia.org/wiki/Toon_van_den_Heever"
 "
 VAN16SA","van Heerden, Ernst","M
 ",1916-03-20,1997-09-30,South Africa,"University of Stellenbosch
-","Stellenbosch, South Africa",,1936,,"Ses Gedigte (title means ""Six Poems""), Pro Ecclesia-Drukkery (Stellenbosh, South Africa), 1940.
+","Stellenbosch, South Africa",,1936,[unknown],,"Ses Gedigte (title means ""Six Poems""), Pro Ecclesia-Drukkery (Stellenbosh, South Africa), 1940.
 
 Die Sewe Vrese, Constantia (Johannesburg, South Africa), 1941.
 
@@ -1199,7 +1361,7 @@ https://www.encyclopedia.com/arts/educational-magazines/van-heerden-ernst-1916-1
 
 http://www.stellenboschwriters.com/vheerdene.html"
 VAN06SA,"Vanwyk Louw, Nicholaas Petrus","M
-",1906-06-11,1970-06-18,South Africa,University of Cape Town,"Cape Town, South Africa",,,,"Alleenspraak (""Monologue"" 1935) 
+",1906-06-11,1970-06-18,South Africa,University of Cape Town,"Cape Town, South Africa",,1929,[unknown],,"Alleenspraak (""Monologue"" 1935) 
 
 Die halwe kring (""The Semicircle"" 1937)
 
@@ -1212,7 +1374,7 @@ http://www.thepresidency.gov.za/national-orders/recipient/nicolaas-petrus-van-wy
 
 https://www.rem.routledge.com/articles/van-wyk-louw-nicolaas-petrus-1906-1970"
 VIN62SA,"Vine Hall, Arthur","M
-",1862,1957,South Africa,,,,,,"The Submarine and the Aeroplane, 1917
+",1862,1957,South Africa,[none],[none],,[none],[none],,"The Submarine and the Aeroplane, 1917
 
 Poems of a South African, 1929",,,Cannot find much biographical information.,"Accessed 11/11/2019
 
@@ -1220,7 +1382,7 @@ https://www.geni.com/people/Arthur-Vine-Hall/6000000083504951477
 
 "
 WAL75GB,"Walrond, Francis Ernley","M
-",1875,1950,Scotland,,,,,,"The Gods of Africa and other Poems in London in 1912 
+",1875,1950,Scotland,[none],[none],,[none],[none],,"The Gods of Africa and other Poems in London in 1912 
 
 Poem, ""Eve,"" was first published for a centenary collection of South African verse in 1925.",,,"He moved to South Africa in 1904 and earned a living there as a bank manager, in Pretoria, it seems, until his retirement in 1934, when he moved to Isipingo, Natal. Walrond was a co-founder of the Veldsingers' Club.","Accessed 11/11/2019
 
@@ -1230,7 +1392,7 @@ https://rpo.library.utoronto.ca/poets/walrond-francis-ernley
 
 https://www.poemhunter.com/francis-ernley-walrond/"
 WAT24SA,"Watermeyer, E. B.","M
-",1824,1867,South Africa,,,,,,"Poem ""After a Storm"" featured in ""A Treasury of South African Poetry and Verse"" edited by Edward Heath Crouch. ",,,"Very little biographical info. Mentioned in the book ""The Concise Cambridge History of English Literature."" Potentially Edigius Benedictus Watermeyer, founding member of Cape Legislative Assembly.","Accessed 11/11/2019
+",1824,1867,South Africa,[none],[none],,[none],[none],,"Poem ""After a Storm"" featured in ""A Treasury of South African Poetry and Verse"" edited by Edward Heath Crouch. ",,,"Very little biographical info. Mentioned in the book ""The Concise Cambridge History of English Literature."" Potentially Edigius Benedictus Watermeyer, founding member of Cape Legislative Assembly.","Accessed 11/11/2019
 
 https://en.wikisource.org/wiki/A_Treasury_of_South_African_Poetry_and_Verse/E._B._Watermeyer
 
@@ -1238,7 +1400,7 @@ https://en.wikipedia.org/wiki/Egidius_Benedictus_Watermeyer
 
 https://books.google.com/books?id=PoI6AAAAIAAJ&pg=PA927&lpg=PA927&dq=e+b+watermeyer+poet&source=bl&ots=2c7hhC4M_p&sig=ACfU3U3j8_GgDir120VHMr888XT39xgehQ&hl=en&sa=X&ved=2ahUKEwiF0Pbm_OLlAhULd6wKHdj6B7cQ6AEwB3oECAUQAQ#v=onepage&q=e%20b%20watermeyer%20poet&f=false"
 WAT17SA,"Watermeyer, Gottfried Andreas [G. A.]","M
-",1917-10-15,1972-06-94,South Africa,University of Stellenbosch,"Stellenbosch, South Africa",,[did not graduate],,"1948 	Sekel en simbaal
+",1917-10-15,1972-06-94,South Africa,University of Stellenbosch,"Stellenbosch, South Africa",,[none],[unknown],,"1948 	Sekel en simbaal
 1954 	Atlantis or The crying of the waters
 1957 	Die Republiek van duisend jaar
 1961 	Taalfeeskwatryne
@@ -1247,7 +1409,7 @@ WAT17SA,"Watermeyer, Gottfried Andreas [G. A.]","M
 
 https://af.wikipedia.org/wiki/G.A._Watermeyer"
 WRI20SA,"Wright, David","M
-",1920-02-23,1994-08-28,South Africa,"Oriel College, Oxford","Oxford, England",,1942,,"    Poems and Versions, Carcanet Press (1992)
+",1920-02-23,1994-08-28,South Africa,"Oriel College, Oxford","Oxford, England",,1942,[unknown],,"    Poems and Versions, Carcanet Press (1992)
     Elegies, Greville (1990)
     Selected Poems, Carcanet Press (1988)
     Metrical Observations, Carcanet (1980)

@@ -9,5 +9,28 @@ class Person < ApplicationRecord
     str
   end
 
+  rails_admin do
+    list do
+      field :name
+      field :gender
+      field :date_birth
+      field :date_death
+      field :cap
+      field :poet_id
+      field :locations do
+        label "Nationality"
+      end
+    end
+    show do
+      configure :locations do
+        label "Nationality"
+      end
+    end
+    edit do
+      configure :locations do
+        label "Nationality"
+      end
+    end
+  end
 
 end

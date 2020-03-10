@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_09_155405) do
+ActiveRecord::Schema.define(version: 2020_03_10_155544) do
 
   create_table "educations", force: :cascade do |t|
     t.integer "year_started"
@@ -39,6 +39,22 @@ ActiveRecord::Schema.define(version: 2020_03_09_155405) do
     t.integer "location_id", null: false
   end
 
+  create_table "news_items", force: :cascade do |t|
+    t.string "article_title"
+    t.string "item_type"
+    t.datetime "date"
+    t.text "citation"
+    t.text "excerpt"
+    t.text "notes"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "news_items_tags", id: false, force: :cascade do |t|
+    t.integer "tag_id", null: false
+    t.integer "news_item_id", null: false
+  end
+
   create_table "people", force: :cascade do |t|
     t.string "poet_id"
     t.string "name_last"
@@ -52,6 +68,12 @@ ActiveRecord::Schema.define(version: 2020_03_09_155405) do
     t.text "biography"
     t.text "notes"
     t.text "citations"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

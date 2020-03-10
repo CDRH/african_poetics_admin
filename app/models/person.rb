@@ -1,7 +1,8 @@
 class Person < ApplicationRecord
 
   has_many :educations, dependent: :destroy
-  has_and_belongs_to_many :locations  # nationality
+  has_and_belongs_to_many :locations,
+    dependent: :destroy  # nationality
 
   def name
     str = [ name_last, name_given ].compact.join(", ")

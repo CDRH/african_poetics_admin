@@ -11,7 +11,6 @@ class PoetCsv
     @csv.each_with_index do |row, index|
       print "." if index%20 == 0
       seed_row(row)
-
     end
     log_seeding(Person, @csv.length)
   end

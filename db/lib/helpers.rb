@@ -37,7 +37,7 @@ module Helpers
 
   def log_seeding(model, seed_length)
     count = model.all.length
-    if count != seed_length-1
+    if count != seed_length
       puts "Something went wrong when loading model #{model}: loaded #{count} of #{seed_length}"
     else
       puts "#{count} records created for #{model}"

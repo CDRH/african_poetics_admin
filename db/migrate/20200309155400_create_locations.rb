@@ -8,6 +8,7 @@ class CreateLocations < ActiveRecord::Migration[6.0]
       t.timestamps
     end
 
-    add_reference :people, :location
+    # join locations to people for "nationality"
+    create_join_table :people, :locations
   end
 end

@@ -1,12 +1,10 @@
 class Person < ApplicationRecord
 
   has_many :educations, dependent: :destroy
-  belongs_to :location
+  has_and_belongs_to_many :locations  # nationality
 
   def name
-    str = ""
-    str += name_last
-    str += " #{name_given}" if name_given
+    str = [ name_last, name_given ].compact.join(", ")
     str += " (#{name_alt})" if name_alt
     str
   end

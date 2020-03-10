@@ -1,0 +1,116 @@
+class PoetCsv
+
+  include Helpers
+
+  def initialize(filename)
+    @csv = read_seed_file(filename)
+  end
+
+  def seed
+    puts "Seeding poets"
+    @csv.each_with_index do |row, index|
+      print "." if index%20 == 0
+      seed_row(row)
+
+    end
+    log_seeding(Person, @csv.length)
+  end
+
+  private
+
+  def education_empty?(edu)
+    edu[0] == "[none]" && edu[1] == "[none]" && edu[2] == "[none]"
+  end
+
+  def generate_education_information(row, person)
+    educations = combine_fields(row,
+      "Poet University Name",
+      "Poet University Place",
+      "Poet University Date Graduated",
+      same_length: false
+    )
+    educations.each do |edu|
+      next if education_empty?(edu)
+
+      # lookup / create university first
+      # TODO going to need to standardize how the degrees are listed
+      # before this can be accurately seeded
+      uni = University.find_or_create_by(name: edu[0])
+      # split location to city, country, region (TODO region not in spreadsheet)
+      city, country, region = edu[1].split(", ") if edu[1]
+      uni.location = Location.find_or_create_by(city: city, country: country, region: region)
+      uni.save
+
+      grad = edu[2][/^\d{4}/] if edu[2]
+      # look for degree in two fields
+      degree = edu[2][/\((.*)\)/,1] if edu[2]
+      if !degree
+        degree = edu[0][/\((.*)\)/,1] if edu[0]
+      end
+      education = Education.create(
+        year_started: nil,
+        year_ended: edu[2],
+        # TODO only getting the first year listed, which means leaving out
+        # fancy things like "1950s" or "1928-1930" type listings
+        graduated: grad,
+        # TODO going to be grabbing the rest of the string, essentially
+        # which isn't what we ultimately want
+        degree: degree,
+      )
+      education.person = person
+      education.university = uni
+      education.save
+    end
+    # TODO Poet University Name
+    # TODO Poet University Place
+    # TODO Poet University Date Graduated
+  end
+
+  def nationalities(row)
+    countries = row["Poet Nationality (Country Name) "]
+    if countries
+      countries.split("\n").map do |country|
+        Location.find_or_create_by(
+          # must have ALL fields filled out or else could grab wrong record
+          # TODO warning nationality does NOT have region in the CSV
+          # so we will need to add that there or look it up here!
+          city: nil,
+          country: country,
+          region: nil,
+          latlng: nil
+        )
+      end
+    end
+  end
+
+  def person_basics(row)
+    # split up name into components
+    last, given, alt = get_poet_name(
+      row["Poet Name (Last name, first name[Alternate])"]
+    )
+    Person.new(
+      poet_id: row["Poet ID"],
+      name_last: last,
+      name_given: given,
+      name_alt: alt,
+      gender: row["Poet Gender"],
+      date_birth: row["DOB (YYYY-MM-DD)"],
+      date_death: row["DOD (YYYY-MM-DD)"],
+      cap: row["In CAP"] == "Y",
+      bibliography: row["Poet BIB"],
+      notes: row["Notes"],
+      citations: row["BIO INFO"]
+    )
+  end
+
+  def seed_row(row)
+
+    person = person_basics(row)
+    person.locations += nationalities(row) || []
+    person.save
+
+    generate_education_information(row, person)
+
+  end
+
+end

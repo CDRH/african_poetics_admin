@@ -34,6 +34,11 @@ ActiveRecord::Schema.define(version: 2020_03_09_155405) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "locations_people", id: false, force: :cascade do |t|
+    t.integer "person_id", null: false
+    t.integer "location_id", null: false
+  end
+
   create_table "people", force: :cascade do |t|
     t.string "poet_id"
     t.string "name_last"
@@ -49,8 +54,6 @@ ActiveRecord::Schema.define(version: 2020_03_09_155405) do
     t.text "citations"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "location_id"
-    t.index ["location_id"], name: "index_people_on_location_id"
   end
 
   create_table "universities", force: :cascade do |t|

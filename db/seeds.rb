@@ -15,6 +15,3 @@ Person.destroy_all
 poet_csv = PoetCsv.new("poets.csv")
 puts "called once"
 poet_csv.seed
-
-# Call seeding methods
-# seed_poets("poets.csv")

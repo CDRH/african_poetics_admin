@@ -39,4 +39,7 @@ RailsAdmin.config do |config|
     # history_show
   end
 
+  config.default_items_per_page = 50
+  config.sidescroll = true
+
 end

@@ -3,7 +3,9 @@ class Education < ApplicationRecord
   belongs_to :university
 
   def name
-    "#{person_name}, #{uni_name} (#{degree})"
+    if person && university
+      "#{person_name}, #{uni_name} (#{degree})"
+    end
   end
 
   def person_name

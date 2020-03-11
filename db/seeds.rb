@@ -13,6 +13,7 @@ University.destroy_all
 NewsItem.destroy_all
 Person.destroy_all
 Tag.destroy_all
+Role.destroy_all
 
 poet_csv = PoetCsv.new("poets.csv")
 news_csv = NewsCsv.new("news.csv")

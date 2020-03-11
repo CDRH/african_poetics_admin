@@ -17,6 +17,49 @@ class NewsCsv
 
   private
 
+  def create_roles(row, item)
+    people_roles = {}
+
+    if row["Critic/Reporter"]
+      row["Critic/Reporter"].split("\n").each do |p|
+        people_roles[p] = "Critic/Reporter"
+      end
+    end
+    if row["Poet Name (Last, First Middle) [Alternate Name]"]
+      row["Poet Name (Last, First Middle) [Alternate Name]"].split("\n").each do |p|
+        people_roles[p] = "Poet"
+      end
+    end
+    if row["Mentioned Poets"]
+      row["Mentioned Poets"].split("\n").each do |p|
+        people_roles[p] = "Mentioned Poet"
+      end
+    end
+    # TODO skipping relative part because it's not always clear which
+    # poet they go with!
+    if row["Mentioned, Other | Profession"]
+      row["Mentioned, Other | Profession"].split("\n").each do |p|
+        p_name, profession = p.split("|")
+        people_roles[p_name] = profession
+      end
+    end
+
+    people_roles.each do |p_name, p_role|
+      names = get_poet_name(p_name)
+      person = Person.find_or_create_by(
+        name_last: names[0],
+        name_given: names[1],
+        name_alt: names[2]
+      )
+      person.save
+      Role.create(
+        person: person,
+        role: p_role.strip,
+        news_item: item
+      )
+    end
+  end
+
   def create_tags(row)
     tag_list = row["Tags"]
     if tag_list
@@ -40,6 +83,7 @@ class NewsCsv
   def seed_row(row)
     item = news_item_basics(row)
     item.tags += create_tags(row) || []
+    create_roles(row, item)
     item.save
   end
 

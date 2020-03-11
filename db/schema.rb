@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_10_155544) do
+ActiveRecord::Schema.define(version: 2020_03_10_173700) do
 
   create_table "educations", force: :cascade do |t|
     t.integer "year_started"
@@ -70,6 +70,16 @@ ActiveRecord::Schema.define(version: 2020_03_10_155544) do
     t.text "citations"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.integer "person_id"
+    t.integer "news_item_id"
+    t.string "role"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["news_item_id"], name: "index_roles_on_news_item_id"
+    t.index ["person_id"], name: "index_roles_on_person_id"
   end
 
   create_table "tags", force: :cascade do |t|

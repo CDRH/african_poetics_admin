@@ -23,16 +23,20 @@ module Helpers
   end
 
   def get_poet_name(fullname)
-    lastname, remainder = fullname.split(",").map(&:strip)
-    if remainder.include?("[")
-      matches = remainder.match(/(.*)\[(.*)\]/)
-      given = matches[1].strip if matches[1]
-      alt = matches[2].strip if matches[2]
+    if fullname
+      lastname, remainder = fullname.split(",").map(&:strip)
+      if remainder && remainder.include?("[")
+        matches = remainder.match(/(.*)\[(.*)\]/)
+        given = matches[1].strip if matches[1]
+        alt = matches[2].strip if matches[2]
+      else
+        given = remainder || nil
+        alt = nil
+      end
+      [ lastname, given, alt ]
     else
-      given = remainder
-      alt = nil
+      [ nil, nil, nil ]
     end
-    [ lastname, given, alt ]
   end
 
   def log_seeding(model, seed_length)

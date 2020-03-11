@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_10_173700) do
+ActiveRecord::Schema.define(version: 2020_03_11_141636) do
 
   create_table "educations", force: :cascade do |t|
     t.integer "year_started"
@@ -25,7 +25,34 @@ ActiveRecord::Schema.define(version: 2020_03_10_173700) do
     t.index ["university_id"], name: "index_educations_on_university_id"
   end
 
+  create_table "event_roles", force: :cascade do |t|
+    t.integer "person_id"
+    t.integer "event_id"
+    t.string "role"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["event_id"], name: "index_event_roles_on_event_id"
+    t.index ["person_id"], name: "index_event_roles_on_person_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.datetime "date"
+    t.string "event_type"
+    t.string "name_original"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "location_id"
+    t.index ["location_id"], name: "index_events_on_location_id"
+  end
+
+  create_table "events_news_items", id: false, force: :cascade do |t|
+    t.integer "event_id", null: false
+    t.integer "news_item_id", null: false
+  end
+
   create_table "locations", force: :cascade do |t|
+    t.string "place"
     t.string "city"
     t.string "country"
     t.string "region"

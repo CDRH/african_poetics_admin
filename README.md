@@ -19,3 +19,5 @@ Prepare database
 - how to combine news_item + relative + poet?
 
 - critic/reporter field appears doubled in mentioned,other|profession field MOST of the time, but not all of the time...what should we do about that?
+
+- can events have multiple locations?

@@ -4,8 +4,8 @@ class NewsItem < ApplicationRecord
     dependent: :destroy
   has_and_belongs_to_many :tags,
     dependent: :destroy
-  has_many :roles
-  has_many :people, through: :roles
+  has_many :news_item_roles
+  has_many :people, through: :news_item_roles
 
   def name
     "'#{article_title}', #{date}"
@@ -16,7 +16,7 @@ class NewsItem < ApplicationRecord
       field :article_title
       field :item_type
       field :date
-      field :roles do
+      field :news_item_roles do
         label "People by Role"
       end
       field :citation
@@ -24,8 +24,8 @@ class NewsItem < ApplicationRecord
       field :tags
     end
     edit do
-      configure :roles do
-        label "People by Role"
+      configure :news_item_roles do
+        label "People by Role (SEE HELP TEXT)"
         help <<-TEXT
           ATTENTION! Add people (below) to this news item first and hit 'Save and
           Edit.' Then double click a person's name in Role to assign."

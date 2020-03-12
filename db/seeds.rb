@@ -14,9 +14,8 @@ University.destroy_all
 NewsItem.destroy_all
 Person.destroy_all
 Tag.destroy_all
-Role.destroy_all
+NewsItemRole.destroy_all
 Event.destroy_all
-EventRole.destroy_all
 
 events_csv = EventsCsv.new("events.csv")
 news_csv = NewsCsv.new("news.csv")

@@ -25,21 +25,10 @@ ActiveRecord::Schema.define(version: 2020_03_11_141636) do
     t.index ["university_id"], name: "index_educations_on_university_id"
   end
 
-  create_table "event_roles", force: :cascade do |t|
-    t.integer "person_id"
-    t.integer "event_id"
-    t.string "role"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["event_id"], name: "index_event_roles_on_event_id"
-    t.index ["person_id"], name: "index_event_roles_on_person_id"
-  end
-
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.datetime "date"
     t.string "event_type"
-    t.string "name_original"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "location_id"
@@ -49,6 +38,11 @@ ActiveRecord::Schema.define(version: 2020_03_11_141636) do
   create_table "events_news_items", id: false, force: :cascade do |t|
     t.integer "event_id", null: false
     t.integer "news_item_id", null: false
+  end
+
+  create_table "events_people", id: false, force: :cascade do |t|
+    t.integer "event_id", null: false
+    t.integer "person_id", null: false
   end
 
   create_table "locations", force: :cascade do |t|
@@ -64,6 +58,16 @@ ActiveRecord::Schema.define(version: 2020_03_11_141636) do
   create_table "locations_people", id: false, force: :cascade do |t|
     t.integer "person_id", null: false
     t.integer "location_id", null: false
+  end
+
+  create_table "news_item_roles", force: :cascade do |t|
+    t.integer "person_id"
+    t.integer "news_item_id"
+    t.string "role"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["news_item_id"], name: "index_news_item_roles_on_news_item_id"
+    t.index ["person_id"], name: "index_news_item_roles_on_person_id"
   end
 
   create_table "news_items", force: :cascade do |t|
@@ -97,16 +101,6 @@ ActiveRecord::Schema.define(version: 2020_03_11_141636) do
     t.text "citations"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "roles", force: :cascade do |t|
-    t.integer "person_id"
-    t.integer "news_item_id"
-    t.string "role"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["news_item_id"], name: "index_roles_on_news_item_id"
-    t.index ["person_id"], name: "index_roles_on_person_id"
   end
 
   create_table "tags", force: :cascade do |t|

@@ -1,10 +1,17 @@
 class Person < ApplicationRecord
 
+  # foreign keys
   has_many :educations, dependent: :destroy
+
+  # join tables
+  has_and_belongs_to_many :events,
+    dependent: :destroy
   has_and_belongs_to_many :locations,
     dependent: :destroy  # nationality
-  has_many :roles
-  has_many :news_items, through: :roles
+
+  # join tables with attributes
+  has_many :news_item_roles
+  has_many :news_items, through: :news_item_roles
 
   def name
     str = [ name_last, name_given ].compact.join(", ")
@@ -29,7 +36,7 @@ class Person < ApplicationRecord
       configure :locations do
         label "Nationality"
       end
-      configure :roles do
+      configure :news_item_roles do
         pretty_value do
           value.map { |v| v.role }.uniq.join(", ")
         end

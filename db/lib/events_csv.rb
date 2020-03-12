@@ -40,13 +40,8 @@ class EventsCsv
           name_given: names[1],
           name_alt: names[2]
         )
+        person.events << item
         person.save
-        # at the moment, everybody is listed as "poet"
-        EventRole.create(
-          person: person,
-          role: "Poet",
-          event: item
-        )
       end
     end
   end
@@ -56,15 +51,51 @@ class EventsCsv
       name: row["Event Title"],
       date: row["Event Date"],
       event_type: row["Event Type"],
-      name_original: row["Event Original Name"],
     )
   end
 
+  def find_event(row)
+    # this event may have been previously created by the
+    # news.csv, so let's look for it under its original name
+    # and then RENAME it!
+
+    e = Event.find_by(name: row["Event Original Title"])
+    # is there already an event by that name that's filled out?
+    # we don't want to overwrite information, so in that case make
+    # a new event. Otherwise, just fill in the updated information
+
+    e = e || Event.new
+
+    if e.date || e.event_type
+      puts "ALREADY EXISTS"
+      e = Event.new(
+        name: row["Event Title"],
+        date: row["Event Date"],
+        event_type: row["Event Type"]
+      )
+    else
+      puts "should have news_items?"
+      puts e.news_items.length
+      e.update(
+        # use the corrected title, rather than the original
+        name: row["Event Title"],
+        date: row["Event Date"],
+        event_type: row["Event Type"]
+      )
+    end
+    e
+  end
+
   def seed_row(row)
-    item = event_basics(row)
-    item.location = create_location(row)
-    create_roles(row, item)
-    item.save
+    item = find_event(row)
+    loc = create_location(row)
+    if loc
+      item.location = loc if loc
+      create_roles(row, item)
+      item.save
+    else
+      puts "Problem with #{item.name}: no location"
+    end
   end
 
 end

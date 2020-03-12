@@ -1,4 +1,4 @@
-class Role < ApplicationRecord
+class NewsItemRole < ApplicationRecord
 
   belongs_to :news_item
   belongs_to :person

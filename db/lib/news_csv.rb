@@ -17,6 +17,27 @@ class NewsCsv
 
   private
 
+  def create_events(row, item)
+    # events used to be stored on the news items spreadsheet
+    # but recently got their own spreadsheet for more detailed entry
+
+    # in this case, just make the event with the old name
+    # and we will need to redo it when the event spreadsheet is ingested
+    events = row["Event Title"]
+    if events
+      events.split("\n").each do |event|
+        if event.present?
+          e = Event.find_or_create_by(
+            name: event
+          )
+          e.news_items << item
+          e.save
+        end
+      end
+    end
+
+  end
+
   def create_roles(row, item)
     people_roles = {}
 
@@ -52,7 +73,7 @@ class NewsCsv
         name_alt: names[2]
       )
       person.save
-      Role.create(
+      NewsItemRole.create(
         person: person,
         role: p_role.strip,
         news_item: item
@@ -84,6 +105,7 @@ class NewsCsv
     item = news_item_basics(row)
     item.tags += create_tags(row) || []
     create_roles(row, item)
+    create_events(row, item)
     item.save
   end
 

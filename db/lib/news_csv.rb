@@ -2,8 +2,11 @@ class NewsCsv
 
   include Helpers
 
+  attr_reader :events_mapping
+
   def initialize(filename)
     @csv = read_seed_file(filename)
+    @events_mapping = {}
   end
 
   def seed
@@ -21,21 +24,22 @@ class NewsCsv
     # events used to be stored on the news items spreadsheet
     # but recently got their own spreadsheet for more detailed entry
 
-    # in this case, just make the event with the old name
-    # and we will need to redo it when the event spreadsheet is ingested
+    # alas, it turns out that new events MUST have a location
+    # or bust, and since we don't know the location yet
+    # let's just collect the event title mappings
     events = row["Event Title"]
     if events
       events.split("\n").each do |event|
         if event.present?
-          e = Event.find_or_create_by(
-            name: event
-          )
-          e.news_items << item
-          e.save
+          event.strip!
+          if @events_mapping.key?(event)
+            @events_mapping[event] << item.id
+          else
+            @events_mapping[event] = [ item.id ]
+          end
         end
       end
     end
-
   end
 
   def create_roles(row, item)

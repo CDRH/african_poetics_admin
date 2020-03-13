@@ -22,6 +22,7 @@ class NewsItem < ApplicationRecord
       field :citation
       field :excerpt
       field :tags
+      field :events
     end
     edit do
       configure :news_item_roles do

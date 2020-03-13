@@ -17,9 +17,9 @@ Tag.destroy_all
 NewsItemRole.destroy_all
 Event.destroy_all
 
-events_csv = EventsCsv.new("events.csv")
 news_csv = NewsCsv.new("news.csv")
+news_csv.seed
 poet_csv = PoetCsv.new("poets.csv")
 poet_csv.seed
-news_csv.seed
+events_csv = EventsCsv.new("events.csv", news_csv.events_mapping)
 events_csv.seed

@@ -2,8 +2,9 @@ class EventsCsv
 
   include Helpers
 
-  def initialize(filename)
+  def initialize(filename, events_mapping)
     @csv = read_seed_file(filename)
+    @events_mapping = events_mapping
   end
 
   def seed
@@ -16,6 +17,29 @@ class EventsCsv
   end
 
   private
+
+  def associate_news_item(row, event)
+    # use original title to look up news items
+    # that might be associated with this particular event
+
+    original = row["Event Original Title"]
+    original.strip! if original
+    if @events_mapping.key?(original)
+      @events_mapping[original].each do |news_item_id|
+        news_item = NewsItem.find(news_item_id)
+        if news_item
+          event.news_items << news_item
+        end
+      end
+    else
+      puts ".#{event.name}. FAILED"
+    end
+  end
+
+  def create_event(row)
+    # original event name SHOULD have been on the news spreadsheet
+    # so grab that information and associate the item
+  end
 
   def create_location(row)
     loc = row["Event Location"]
@@ -30,7 +54,7 @@ class EventsCsv
     end
   end
 
-  def create_roles(row, item)
+  def create_roles(row, event)
     poet_list = row["Poets"]
     if poet_list
       poets = poet_list.split("\n").map do |poet|
@@ -40,7 +64,7 @@ class EventsCsv
           name_given: names[1],
           name_alt: names[2]
         )
-        person.events << item
+        person.events << event
         person.save
       end
     end
@@ -54,47 +78,16 @@ class EventsCsv
     )
   end
 
-  def find_event(row)
-    # this event may have been previously created by the
-    # news.csv, so let's look for it under its original name
-    # and then RENAME it!
-
-    e = Event.find_by(name: row["Event Original Title"])
-    # is there already an event by that name that's filled out?
-    # we don't want to overwrite information, so in that case make
-    # a new event. Otherwise, just fill in the updated information
-
-    e = e || Event.new
-
-    if e.date || e.event_type
-      puts "ALREADY EXISTS"
-      e = Event.new(
-        name: row["Event Title"],
-        date: row["Event Date"],
-        event_type: row["Event Type"]
-      )
-    else
-      puts "should have news_items?"
-      puts e.news_items.length
-      e.update(
-        # use the corrected title, rather than the original
-        name: row["Event Title"],
-        date: row["Event Date"],
-        event_type: row["Event Type"]
-      )
-    end
-    e
-  end
-
   def seed_row(row)
-    item = find_event(row)
+    event = event_basics(row)
     loc = create_location(row)
     if loc
-      item.location = loc if loc
-      create_roles(row, item)
-      item.save
+      event.location = loc if loc
+      create_roles(row, event)
+      associate_news_item(row, event)
+      event.save
     else
-      puts "Problem with #{item.name}: no location"
+      puts "Problem with #{row["Event Original Title"]}"
     end
   end
 

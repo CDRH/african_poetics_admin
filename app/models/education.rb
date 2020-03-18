@@ -20,7 +20,6 @@ class Education < ApplicationRecord
     list do
       field :person_name
       field :uni_name
-      field :year_started
       field :year_ended
       field :graduated
       field :degree

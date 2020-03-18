@@ -1,7 +1,6 @@
 class CreateEducationsAndUniversities < ActiveRecord::Migration[6.0]
   def change
     create_table :educations do |t|
-      t.integer :year_started
       t.integer :year_ended
       t.boolean :graduated
       t.string :degree

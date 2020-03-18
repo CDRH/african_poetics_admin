@@ -50,7 +50,6 @@ class PoetCsv
       degree = edu[3]
 
       education = Education.create(
-        year_started: nil,
         year_ended: grad_date,
         graduated: !!grad_date,
         degree: degree,

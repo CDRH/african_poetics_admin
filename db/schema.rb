@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2020_03_11_141636) do
 
   create_table "educations", force: :cascade do |t|
-    t.integer "year_started"
     t.integer "year_ended"
     t.boolean "graduated"
     t.string "degree"

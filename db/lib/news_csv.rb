@@ -45,11 +45,6 @@ class NewsCsv
   def create_roles(row, item)
     people_roles = {}
 
-    if row["Critic/Reporter"]
-      row["Critic/Reporter"].split("\n").each do |p|
-        people_roles[p] = "Critic/Reporter"
-      end
-    end
     if row["Poet Name (Last, First Middle) [Alternate Name]"]
       row["Poet Name (Last, First Middle) [Alternate Name]"].split("\n").each do |p|
         people_roles[p] = "Poet"
@@ -62,6 +57,8 @@ class NewsCsv
     end
     # TODO skipping relative part because it's not always clear which
     # poet they go with!
+
+    # SKIPPING Critic/Reporter field because it's duplicated in Mentioned, Other
     if row["Mentioned, Other | Profession"]
       row["Mentioned, Other | Profession"].split("\n").each do |p|
         p_name, profession = p.split("|")

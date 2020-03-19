@@ -1,6 +1,7 @@
 class NewsItem < ApplicationRecord
   include Dates
 
+  belongs_to :news_item_type
   belongs_to :publisher
 
   has_and_belongs_to_many :events,
@@ -20,7 +21,7 @@ class NewsItem < ApplicationRecord
   rails_admin do
     show do
       field :article_title
-      field :item_type
+      field :news_item_type
       field :date
       field :news_item_roles do
         label "People by Role"

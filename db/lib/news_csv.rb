@@ -96,10 +96,14 @@ class NewsCsv
     Publisher.find_or_create_by(name: publisher)
   end
 
+  def find_type(row)
+    type = row["Source"]
+    NewsItemType.find_or_create_by(name: type)
+  end
+
   def news_item_basics(row)
     NewsItem.new(
       article_title: row["Item Title"],
-      item_type: row["Source"],
       date: row["Source Publication Date"],
       citation: row["Source Citation"],
       excerpt: row["Excerpt"],
@@ -109,6 +113,7 @@ class NewsCsv
 
   def seed_row(row)
     item = news_item_basics(row)
+    item.news_item_type = find_type(row)
     item.publisher = find_publisher(row)
     item.tags += create_tags(row) || []
     create_roles(row, item)

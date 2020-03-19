@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_18_213038) do
+ActiveRecord::Schema.define(version: 2020_03_19_153537) do
 
   create_table "educations", force: :cascade do |t|
     t.integer "year_ended"
@@ -70,9 +70,14 @@ ActiveRecord::Schema.define(version: 2020_03_18_213038) do
     t.index ["person_id"], name: "index_news_item_roles_on_person_id"
   end
 
+  create_table "news_item_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "news_items", force: :cascade do |t|
     t.string "article_title"
-    t.string "item_type"
     t.datetime "date"
     t.text "citation"
     t.text "excerpt"
@@ -80,6 +85,8 @@ ActiveRecord::Schema.define(version: 2020_03_18_213038) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "publisher_id"
+    t.integer "news_item_type_id"
+    t.index ["news_item_type_id"], name: "index_news_items_on_news_item_type_id"
     t.index ["publisher_id"], name: "index_news_items_on_publisher_id"
   end
 

@@ -9,13 +9,15 @@ require_relative "lib/news_csv.rb"
 require_relative "lib/poet_csv.rb"
 
 # comment out if you wish to simply add onto existing data
-Location.destroy_all
-University.destroy_all
-NewsItem.destroy_all
-Person.destroy_all
-Tag.destroy_all
-NewsItemRole.destroy_all
 Event.destroy_all
+Location.destroy_all
+NewsItem.destroy_all
+NewsItemRole.destroy_all
+Person.destroy_all
+Publisher.destroy_all
+Repository.destroy_all
+Tag.destroy_all
+University.destroy_all
 
 news_csv = NewsCsv.new("news.csv")
 news_csv.seed

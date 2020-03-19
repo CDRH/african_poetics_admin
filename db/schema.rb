@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_18_210235) do
+ActiveRecord::Schema.define(version: 2020_03_18_213038) do
 
   create_table "educations", force: :cascade do |t|
     t.integer "year_ended"
@@ -79,6 +79,8 @@ ActiveRecord::Schema.define(version: 2020_03_18_210235) do
     t.text "notes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "publisher_id"
+    t.index ["publisher_id"], name: "index_news_items_on_publisher_id"
   end
 
   create_table "news_items_repositories", id: false, force: :cascade do |t|
@@ -106,6 +108,14 @@ ActiveRecord::Schema.define(version: 2020_03_18_210235) do
     t.text "citations"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "publishers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "location_id"
+    t.index ["location_id"], name: "index_publishers_on_location_id"
   end
 
   create_table "repositories", force: :cascade do |t|

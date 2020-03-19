@@ -1,4 +1,7 @@
 class NewsItem < ApplicationRecord
+  include Dates
+
+  belongs_to :publisher
 
   has_and_belongs_to_many :events,
     dependent: :destroy
@@ -6,11 +9,12 @@ class NewsItem < ApplicationRecord
     dependent: :destroy
   has_and_belongs_to_many :tags,
     dependent: :destroy
+
   has_many :news_item_roles
   has_many :people, through: :news_item_roles
 
   def name
-    "'#{article_title}', #{date}"
+    "'#{article_title}', #{publisher.name} (#{year})"
   end
 
   rails_admin do

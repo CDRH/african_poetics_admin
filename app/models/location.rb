@@ -1,6 +1,8 @@
 class Location < ApplicationRecord
 
-  has_and_belongs_to_many :people  # nationality
+  # nationality
+  has_and_belongs_to_many :people,
+    dependent: :destroy
   has_many :events
   has_many :universities
 

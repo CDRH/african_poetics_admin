@@ -3,7 +3,7 @@ class PoetCsv
   include Helpers
 
   def initialize(filename)
-    @csv = read_seed_file(filename)
+    @csv = Helpers.read_seed_file(filename)
   end
 
   def seed

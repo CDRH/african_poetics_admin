@@ -48,8 +48,19 @@ module Helpers
     end
   end
 
-  def read_seed_file(filename)
+  def self.read_seed_file(filename)
     file = Rails.root.join('db', 'seeds', filename)
-    CSV.read(file, headers: true, encoding: "utf-8")
+    if filename.include?(".csv")
+      CSV.read(file, headers: true, encoding: "utf-8")
+    else
+      YAML.load_file(file)
+    end
+  end
+
+  def self.seed_yaml(filename, model, field)
+    file = self.read_seed_file(filename)
+    file.each do |entry|
+      model.find_or_create_by(field => entry)
+    end
   end
 end

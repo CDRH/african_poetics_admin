@@ -3,7 +3,7 @@ class EventsCsv
   include Helpers
 
   def initialize(filename, events_mapping)
-    @csv = read_seed_file(filename)
+    @csv = Helpers.read_seed_file(filename)
     @events_mapping = events_mapping
   end
 

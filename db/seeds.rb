@@ -20,6 +20,8 @@ Repository.destroy_all
 Tag.destroy_all
 University.destroy_all
 
+Helpers.seed_yaml("news_item_types.yml", NewsItemType, "name")
+
 news_csv = NewsCsv.new("news.csv")
 news_csv.seed
 poet_csv = PoetCsv.new("poets.csv")

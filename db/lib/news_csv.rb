@@ -5,7 +5,7 @@ class NewsCsv
   attr_reader :events_mapping
 
   def initialize(filename)
-    @csv = read_seed_file(filename)
+    @csv = Helpers.read_seed_file(filename)
     @events_mapping = {}
   end
 
@@ -67,6 +67,7 @@ class NewsCsv
     end
 
     people_roles.each do |p_name, p_role|
+      role = p_role ? p_role.strip : nil
       names = get_poet_name(p_name)
       person = Person.find_or_create_by(
         name_last: names[0],
@@ -76,7 +77,7 @@ class NewsCsv
       person.save
       NewsItemRole.create(
         person: person,
-        role: p_role.strip,
+        role: role,
         news_item: item
       )
     end

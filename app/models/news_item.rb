@@ -13,11 +13,12 @@ class NewsItem < ApplicationRecord
   has_and_belongs_to_many :works,
     dependent: :destroy
 
-  has_many :news_item_roles
+  has_many :news_item_roles, dependent: :destroy
   has_many :people, through: :news_item_roles
 
   def name
-    "'#{article_title}', #{publisher.name} (#{year})"
+    pub = publisher ? publisher.name : ""
+    "'#{article_title}', #{pub} (#{year})"
   end
 
   rails_admin do

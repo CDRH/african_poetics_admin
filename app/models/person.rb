@@ -10,8 +10,11 @@ class Person < ApplicationRecord
     dependent: :destroy  # nationality
 
   # join tables with attributes
-  has_many :news_item_roles
+  has_many :news_item_roles, dependent: :destroy
   has_many :news_items, through: :news_item_roles
+
+  has_many :work_roles, dependent: :destroy
+  has_many :works, through: :work_roles
 
   def name
     str = [ name_last, name_given ].compact.join(", ")

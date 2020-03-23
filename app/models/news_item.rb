@@ -10,6 +10,8 @@ class NewsItem < ApplicationRecord
     dependent: :destroy
   has_and_belongs_to_many :tags,
     dependent: :destroy
+  has_and_belongs_to_many :works,
+    dependent: :destroy
 
   has_many :news_item_roles
   has_many :people, through: :news_item_roles

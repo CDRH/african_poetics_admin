@@ -19,6 +19,9 @@ Publisher.destroy_all
 Repository.destroy_all
 Tag.destroy_all
 University.destroy_all
+Work.destroy_all
+WorkRole.destroy_all
+WorkType.destroy_all
 
 Helpers.seed_yaml("news_item_types.yml", NewsItemType, "name")
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_19_153537) do
+ActiveRecord::Schema.define(version: 2020_03_19_184733) do
 
   create_table "educations", force: :cascade do |t|
     t.integer "year_ended"
@@ -100,6 +100,11 @@ ActiveRecord::Schema.define(version: 2020_03_19_153537) do
     t.integer "news_item_id", null: false
   end
 
+  create_table "news_items_works", id: false, force: :cascade do |t|
+    t.integer "work_id", null: false
+    t.integer "news_item_id", null: false
+  end
+
   create_table "people", force: :cascade do |t|
     t.string "poet_id"
     t.string "name_last"
@@ -145,6 +150,34 @@ ActiveRecord::Schema.define(version: 2020_03_19_153537) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "location_id"
     t.index ["location_id"], name: "index_universities_on_location_id"
+  end
+
+  create_table "work_roles", force: :cascade do |t|
+    t.integer "person_id"
+    t.integer "work_id"
+    t.string "role"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["person_id"], name: "index_work_roles_on_person_id"
+    t.index ["work_id"], name: "index_work_roles_on_work_id"
+  end
+
+  create_table "work_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "works", force: :cascade do |t|
+    t.string "title"
+    t.datetime "date"
+    t.text "citation"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "publisher_id"
+    t.integer "work_type_id"
+    t.index ["publisher_id"], name: "index_works_on_publisher_id"
+    t.index ["work_type_id"], name: "index_works_on_work_type_id"
   end
 
 end

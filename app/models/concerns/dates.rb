@@ -21,7 +21,7 @@ module Dates
         # manually pull out string
         date[/^\d{4}/]
       end
-    elsif date_not_before
+    elsif defined? date_not_before
       # this will always be a date time
       date_not_before.strftime("%Y")
     end

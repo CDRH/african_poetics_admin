@@ -11,6 +11,14 @@ class Event < ApplicationRecord
   belongs_to :location, optional: true
 
   rails_admin do
+    list do
+      sort_by :name
+
+      field :name
+      field :date
+      field :event_type
+      field :location
+    end
     edit do
       field :name
       field :date

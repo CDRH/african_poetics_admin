@@ -21,26 +21,61 @@ class NewsItem < ApplicationRecord
   end
 
   rails_admin do
+    list do
+      sort_by :article_title
+
+      field :article_title
+      field :news_item_type
+      field :date do
+        formatted_value do
+          value.strftime("%Y-%m-%d")
+        end
+      end
+      field :publisher
+      field :citation
+      field :news_item_roles do
+        label "People by Role"
+      end
+    end
     show do
       field :article_title
       field :news_item_type
       field :date
-      field :news_item_roles do
-        label "People by Role"
-      end
+      field :publisher
       field :citation
+      field :repositories
+      field :news_item_roles do
+        label "People by Role (SEE HELP TEXT)"
+      end
+      field :people
+      field :events
+      field :works
       field :excerpt
       field :tags
-      field :events
+      field :notes
     end
     edit do
-      configure :news_item_roles do
+      field :article_title
+      field :news_item_type
+      field :date
+      field :publisher
+      field :citation
+      field :repositories
+      field :news_item_roles do
         label "People by Role (SEE HELP TEXT)"
         help <<-TEXT
           ATTENTION! Add people (below) to this news item first and hit 'Save and
           Edit.' Then double click a person's name in Role to assign."
         TEXT
       end
+      field :people do
+        label "All Associated People (add here first, then add role)"
+      end
+      field :events
+      field :works
+      field :excerpt
+      field :tags
+      field :notes
     end
   end
 end

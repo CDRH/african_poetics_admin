@@ -170,8 +170,9 @@ ActiveRecord::Schema.define(version: 2020_03_19_184733) do
 
   create_table "works", force: :cascade do |t|
     t.string "title"
-    t.datetime "date"
+    t.integer "year"
     t.text "citation"
+    t.boolean "publication"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "publisher_id"

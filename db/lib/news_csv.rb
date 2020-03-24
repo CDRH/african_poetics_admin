@@ -93,6 +93,65 @@ class NewsCsv
     end
   end
 
+  def create_works(row, item)
+    # match up publication details and poet pub types
+    # find or create a work for this particular item
+    # associate with the current news_item
+    # find ALL poets listed in news_item and associate with work
+    #   this may be inaccurate but it's better to have too many
+    pubs = combine_fields(
+      row,
+      "Poet Publication Details",
+      "Poet Pub Type",
+      same_length: false
+    )
+
+    author_list = row["Poet Name (Last, First Middle) [Alternate Name]"]
+    authors = []
+    if author_list
+      author_list.split("\n").map do |a|
+        names = get_poet_name(a)
+        authors << Person.find_or_create_by(
+          name_last: names[0],
+          name_given: names[1],
+          name_alt: names[2]
+        )
+      end
+    end
+
+    pubs.each do |pub|
+      title = pub[0].strip
+      next if title.blank?
+
+      work = Work.find_or_create_by(title: title)
+
+      work_type = pub[1] ? pub[1].strip : nil
+      if work_type
+        pub_type = WorkType.find_or_create_by(name: work_type)
+        work.work_type = pub_type
+      end
+
+      # blindly try to find a year and hope it's right
+      year = title[/\d{4}/]
+      work.year = year
+      # ultimately this field will need to be cleaned up, but populating what we can for now!
+      work.citation = title
+
+      work.news_items << item
+      work.save
+
+      # for each person, make a role of "Poet" I guess
+      authors.each do |author|
+        WorkRole.create(
+          work: work,
+          person: author,
+          role: "Poet"
+        )
+      end
+    end
+
+  end
+
   def find_publisher(row)
     publisher = row["Source Title"]
     Publisher.find_or_create_by(name: publisher)
@@ -118,9 +177,10 @@ class NewsCsv
     item.news_item_type = find_type(row)
     item.publisher = find_publisher(row)
     item.tags += create_tags(row) || []
-    create_roles(row, item)
-    create_events(row, item)
     item.save
+    create_events(row, item)
+    create_roles(row, item)
+    create_works(row, item)
   end
 
 end

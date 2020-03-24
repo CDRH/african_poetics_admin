@@ -20,7 +20,7 @@ class PoetCsv
   def create_university(edu)
     uni = University.find_or_create_by(name: edu[0])
     # split location to city, country, region (TODO region not in spreadsheet)
-    city, country, region = edu[1].split(", ") if edu[1]
+    region, country, city = edu[1].split(".") if edu[1]
     uni.location = Location.find_or_create_by(
       city: city,
       country: country,

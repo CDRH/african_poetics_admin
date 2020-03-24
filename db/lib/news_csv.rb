@@ -86,7 +86,8 @@ class NewsCsv
   def create_tags(row)
     tag_list = row["Tags"]
     if tag_list
-      tag_list.split(", ").map do |tag|
+      tag_list.split(/,,? ?/).map do |tag|
+        tag.strip!
         Tag.find_or_create_by(name: tag)
       end
     end

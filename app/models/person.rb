@@ -44,6 +44,11 @@ class Person < ApplicationRecord
           value.map { |v| v.role }.uniq.join(", ")
         end
       end
+      configure :work_roles do
+        pretty_value do
+          value.map { |v| v.role }.uniq.join(", ")
+        end
+      end
     end
     edit do
       configure :locations do

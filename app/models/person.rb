@@ -4,6 +4,8 @@ class Person < ApplicationRecord
   has_many :educations, dependent: :destroy
 
   # join tables
+  has_and_belongs_to_many :commentaries,
+    dependent: :destroy
   has_and_belongs_to_many :events,
     dependent: :destroy
   has_and_belongs_to_many :locations,

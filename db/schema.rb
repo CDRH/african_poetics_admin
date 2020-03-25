@@ -10,7 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_19_184733) do
+ActiveRecord::Schema.define(version: 2020_03_25_173243) do
+
+  create_table "commentaries", force: :cascade do |t|
+    t.string "name"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "commentaries_commentary_authors", id: false, force: :cascade do |t|
+    t.integer "commentary_id", null: false
+    t.integer "commentary_author_id", null: false
+  end
+
+  create_table "commentaries_events", id: false, force: :cascade do |t|
+    t.integer "commentary_id", null: false
+    t.integer "event_id", null: false
+  end
+
+  create_table "commentaries_news_items", id: false, force: :cascade do |t|
+    t.integer "commentary_id", null: false
+    t.integer "news_item_id", null: false
+  end
+
+  create_table "commentaries_people", id: false, force: :cascade do |t|
+    t.integer "commentary_id", null: false
+    t.integer "person_id", null: false
+  end
+
+  create_table "commentaries_works", id: false, force: :cascade do |t|
+    t.integer "commentary_id", null: false
+    t.integer "work_id", null: false
+  end
+
+  create_table "commentary_authors", force: :cascade do |t|
+    t.string "name"
+    t.text "short_biography"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "educations", force: :cascade do |t|
     t.integer "year_ended"

@@ -4,11 +4,14 @@
 require 'csv'
 
 require_relative "lib/helpers.rb"
+require_relative "lib/commentaries_csv.rb"
 require_relative "lib/events_csv.rb"
 require_relative "lib/news_csv.rb"
 require_relative "lib/poet_csv.rb"
 
 # comment out if you wish to simply add onto existing data
+Commentary.destroy_all
+CommentaryAuthor.destroy_all
 Event.destroy_all
 Location.destroy_all
 NewsItem.destroy_all
@@ -31,3 +34,5 @@ poet_csv = PoetCsv.new("poets.csv")
 poet_csv.seed
 events_csv = EventsCsv.new("events.csv", news_csv.events_mapping)
 events_csv.seed
+commentaries_csv = CommentariesCsv.new("commentaries.csv")
+commentaries_csv.seed

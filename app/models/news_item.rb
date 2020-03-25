@@ -4,6 +4,8 @@ class NewsItem < ApplicationRecord
   belongs_to :news_item_type
   belongs_to :publisher
 
+  has_and_belongs_to_many :commentaries,
+    dependent: :destroy
   has_and_belongs_to_many :events,
     dependent: :destroy
   has_and_belongs_to_many :repositories,

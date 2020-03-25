@@ -30,6 +30,32 @@ class PoetCsv
     uni
   end
 
+  def create_works(row, person)
+    works_list = row["Poet BIB"]
+    if works_list
+      works_list.split("\n").each do |work|
+        w = work.match(/^(.*)(?:\((\d{4})\)?)/)
+        if w
+          title = w[1].strip if w[1]
+          year = w[2]
+          # most of these have dates we can separate out
+          new_work = Work.create(
+            title: title,
+            year: year,
+            citation: work
+          )
+          new_work.save
+
+          WorkRole.create(
+            work: new_work,
+            person: person,
+            role: "Poet"
+          )
+        end
+      end
+    end
+  end
+
   def education_empty?(edu)
     edu[0] == "[none]" && edu[1] == "[none]" && edu[2] == "[none]"
   end
@@ -78,23 +104,17 @@ class PoetCsv
   end
 
   def person_basics(row)
-    # split up name into components
-    last, given, alt = get_poet_name(
-      row["Poet Name (Last name, first name[Alternate])"]
-    )
-    Person.new(
-      poet_id: row["Poet ID"],
-      name_last: last,
-      name_given: given,
-      name_alt: alt,
-      gender: row["Poet Gender"],
-      date_birth: row["DOB (YYYY-MM-DD)"],
-      date_death: row["DOD (YYYY-MM-DD)"],
-      cap: row["In CAP"] == "Y",
-      bibliography: row["Poet BIB"],
-      notes: row["Notes"],
-      citations: row["BIO INFO"]
-    )
+    name_str = row["Poet Name (Last name, first name[Alternate])"]
+    person = find_or_create_poet(name_str)
+    person.poet_id = row["Poet ID"]
+    person.gender = row["Poet Gender"]
+    person.date_birth = row["DOB (YYYY-MM-DD)"]
+    person.date_death = row["DOD (YYYY-MM-DD)"]
+    person.cap = row["In CAP"] == "Y"
+    person.bibliography = row["Poet BIB"]
+    person.notes = row["Notes"]
+    person.citations = row["BIO INFO"]
+    person
   end
 
   def seed_row(row)
@@ -103,6 +123,7 @@ class PoetCsv
     person.locations += nationalities(row) || []
     person.save
 
+    create_works(row, person)
     generate_education_information(row, person)
 
   end

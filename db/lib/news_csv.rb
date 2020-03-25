@@ -68,12 +68,7 @@ class NewsCsv
 
     people_roles.each do |p_name, p_role|
       role = p_role ? p_role.strip : nil
-      names = get_poet_name(p_name)
-      person = Person.find_or_create_by(
-        name_last: names[0],
-        name_given: names[1],
-        name_alt: names[2]
-      )
+      person = find_or_create_poet(p_name)
       person.save
       NewsItemRole.create(
         person: person,
@@ -110,12 +105,7 @@ class NewsCsv
     authors = []
     if author_list
       author_list.split("\n").map do |a|
-        names = get_poet_name(a)
-        authors << Person.find_or_create_by(
-          name_last: names[0],
-          name_given: names[1],
-          name_alt: names[2]
-        )
+        authors << find_or_create_poet(a)
       end
     end
 

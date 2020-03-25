@@ -18,6 +18,17 @@ class EventsCsv
 
   private
 
+  def add_people(row, event)
+    poet_list = row["Poets"]
+    if poet_list
+      poets = poet_list.split("\n").map do |poet|
+        person = find_or_create_poet(poet)
+        person.events << event
+        person.save
+      end
+    end
+  end
+
   def associate_news_item(row, event)
     # use original title to look up news items
     # that might be associated with this particular event
@@ -54,22 +65,6 @@ class EventsCsv
     end
   end
 
-  def create_roles(row, event)
-    poet_list = row["Poets"]
-    if poet_list
-      poets = poet_list.split("\n").map do |poet|
-        names = get_poet_name(poet)
-        person = Person.find_or_create_by(
-          name_last: names[0],
-          name_given: names[1],
-          name_alt: names[2]
-        )
-        person.events << event
-        person.save
-      end
-    end
-  end
-
   def event_basics(row)
     Event.new(
       name: row["Event Title"],
@@ -83,7 +78,7 @@ class EventsCsv
     loc = create_location(row)
     if loc
       event.location = loc if loc
-      create_roles(row, event)
+      add_people(row, event)
       associate_news_item(row, event)
       event.save
     else

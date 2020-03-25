@@ -22,6 +22,15 @@ module Helpers
     combined
   end
 
+  def find_or_create_poet(name_str)
+    names = get_poet_name(name_str).map { |n| n.strip if n }
+    Person.find_or_create_by(
+      name_last: names[0],
+      name_given: names[1],
+      name_alt: names[2]
+    )
+  end
+
   def get_poet_name(fullname)
     if fullname
       lastname, remainder = fullname.split(",").map(&:strip)

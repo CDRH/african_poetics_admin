@@ -4,7 +4,6 @@ class CreateWorks < ActiveRecord::Migration[6.0]
       t.string :title
       t.integer :year
       t.text :citation
-      t.boolean :publication
 
       t.timestamps
     end

@@ -172,7 +172,6 @@ ActiveRecord::Schema.define(version: 2020_03_19_184733) do
     t.string "title"
     t.integer "year"
     t.text "citation"
-    t.boolean "publication"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "publisher_id"

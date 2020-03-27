@@ -5,6 +5,7 @@ class CreateNewsItems < ActiveRecord::Migration[6.0]
       t.datetime :date
       t.text :citation
       t.text :excerpt
+      t.text :summary
       t.text :notes
 
       t.timestamps

@@ -112,6 +112,9 @@ class PoetCsv
     person.date_death = row["DOD (YYYY-MM-DD)"]
     person.cap = row["In CAP"] == "Y"
     person.bibliography = row["Poet BIB"]
+    # NOTE populating biography with notes contents for now
+    # so that something displays
+    person.short_biography = row["Notes"]
     person.notes = row["Notes"]
     person.citations = row["BIO INFO"]
     person

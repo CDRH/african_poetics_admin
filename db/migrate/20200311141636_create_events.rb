@@ -5,6 +5,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.datetime :date_not_before
       t.string :date
       t.string :event_type
+      t.text :summary
 
       t.timestamps
     end

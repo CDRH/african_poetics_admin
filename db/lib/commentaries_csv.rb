@@ -19,8 +19,10 @@ class CommentariesCsv
 
   # TODO currently spreadsheet only has single authors
   def add_authors(row, commentary)
+    last, given = row["Commentary Author"].split(", ").map(&:strip)
     author = CommentaryAuthor.find_or_create_by(
-      name: row["Commentary Author"].strip
+      name_last: last,
+      name_given: given
     )
     author.commentaries << commentary
     author.save

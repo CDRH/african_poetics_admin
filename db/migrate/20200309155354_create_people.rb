@@ -10,7 +10,7 @@ class CreatePeople < ActiveRecord::Migration[6.0]
       t.string :date_death
       t.boolean :cap
       t.text :bibliography
-      t.text :biography
+      t.text :short_biography
       t.text :notes
       t.text :citations
       t.timestamps

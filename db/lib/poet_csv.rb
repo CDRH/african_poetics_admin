@@ -87,18 +87,22 @@ class PoetCsv
   end
 
   def nationalities(row)
-    countries = row["Poet Nationality (Country Name) "]
-    if countries
-      countries.split("\n").map do |country|
-        Location.find_or_create_by(
-          # must have ALL fields filled out or else could grab wrong record
-          # TODO warning nationality does NOT have region in the CSV
-          # so we will need to add that there or look it up here!
-          city: nil,
-          country: country,
-          region: nil,
-          latlng: nil
-        )
+    places = row["Poet Nationality (Country Name) "]
+    if places
+      places.split("\n").map do |place|
+        if place
+          region, country = place.split(".")
+          Location.find_or_create_by(
+            # must have ALL fields filled out or else could grab wrong record
+            # TODO warning nationality does NOT have region in the CSV
+            # so we will need to add that there or look it up here!
+            place: nil,
+            city: nil,
+            country: country,
+            region: region,
+            latlng: nil
+          )
+        end
       end
     end
   end

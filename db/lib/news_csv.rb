@@ -88,6 +88,41 @@ class NewsCsv
     end
   end
 
+  def create_other_works(row, item)
+    # these works are not the poet's publications the article is focusing on,
+    # but rather are works in the article which reference the poets being
+    # discussed (for example, reference to a book about the history of Ghana poets)
+    # therefore, they should be added as a related work to this news item
+    # but all the poets in the news item should be added as
+    # "mentioned poet" rather than as a "poet" when it comes to this work
+
+    pubs = row["Publication Poet Mentioned In"]
+    if pubs
+      # get all the poets
+      author_list = row["Poet Name (Last, First Middle) [Alternate Name]"]
+      authors = []
+      if author_list
+        author_list.split("\n").map do |a|
+          authors << find_or_create_poet(a)
+        end
+      end
+
+      pubs.split("\n").each do |pub|
+        title = pub.strip
+        next if title.blank?
+        work = Work.find_or_create_by(title: title)
+
+        authors.each do |author|
+          WorkRole.create(
+            work: work,
+            person: author,
+            role: "Mentioned Poet"
+          )
+        end
+      end
+    end
+  end
+
   def create_works(row, item)
     # match up publication details and poet pub types
     # find or create a work for this particular item
@@ -171,6 +206,7 @@ class NewsCsv
     create_events(row, item)
     create_roles(row, item)
     create_works(row, item)
+    create_other_works(row, item)
   end
 
 end

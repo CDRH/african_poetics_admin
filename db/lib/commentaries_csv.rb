@@ -32,21 +32,27 @@ class CommentariesCsv
     items = row["Event Title"]
     if items
       items.split("\n").each do |item|
-        news_item = Event.find_by(name: item)
+        news_item = Event.find_by(name: item.strip)
         news_item.commentaries << commentary
       end
     end
   end
 
-  def add_news_items(row, commentary)
+  def add_news_items_or_works(row, commentary)
     items = row["Item Title"]
     if items
       items.split("\n").each do |item|
-        news_item = NewsItem.find_by(article_title: item)
+        news_item = NewsItem.find_by(article_title: item.strip)
         if news_item
           news_item.commentaries << commentary
         else
-          puts "COULD NOT FIND #{item}"
+          # check if this is actually a work rather than a news item
+          work = Work.find_by(title: item.strip)
+          if work
+            work.commentaries << commentary
+          else
+            puts "could not find #{item} in news items or works tables"
+          end
         end
       end
     end
@@ -67,7 +73,7 @@ class CommentariesCsv
       name: row["Commentary Title"]
     )
     add_authors(row, commentary)
-    add_news_items(row, commentary)
+    add_news_items_or_works(row, commentary)
     add_poets(row, commentary)
     add_events(row, commentary)
   end

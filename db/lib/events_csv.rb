@@ -47,9 +47,8 @@ class EventsCsv
     end
   end
 
-  def create_event(row)
-    # original event name SHOULD have been on the news spreadsheet
-    # so grab that information and associate the item
+  def create_event_type(row)
+    EventType.find_or_create_by(name: row["Event Type"])
   end
 
   def create_location(row)
@@ -68,13 +67,13 @@ class EventsCsv
   def event_basics(row)
     Event.new(
       name: row["Event Title"],
-      date: row["Event Date"],
-      event_type: row["Event Type"],
+      date: row["Event Date"]
     )
   end
 
   def seed_row(row)
     event = event_basics(row)
+    event.event_type = create_event_type(row)
     loc = create_location(row)
     if loc
       event.location = loc if loc

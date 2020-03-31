@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_25_173243) do
+ActiveRecord::Schema.define(version: 2020_03_31_145727) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "name"
@@ -65,15 +65,22 @@ ActiveRecord::Schema.define(version: 2020_03_25_173243) do
     t.index ["university_id"], name: "index_educations_on_university_id"
   end
 
+  create_table "event_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "date_not_before"
     t.string "date"
-    t.string "event_type"
     t.text "summary"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "location_id"
+    t.bigint "event_type_id"
+    t.index ["event_type_id"], name: "index_events_on_event_type_id"
     t.index ["location_id"], name: "index_events_on_location_id"
   end
 

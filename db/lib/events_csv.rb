@@ -54,9 +54,11 @@ class EventsCsv
   def create_location(row)
     loc = row["Event Location"]
     if loc
-      region, country, city, place = loc.split(". ")
+      region, country, city, place = loc.split(". ").map(&:strip)
+      r = Region.find_or_create_by(name: region)
+
       Location.find_or_create_by(
-        region: region,
+        region: r,
         country: country,
         city: city,
         place: place

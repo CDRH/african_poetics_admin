@@ -19,12 +19,15 @@ class PoetCsv
 
   def create_university(edu)
     uni = University.find_or_create_by(name: edu[0])
-    # split location to city, country, region (TODO region not in spreadsheet)
-    region, country, city = edu[1].split(".") if edu[1]
+
+    region, country, city = edu[1].split(".").map(&:strip) if edu[1]
+
+    r = Region.find_or_create_by(name: region)
+
     uni.location = Location.find_or_create_by(
       city: city,
       country: country,
-      region: region
+      region: r
     )
     uni.save
     uni
@@ -88,10 +91,12 @@ class PoetCsv
 
   def nationalities(row)
     places = row["Poet Nationality (Country Name) "]
-    if places
+    if places && places != "[none]"
       places.split("\n").map do |place|
         if place
-          region, country = place.split(".")
+          region, country = place.split(".").map(&:strip)
+          r = Region.find_or_create_by(name: region)
+
           Location.find_or_create_by(
             # must have ALL fields filled out or else could grab wrong record
             # TODO warning nationality does NOT have region in the CSV
@@ -99,7 +104,7 @@ class PoetCsv
             place: nil,
             city: nil,
             country: country,
-            region: region,
+            region: r,
             latlng: nil
           )
         end

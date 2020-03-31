@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_31_145727) do
+ActiveRecord::Schema.define(version: 2020_03_31_153921) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "name"
@@ -98,10 +98,11 @@ ActiveRecord::Schema.define(version: 2020_03_31_145727) do
     t.string "place"
     t.string "city"
     t.string "country"
-    t.string "region"
     t.string "latlng"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "region_id"
+    t.index ["region_id"], name: "index_locations_on_region_id"
   end
 
   create_table "locations_people", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -178,6 +179,12 @@ ActiveRecord::Schema.define(version: 2020_03_31_145727) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "location_id"
     t.index ["location_id"], name: "index_publishers_on_location_id"
+  end
+
+  create_table "regions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "repositories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

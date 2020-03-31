@@ -20,6 +20,7 @@ NewsItemRole.destroy_all
 NewsItemType.destroy_all
 Person.destroy_all
 Publisher.destroy_all
+Region.destroy_all
 Repository.destroy_all
 Tag.destroy_all
 University.destroy_all

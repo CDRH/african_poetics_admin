@@ -1,5 +1,7 @@
 class Location < ApplicationRecord
 
+  belongs_to :region
+
   # nationality
   has_and_belongs_to_many :people,
     dependent: :destroy
@@ -7,7 +9,7 @@ class Location < ApplicationRecord
   has_many :universities
 
   def name
-    [ region, country, city ].compact.join(", ")
+    [ country, city, place ].compact.join(", ")
   end
 
 end

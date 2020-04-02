@@ -3,8 +3,7 @@ class Location < ApplicationRecord
   belongs_to :region
 
   # nationality
-  has_and_belongs_to_many :people,
-    dependent: :destroy
+  has_and_belongs_to_many :people
   has_many :events
   has_many :universities
 

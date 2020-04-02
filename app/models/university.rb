@@ -1,7 +1,7 @@
 class University < ApplicationRecord
 
   belongs_to :location
-  has_many :educations
+  has_many :educations, dependent: :destroy
 
   rails_admin do
     list do

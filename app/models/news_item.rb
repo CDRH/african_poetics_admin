@@ -4,16 +4,11 @@ class NewsItem < ApplicationRecord
   belongs_to :news_item_type
   belongs_to :publisher
 
-  has_and_belongs_to_many :commentaries,
-    dependent: :destroy
-  has_and_belongs_to_many :events,
-    dependent: :destroy
-  has_and_belongs_to_many :repositories,
-    dependent: :destroy
-  has_and_belongs_to_many :tags,
-    dependent: :destroy
-  has_and_belongs_to_many :works,
-    dependent: :destroy
+  has_and_belongs_to_many :commentaries
+  has_and_belongs_to_many :events
+  has_and_belongs_to_many :repositories
+  has_and_belongs_to_many :tags
+  has_and_belongs_to_many :works
 
   has_many :news_item_roles, dependent: :destroy
   has_many :people, through: :news_item_roles

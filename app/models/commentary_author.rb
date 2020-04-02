@@ -1,7 +1,6 @@
 class CommentaryAuthor < ApplicationRecord
 
-  has_and_belongs_to_many :commentaries,
-    dependent: :destroy
+  has_and_belongs_to_many :commentaries
 
   def name
     [ name_title, name_given, name_last ].compact.join(" ")

@@ -18,6 +18,11 @@ class Work < ApplicationRecord
       field :work_type
       field :work_roles
     end
+    edit do
+      configure :news_items do
+        hide
+      end
+    end
   end
 
 

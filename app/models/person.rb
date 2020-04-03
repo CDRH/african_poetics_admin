@@ -24,8 +24,8 @@ class Person < ApplicationRecord
 
   rails_admin do
     list do
-      field :name
       field :name_last
+      field :name_given
       field :gender
       field :date_birth
       field :date_death

@@ -29,6 +29,7 @@ class Person < ApplicationRecord
       field :gender
       field :date_birth
       field :date_death
+      field :complete
       field :cap
       field :poet_id
       field :locations do

@@ -131,6 +131,8 @@ class PoetCsv
 
     person = person_basics(row)
     person.locations += nationalities(row) || []
+    # assume this person is done if they are being imported
+    person.complete = true
     person.save
 
     create_works(row, person)

@@ -76,6 +76,8 @@ class EventsCsv
   def seed_row(row)
     event = event_basics(row)
     event.event_type = create_event_type(row)
+    # assume this event is done if it is being imported
+    event.complete = true
     loc = create_location(row)
     if loc
       event.location = loc if loc

@@ -202,6 +202,8 @@ class NewsCsv
     item.news_item_type = find_type(row)
     item.publisher = find_publisher(row)
     item.tags += create_tags(row) || []
+    # assume this news item is done if it is being imported
+    item.complete = true
     item.save
     create_events(row, item)
     create_roles(row, item)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_03_194522) do
+ActiveRecord::Schema.define(version: 2020_04_03_203502) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "name"
@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(version: 2020_04_03_194522) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "location_id"
     t.bigint "event_type_id"
+    t.boolean "complete"
     t.index ["event_type_id"], name: "index_events_on_event_type_id"
     t.index ["location_id"], name: "index_events_on_location_id"
   end
@@ -139,6 +140,7 @@ ActiveRecord::Schema.define(version: 2020_04_03_194522) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "publisher_id"
     t.bigint "news_item_type_id"
+    t.boolean "complete"
     t.index ["news_item_type_id"], name: "index_news_items_on_news_item_type_id"
     t.index ["publisher_id"], name: "index_news_items_on_publisher_id"
   end
@@ -173,6 +175,7 @@ ActiveRecord::Schema.define(version: 2020_04_03_194522) do
     t.text "citations"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "complete"
   end
 
   create_table "publishers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

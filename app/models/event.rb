@@ -18,14 +18,12 @@ class Event < ApplicationRecord
       field :date
       field :event_type
       field :location
+      field :summary
     end
     edit do
-      field :name
-      field :date
-      field :event_type
-      field :location
-      field :news_items
-      field :people
+      configure :date_not_before do
+        hide
+      end
     end
   end
 

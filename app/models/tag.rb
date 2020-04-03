@@ -9,6 +9,7 @@ class Tag < ApplicationRecord
   rails_admin do
     list do
       field :name
+      field :description
       field :item_number
       field :news_items
     end

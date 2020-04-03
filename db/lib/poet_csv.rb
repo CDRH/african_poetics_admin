@@ -49,10 +49,18 @@ class PoetCsv
           )
           new_work.save
 
+          # If this person wrote a work of poetry, they should
+          # be included as a poet AND as an author, according to
+          # meeting on 4/3
           WorkRole.create(
             work: new_work,
             person: person,
             role: "Poet"
+          )
+          WorkRole.create(
+            work: new_work,
+            person: person,
+            role: "Author"
           )
         end
       end

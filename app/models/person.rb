@@ -52,6 +52,12 @@ class Person < ApplicationRecord
       end
     end
     edit do
+      configure :date_birth do
+        help "YYYY-MM-DD or YYYY. Leave blank if not known."
+      end
+      configure :date_death do
+        help "YYYY-MM-DD or YYYY. Leave blank if alive or not known."
+      end
       configure :locations do
         label "Nationality"
       end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_03_203502) do
+ActiveRecord::Schema.define(version: 2020_04_03_203922) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "name"
@@ -168,7 +168,6 @@ ActiveRecord::Schema.define(version: 2020_04_03_203502) do
     t.string "gender"
     t.string "date_birth"
     t.string "date_death"
-    t.boolean "cap"
     t.text "bibliography"
     t.text "short_biography"
     t.text "notes"
@@ -176,6 +175,7 @@ ActiveRecord::Schema.define(version: 2020_04_03_203502) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "complete"
+    t.boolean "major_african_poet"
   end
 
   create_table "publishers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

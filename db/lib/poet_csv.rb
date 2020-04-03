@@ -119,11 +119,14 @@ class PoetCsv
     person.gender = row["Poet Gender"]
     person.date_birth = row["DOB (YYYY-MM-DD)"]
     person.date_death = row["DOD (YYYY-MM-DD)"]
-    person.cap = row["In CAP"] == "Y"
     person.bibliography = row["Poet BIB"]
     person.short_biography = row["Short Bio"]
     person.notes = row["Notes"]
     person.citations = row["BIO INFO"]
+    # if a person is appearing on this spreadsheet, then we can
+    # assume that they are a major african poet
+    # other poets added from other spreadsheet may not fit that criteria
+    person.major_african_poet = true
     person
   end
 

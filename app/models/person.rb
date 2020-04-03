@@ -30,7 +30,7 @@ class Person < ApplicationRecord
       field :date_birth
       field :date_death
       field :complete
-      field :cap
+      field :major_african_poet
       field :poet_id
       field :locations do
         label "Nationality"

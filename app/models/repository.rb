@@ -5,12 +5,7 @@ class Repository < ApplicationRecord
 
   rails_admin do
     list do
-      configure :created_at do
-        hide
-      end
-      configure :updated_at do
-        hide
-      end
+      exclude_fields :created_at, :updated_at
     end
   end
 

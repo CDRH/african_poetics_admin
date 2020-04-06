@@ -5,18 +5,8 @@ class Role < ApplicationRecord
 
   rails_admin do
     list do
-      configure :created_at do
-        hide
-      end
-      configure :updated_at do
-        hide
-      end
-      configure :news_item_roles do
-        hide
-      end
-      configure :work_roles do
-        hide
-      end
+      exclude_fields :created_at, :updated_at
+      exclude_fields :news_item_roles, :work_roles
     end
   end
 end

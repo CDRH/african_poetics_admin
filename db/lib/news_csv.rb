@@ -110,7 +110,8 @@ class NewsCsv
       pubs.split("\n").each do |pub|
         title = pub.strip
         next if title.blank?
-        work = Work.find_or_create_by(title: title)
+        possible_year = title[/\d{4}/]
+        work = Work.find_or_create_by(title: title, year: possible_year)
 
         authors.each do |author|
           WorkRole.create(

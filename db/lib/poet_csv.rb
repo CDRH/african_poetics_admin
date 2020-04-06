@@ -40,7 +40,8 @@ class PoetCsv
         w = work.match(/^(.*)(?:\((\d{4})\)?)/)
         if w
           title = w[1].strip if w[1]
-          year = w[2]
+          # NOTE: work MUST have a year so adding placeholder if empty
+          year = w[2] ? w[2].strip : 0
           # most of these have dates we can separate out
           new_work = Work.create(
             title: title,

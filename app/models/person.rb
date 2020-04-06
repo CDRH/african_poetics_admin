@@ -26,6 +26,7 @@ class Person < ApplicationRecord
     list do
       field :name_last
       field :name_given
+      field :name_alt
       field :gender
       field :date_birth
       field :date_death

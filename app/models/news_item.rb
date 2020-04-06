@@ -30,34 +30,35 @@ class NewsItem < ApplicationRecord
         end
       end
       field :publisher
-      field :citation
       field :news_item_roles do
         label "People by Role"
       end
     end
     show do
-      field :article_title
-      field :news_item_type
-      field :date
-      field :publisher
-      field :citation
-      field :repositories
-      field :news_item_roles do
-        label "People by Role (SEE HELP TEXT)"
+      configure :date do
+        formatted_value do
+          value.strftime("%Y-%m-%d")
+        end
       end
-      field :people
-      field :events
-      field :works
-      field :excerpt
-      field :tags
-      field :notes
+      configure :source_link do
+        formatted_value do
+          bindings[:view].link_to(value, value)
+        end
+      end
+      configure :source_access_date do
+        formatted_value do
+          value.strftime("%Y-%m-%d")
+        end
+      end
     end
     edit do
       field :article_title
       field :news_item_type
       field :date
       field :publisher
-      field :citation
+      field :source_page_no
+      field :source_link
+      field :source_access_date
       field :repositories
       field :news_item_roles do
         label "People by Role (SEE HELP TEXT)"

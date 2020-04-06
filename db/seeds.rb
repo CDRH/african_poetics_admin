@@ -14,6 +14,7 @@ Commentary.destroy_all
 CommentaryAuthor.destroy_all
 Event.destroy_all
 EventType.destroy_all
+Gender.destroy_all
 Location.destroy_all
 NewsItem.destroy_all
 NewsItemRole.destroy_all

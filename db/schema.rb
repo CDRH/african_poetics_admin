@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_06_154714) do
+ActiveRecord::Schema.define(version: 2020_04_06_160957) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "name"
@@ -138,7 +138,6 @@ ActiveRecord::Schema.define(version: 2020_04_06_154714) do
   create_table "news_items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "article_title"
     t.datetime "date"
-    t.text "citation"
     t.text "excerpt"
     t.text "summary"
     t.text "notes"
@@ -147,6 +146,9 @@ ActiveRecord::Schema.define(version: 2020_04_06_154714) do
     t.bigint "publisher_id"
     t.bigint "news_item_type_id"
     t.boolean "complete"
+    t.string "source_page_no"
+    t.text "source_link"
+    t.datetime "source_access_date"
     t.index ["news_item_type_id"], name: "index_news_items_on_news_item_type_id"
     t.index ["publisher_id"], name: "index_news_items_on_publisher_id"
   end

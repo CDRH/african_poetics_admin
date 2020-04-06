@@ -42,6 +42,17 @@ class NewsCsv
     end
   end
 
+  def create_repositories(row, item)
+    # at the moment, the spreadsheet only has single entries
+    # so we don't have to try to cut apart the field for multiples
+    repo_name = row["Repository"]
+    if repo_name
+      repo = Repository.find_or_create_by(name: repo_name.strip)
+      repo.news_items << item
+      repo.save
+    end
+  end
+
   def create_roles(row, item)
     people_roles = {}
 
@@ -192,7 +203,9 @@ class NewsCsv
     NewsItem.new(
       article_title: row["Item Title"],
       date: row["Source Publication Date"],
-      citation: row["Source Citation"],
+      source_page_no: row["Source Page Number"],
+      source_link: row["Source Link"],
+      source_access_date: row["Source Access Date"],
       excerpt: row["Excerpt"],
       notes: row["Notes"]
     )
@@ -207,6 +220,7 @@ class NewsCsv
     item.complete = true
     item.save
     create_events(row, item)
+    create_repositories(row, item)
     create_roles(row, item)
     create_works(row, item)
     create_other_works(row, item)

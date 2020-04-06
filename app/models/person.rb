@@ -1,6 +1,8 @@
 class Person < ApplicationRecord
 
-  belongs_to :gender
+  # optional because this information is only collected for
+  # major african poets, not all the people in the db
+  belongs_to :gender, optional: true
 
   # foreign keys
   has_many :educations, dependent: :destroy

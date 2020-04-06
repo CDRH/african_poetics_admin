@@ -78,7 +78,8 @@ class NewsCsv
     end
 
     people_roles.each do |p_name, p_role|
-      role = p_role ? p_role.strip : nil
+      role_name = p_role ? p_role.strip : nil
+      role = Role.find_or_create_by(name: role_name)
       person = find_or_create_poet(p_name)
       person.save
       NewsItemRole.create(
@@ -124,11 +125,13 @@ class NewsCsv
         possible_year = title[/\d{4}/]
         work = Work.find_or_create_by(title: title, year: possible_year)
 
+        mentioned_poet_role = Role.find_or_create_by(name: "Mentioned Poet")
+
         authors.each do |author|
           WorkRole.create(
             work: work,
             person: author,
-            role: "Mentioned Poet"
+            role: mentioned_poet_role
           )
         end
       end
@@ -177,12 +180,13 @@ class NewsCsv
       work.news_items << item
       work.save
 
+      work_role_poet = Role.find_or_create_by(name: "Poet")
       # for each person, make a role of "Poet" I guess
       authors.each do |author|
         WorkRole.create(
           work: work,
           person: author,
-          role: "Poet"
+          role: work_role_poet
         )
       end
     end

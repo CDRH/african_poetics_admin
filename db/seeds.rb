@@ -23,6 +23,7 @@ Person.destroy_all
 Publisher.destroy_all
 Region.destroy_all
 Repository.destroy_all
+Role.destroy_all
 Tag.destroy_all
 University.destroy_all
 Work.destroy_all

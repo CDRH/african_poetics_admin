@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_06_160957) do
+ActiveRecord::Schema.define(version: 2020_04_06_173902) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "name"
@@ -121,11 +121,12 @@ ActiveRecord::Schema.define(version: 2020_04_06_160957) do
   create_table "news_item_roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "person_id"
     t.bigint "news_item_id"
-    t.string "role"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "role_id"
     t.index ["news_item_id"], name: "index_news_item_roles_on_news_item_id"
     t.index ["person_id"], name: "index_news_item_roles_on_person_id"
+    t.index ["role_id"], name: "index_news_item_roles_on_role_id"
   end
 
   create_table "news_item_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -208,6 +209,13 @@ ActiveRecord::Schema.define(version: 2020_04_06_160957) do
     t.index ["location_id"], name: "index_repositories_on_location_id"
   end
 
+  create_table "roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -226,10 +234,11 @@ ActiveRecord::Schema.define(version: 2020_04_06_160957) do
   create_table "work_roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "person_id"
     t.bigint "work_id"
-    t.string "role"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "role_id"
     t.index ["person_id"], name: "index_work_roles_on_person_id"
+    t.index ["role_id"], name: "index_work_roles_on_role_id"
     t.index ["work_id"], name: "index_work_roles_on_work_id"
   end
 

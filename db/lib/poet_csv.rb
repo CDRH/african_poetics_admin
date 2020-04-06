@@ -53,15 +53,17 @@ class PoetCsv
           # If this person wrote a work of poetry, they should
           # be included as a poet AND as an author, according to
           # meeting on 4/3
+          role_poet = Role.find_or_create_by(name: "Poet")
+          role_author = Role.find_or_create_by(name: "Author")
           WorkRole.create(
             work: new_work,
             person: person,
-            role: "Poet"
+            role: role_poet
           )
           WorkRole.create(
             work: new_work,
             person: person,
-            role: "Author"
+            role: role_author
           )
         end
       end

@@ -1,11 +1,12 @@
 class WorkRole < ApplicationRecord
 
   belongs_to :person
+  belongs_to :role
   belongs_to :work
 
   def name
-    if person
-      "#{person.name} (#{role})"
+    if person && role
+      "#{person.name} (#{role.name})"
     end
   end
 

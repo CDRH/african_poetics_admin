@@ -34,6 +34,7 @@ class NewsItem < ApplicationRecord
         label "People by Role"
       end
     end
+
     show do
       configure :date do
         formatted_value do
@@ -51,6 +52,7 @@ class NewsItem < ApplicationRecord
         end
       end
     end
+
     edit do
       field :article_title
       field :news_item_type
@@ -60,21 +62,15 @@ class NewsItem < ApplicationRecord
       field :source_link
       field :source_access_date
       field :repositories
-      field :news_item_roles do
-        label "People by Role (SEE HELP TEXT)"
-        help <<-TEXT
-          ATTENTION! Add people (below) to this news item first and hit 'Save and
-          Edit.' Then double click a person's name in Role to assign."
-        TEXT
-      end
       field :people do
-        label "All Associated People (add here first, then add role)"
+        label "Associated people (add before roles)"
+        help "Optional. Add people, save, THEN add people roles"
       end
-      field :events
-      field :works
-      field :excerpt
-      field :tags
-      field :notes
+      field :news_item_roles do
+        label "Associated people by role (add after associated people)"
+        help "Optional. Add people, save, THEN add role to this field"
+      end
+      include_all_fields
     end
   end
 end

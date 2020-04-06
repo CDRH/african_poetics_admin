@@ -1,5 +1,7 @@
 class Person < ApplicationRecord
 
+  belongs_to :gender
+
   # foreign keys
   has_many :educations, dependent: :destroy
 
@@ -32,7 +34,6 @@ class Person < ApplicationRecord
       field :date_death
       field :complete
       field :major_african_poet
-      field :poet_id
       field :locations do
         label "Nationality"
       end

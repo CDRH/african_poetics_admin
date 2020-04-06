@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_03_211432) do
+ActiveRecord::Schema.define(version: 2020_04_06_154714) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "name"
@@ -96,6 +96,12 @@ ActiveRecord::Schema.define(version: 2020_04_03_211432) do
     t.bigint "person_id", null: false
   end
 
+  create_table "genders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "place"
     t.string "city"
@@ -161,11 +167,9 @@ ActiveRecord::Schema.define(version: 2020_04_03_211432) do
   end
 
   create_table "people", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "poet_id"
     t.string "name_last"
     t.string "name_given"
     t.string "name_alt"
-    t.string "gender"
     t.string "date_birth"
     t.string "date_death"
     t.text "bibliography"
@@ -175,6 +179,8 @@ ActiveRecord::Schema.define(version: 2020_04_03_211432) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "complete"
     t.boolean "major_african_poet"
+    t.bigint "gender_id"
+    t.index ["gender_id"], name: "index_people_on_gender_id"
   end
 
   create_table "publishers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

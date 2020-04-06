@@ -72,6 +72,11 @@ class PoetCsv
     edu[0] == "[none]" && edu[1] == "[none]" && edu[2] == "[none]"
   end
 
+  def gender(row)
+    g = row["Poet Gender"]
+    Gender.find_or_create_by(name: g.strip) if g
+  end
+
   def generate_education_information(row, person)
     educations = combine_fields(row,
       "Poet University Name",
@@ -124,8 +129,6 @@ class PoetCsv
   def person_basics(row)
     name_str = row["Poet Name (Last name, first name[Alternate])"]
     person = find_or_create_poet(name_str)
-    person.poet_id = row["Poet ID"]
-    person.gender = row["Poet Gender"]
     person.date_birth = row["DOB (YYYY-MM-DD)"]
     person.date_death = row["DOD (YYYY-MM-DD)"]
     person.bibliography = row["Poet BIB"]
@@ -141,6 +144,7 @@ class PoetCsv
   def seed_row(row)
 
     person = person_basics(row)
+    person.gender = gender(row)
     person.locations += nationalities(row) || []
     # assume this person is done if they are being imported
     person.complete = true

@@ -131,7 +131,6 @@ class PoetCsv
     person.bibliography = row["Poet BIB"]
     person.short_biography = row["Short Bio"]
     person.notes = row["Notes"]
-    person.citations = row["BIO INFO"]
     # if a person is appearing on this spreadsheet, then we can
     # assume that they are a major african poet
     # other poets added from other spreadsheet may not fit that criteria

@@ -43,6 +43,13 @@ class Person < ApplicationRecord
       configure :name_alt do
         search_operator "starts_with"
       end
+      configure :date_birth do
+        queryable false
+      end
+      configure :date_death do
+        queryable false
+      end
+
       exclude_fields :created_at, :updated_at
       # exclude text fields
       exclude_fields :bibliography, :short_biography, :notes

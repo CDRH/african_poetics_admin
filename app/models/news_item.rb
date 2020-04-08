@@ -32,9 +32,9 @@ class NewsItem < ApplicationRecord
         end
       end
       field :publisher
-      field :news_item_roles do
-        label "People by Role"
-      end
+#      field :news_item_roles do
+#        label "People by Role"
+#      end
     end
 
     show do

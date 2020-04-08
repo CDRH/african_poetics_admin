@@ -10,6 +10,10 @@ class Tag < ApplicationRecord
     list do
       sort_by :name
 
+      configure :name do
+        search_operator "starts_with"
+      end
+
       field :name
       field :description
       field :item_number

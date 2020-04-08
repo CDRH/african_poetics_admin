@@ -7,6 +7,9 @@ class University < ApplicationRecord
     list do
       sort_by :name
 
+      configure :name do
+        search_operator "starts_with"
+      end
       configure :educations do
         hide
       end

@@ -15,6 +15,10 @@ class Location < ApplicationRecord
     list do
       sort_by :country
 
+      configure :country do
+        search_operator "starts_with"
+      end
+
       exclude_fields :created_at, :updated_at
     end
   end

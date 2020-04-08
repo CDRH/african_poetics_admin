@@ -34,6 +34,15 @@ class Person < ApplicationRecord
         label "Nationality"
       end
 
+      configure :name_last do
+        search_operator "starts_with"
+      end
+      configure :name_given do
+        search_operator "starts_with"
+      end
+      configure :name_alt do
+        search_operator "starts_with"
+      end
       exclude_fields :created_at, :updated_at
       # exclude text fields
       exclude_fields :bibliography, :short_biography, :notes

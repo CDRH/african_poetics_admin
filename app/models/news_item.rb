@@ -22,7 +22,9 @@ class NewsItem < ApplicationRecord
     list do
       sort_by :article_title
 
-      field :article_title
+      field :article_title do
+        search_operator "starts_with"
+      end
       field :news_item_type
       field :date do
         formatted_value do

@@ -16,6 +16,10 @@ class Work < ApplicationRecord
     list do
       sort_by :title
 
+      configure :title do
+        search_operator "starts_with"
+      end
+
       exclude_fields :created_at, :updated_at
       exclude_fields :citation, :commentaries,
         :news_items, :people

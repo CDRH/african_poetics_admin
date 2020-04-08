@@ -8,6 +8,8 @@ class Tag < ApplicationRecord
 
   rails_admin do
     list do
+      sort_by :name
+
       field :name
       field :description
       field :item_number

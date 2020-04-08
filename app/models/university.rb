@@ -5,6 +5,7 @@ class University < ApplicationRecord
 
   rails_admin do
     list do
+      sort_by :name
 
       configure :educations do
         hide

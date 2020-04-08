@@ -8,6 +8,8 @@ class Commentary < ApplicationRecord
 
   rails_admin do
     list do
+      sort_by :name
+
       configure :content do
         pretty_value do
           value ? "#{value[0..150]}..." : "[No content]"

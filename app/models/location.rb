@@ -13,6 +13,8 @@ class Location < ApplicationRecord
 
   rails_admin do
     list do
+      sort_by :country
+
       exclude_fields :created_at, :updated_at
     end
   end

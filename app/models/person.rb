@@ -28,6 +28,8 @@ class Person < ApplicationRecord
 
   rails_admin do
     list do
+      sort_by :name_last
+
       configure :locations do
         label "Nationality"
       end

@@ -5,6 +5,8 @@ class Role < ApplicationRecord
 
   rails_admin do
     list do
+      sort_by :name
+
       exclude_fields :created_at, :updated_at
       exclude_fields :news_item_roles, :work_roles
     end

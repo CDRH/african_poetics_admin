@@ -4,7 +4,7 @@ class Education < ApplicationRecord
 
   def name
     if person && university
-      "#{person_name}, #{uni_name} (#{degree})"
+      "#{person_name}, #{university_name} (#{degree})"
     end
   end
 
@@ -12,14 +12,16 @@ class Education < ApplicationRecord
     person.name
   end
 
-  def uni_name
+  def university_name
     university.name
   end
 
   rails_admin do
     list do
+      items_per_page 25
+
       field :person_name
-      field :uni_name
+      field :university_name
       field :year_ended
       field :graduated
       field :degree

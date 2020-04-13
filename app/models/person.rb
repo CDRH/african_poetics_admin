@@ -32,10 +32,6 @@ class Person < ApplicationRecord
     list do
       sort_by :name_last
 
-      configure :locations do
-        label "Nationality"
-      end
-
       configure :name_last do
         search_operator "starts_with"
       end
@@ -52,12 +48,12 @@ class Person < ApplicationRecord
         queryable false
       end
 
-      exclude_fields :created_at, :updated_at
-      # exclude text fields
-      exclude_fields :bibliography, :short_biography, :notes
-      # exclude associations (except locations)
-      exclude_fields :commentaries, :educations, :events,
-        :news_item_roles, :news_items, :work_roles, :works
+      exclude_fields :created_at, :updated_at,
+                     # exclude text fields
+                     :bibliography, :notes, :short_biography,
+                     # exclude associations
+                     :commentaries, :educations, :events, :locations,
+                     :news_item_roles, :news_items, :work_roles, :works
     end
 
     show do

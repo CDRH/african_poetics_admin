@@ -14,15 +14,15 @@ class Work < ApplicationRecord
 
   rails_admin do
     list do
+      items_per_page 150
       sort_by :title
 
       configure :title do
         search_operator "starts_with"
       end
 
-      exclude_fields :created_at, :updated_at
-      exclude_fields :citation, :commentaries,
-        :news_items, :people
+      exclude_fields :created_at, :updated_at,
+                     :citation, :commentaries, :news_items, :people, :work_roles
     end
     edit do
       field :title

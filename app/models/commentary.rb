@@ -18,7 +18,8 @@ class Commentary < ApplicationRecord
         end
       end
 
-      exclude_fields :created_at, :updated_at
+      exclude_fields :created_at, :updated_at,
+                     :events, :news_items, :people, :works
     end
 
     show do

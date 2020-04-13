@@ -19,7 +19,8 @@ class Location < ApplicationRecord
         search_operator "starts_with"
       end
 
-      exclude_fields :created_at, :updated_at
+      exclude_fields :created_at, :updated_at,
+                     :events, :people, :universities
     end
   end
 

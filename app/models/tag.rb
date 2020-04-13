@@ -10,6 +10,8 @@ class Tag < ApplicationRecord
 
   rails_admin do
     list do
+      # Lowered from 50 due to item_number slowing page load
+      items_per_page 25
       sort_by :name
 
       configure :name do
@@ -17,9 +19,8 @@ class Tag < ApplicationRecord
       end
 
       field :name
-      field :description
       field :item_number
-      field :news_items
+      field :description
     end
   end
 

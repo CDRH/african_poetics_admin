@@ -9,7 +9,8 @@ class Repository < ApplicationRecord
     list do
       sort_by :name
 
-      exclude_fields :created_at, :updated_at
+      exclude_fields :created_at, :updated_at,
+                     :locations, :news_items
     end
   end
 

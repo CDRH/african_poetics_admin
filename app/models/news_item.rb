@@ -13,6 +13,8 @@ class NewsItem < ApplicationRecord
   has_many :news_item_roles, dependent: :destroy
   has_many :people, through: :news_item_roles
 
+  validates :article_title, presence: true
+
   def name
     pub = publisher ? publisher.name : ""
     "'#{article_title}', #{pub} (#{year})"

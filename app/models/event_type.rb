@@ -2,6 +2,8 @@ class EventType < ApplicationRecord
 
   has_many :events
 
+  validates :name, presence: true
+
   rails_admin do
     list do
       sort_by :name

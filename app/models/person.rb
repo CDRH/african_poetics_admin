@@ -20,6 +20,8 @@ class Person < ApplicationRecord
   has_many :work_roles, dependent: :destroy
   has_many :works, through: :work_roles
 
+  validates :name_last, presence: true
+
   def name
     str = [ name_last, name_given ].compact.join(", ")
     str += " [#{name_alt}]" if name_alt

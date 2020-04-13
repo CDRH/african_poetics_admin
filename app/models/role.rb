@@ -3,6 +3,8 @@ class Role < ApplicationRecord
   has_many :news_item_roles
   has_many :work_roles
 
+  validates :name, presence: true
+
   rails_admin do
     list do
       sort_by :name

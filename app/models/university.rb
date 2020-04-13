@@ -3,6 +3,8 @@ class University < ApplicationRecord
   belongs_to :location
   has_many :educations, dependent: :destroy
 
+  validates :name, presence: true
+
   rails_admin do
     list do
       sort_by :name

@@ -2,6 +2,8 @@ class NewsItemType < ApplicationRecord
 
   has_many :news_items
 
+  validates :name, presence: true
+
   rails_admin do
     list do
       sort_by :name

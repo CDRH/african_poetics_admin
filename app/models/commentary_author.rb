@@ -2,6 +2,8 @@ class CommentaryAuthor < ApplicationRecord
 
   has_and_belongs_to_many :commentaries
 
+  validates :name_last, presence: true
+
   def name
     [ name_title, name_given, name_last ].compact.join(" ")
   end

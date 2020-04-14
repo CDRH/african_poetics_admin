@@ -47,7 +47,7 @@ RailsAdmin.config do |config|
   # Lower weights move this group first
   config.model "NewsItem" do
     navigation_label "Biographic Info"
-    weight -4
+    weight -3
   end
   config.model "Person" do
     navigation_label "Biographic Info"

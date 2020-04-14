@@ -24,7 +24,7 @@ class Event < ApplicationRecord
       field :date
       field :event_type
       field :location
-      field :summary
+      field :complete
     end
     edit do
       configure :date do

@@ -62,14 +62,11 @@ class Person < ApplicationRecord
         queryable false
       end
 
-      exclude_fields :created_at, :updated_at,
-                     # exclude text fields
-                     :bibliography, :notes, :short_biography,
-                     # exclude associations
-                     :commentaries, :educations, :events, :locations,
-                     :news_item_roles, :news_items, :objects,
-                     :relationship_objects, :relationship_subjects, :subjects,
-                     :work_roles, :works
+      field :name_last
+      field :name_given
+      field :name_alt
+      field :major_african_poet
+      field :complete
     end
 
     show do

@@ -34,6 +34,7 @@ class NewsItem < ApplicationRecord
         end
       end
       field :publisher
+      field :complete
     end
 
     show do

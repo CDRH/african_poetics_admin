@@ -58,7 +58,7 @@ RailsAdmin.config do |config|
     weight -2
   end
   config.model "Work" do
-    navigation_label "Reference Info"
+    navigation_label "Biographic Info"
     weight -2
   end
 

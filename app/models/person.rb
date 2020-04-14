@@ -89,28 +89,11 @@ class Person < ApplicationRecord
       field :locations do
         label "Nationality"
       end
-      field :educations
       field :bibliography
       field :short_biography
-      field :news_items do
-        label "News items (add before roles)"
-        help "Optional. Add news items, save, THEN add news item role"
-      end
-      field :news_item_roles do
-        label "News item roles (add after news items)"
-        help "Optional. First add a news item, save, THEN add roles to this field"
-      end
-      field :works do
-        label "Works (add before roles)"
-        help "Optional. Add works, save, THEN add work role"
-      end
-      field :work_roles do
-        label "Work roles (add after works)"
-        help "Optional. First add a news item, save, THEN add roles to this field"
-      end
-      # despite adding a few above here to work with the order,
-      # go ahead and display everything
       include_all_fields
+      exclude_fields :educations, :events, :news_items, :news_item_roles,
+                     :works, :work_roles
     end
   end
 

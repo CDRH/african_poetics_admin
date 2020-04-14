@@ -33,6 +33,10 @@ class Commentary < ApplicationRecord
         end
       end
     end
+
+    edit do
+      exclude_fields :events, :news_items, :people, :works
+    end
   end
 
 end

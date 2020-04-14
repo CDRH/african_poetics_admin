@@ -34,19 +34,11 @@ class Work < ApplicationRecord
       field :citation do
         help "This field added because works were imported from nonstandard formats and may require additional information"
       end
-      field :people do
-        label "Associated people (add before roles)"
-        help "Optional. Add people, save, THEN add person roles"
-      end
-      field :work_roles do
-        label "Person roles (add after people)"
-        help "Optional. Add people, save, THEN add role to this field"
-      end
       include_all_fields
       # NOTE: Lorna said that works will always
       # be entered from a person page or news item
       # not from this interface, so hide news_items
-      exclude_fields :news_items
+      exclude_fields :news_items, :people, :work_roles
     end
   end
 

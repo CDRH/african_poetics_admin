@@ -11,6 +11,10 @@ class EventType < ApplicationRecord
       exclude_fields :created_at, :updated_at,
                      :events
     end
+
+    edit do
+      exclude_fields :events
+    end
   end
 
 end

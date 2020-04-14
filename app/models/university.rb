@@ -18,6 +18,10 @@ class University < ApplicationRecord
 
       exclude_fields :created_at, :updated_at
     end
+
+    edit do
+      exclude_fields :educations
+    end
   end
 
 end

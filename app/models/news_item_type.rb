@@ -11,6 +11,10 @@ class NewsItemType < ApplicationRecord
       exclude_fields :created_at, :updated_at,
                      :news_items
     end
+
+    edit do
+      exclude_fields :news_items
+    end
   end
 
 end

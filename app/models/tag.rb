@@ -22,6 +22,10 @@ class Tag < ApplicationRecord
       field :item_number
       field :description
     end
+
+    edit do
+      exclude_fields :news_items
+    end
   end
 
 end

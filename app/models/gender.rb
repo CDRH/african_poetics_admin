@@ -11,6 +11,10 @@ class Gender < ApplicationRecord
       exclude_fields :created_at, :updated_at,
                      :people
     end
+
+    edit do
+      exclude_fields :people
+    end
   end
 
 end

@@ -12,6 +12,10 @@ class Repository < ApplicationRecord
       exclude_fields :created_at, :updated_at,
                      :locations, :news_items
     end
+
+    edit do
+      exclude_fields :news_items
+    end
   end
 
 end

@@ -15,6 +15,10 @@ class CommentaryAuthor < ApplicationRecord
       exclude_fields :created_at, :updated_at,
                      :commentaries
     end
+
+    edit do
+      exclude_fields :commentaries
+    end
   end
 
 end

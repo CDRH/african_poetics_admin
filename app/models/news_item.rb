@@ -34,9 +34,6 @@ class NewsItem < ApplicationRecord
         end
       end
       field :publisher
-#      field :news_item_roles do
-#        label "People by Role"
-#      end
     end
 
     show do
@@ -66,15 +63,8 @@ class NewsItem < ApplicationRecord
       field :source_link
       field :source_access_date
       field :repositories
-      field :people do
-        label "Associated people (add before roles)"
-        help "Optional. Add people, save, THEN add people roles"
-      end
-      field :news_item_roles do
-        label "Associated people by role (add after associated people)"
-        help "Optional. Add people, save, THEN add role to this field"
-      end
       include_all_fields
+      exclude_fields :people, :news_item_roles
     end
   end
 end

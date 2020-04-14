@@ -22,6 +22,10 @@ class Location < ApplicationRecord
       exclude_fields :created_at, :updated_at,
                      :events, :people, :universities
     end
+
+    edit do
+      exclude_fields :events, :people, :universities
+    end
   end
 
 end

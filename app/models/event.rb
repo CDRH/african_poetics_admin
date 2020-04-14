@@ -26,9 +26,7 @@ class Event < ApplicationRecord
       configure :date do
         help "YYYY-MM-DD or YYYY. Leave blank if not known"
       end
-      configure :date_not_before do
-        hide
-      end
+      exclude_fields :date_note_before, :news_items, :people
     end
   end
 

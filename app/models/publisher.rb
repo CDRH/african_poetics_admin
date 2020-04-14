@@ -13,6 +13,10 @@ class Publisher < ApplicationRecord
       exclude_fields :created_at, :updated_at,
                      :news_items, :works
     end
+
+    edit do
+      exclude_fields :news_items, :works
+    end
   end
 
 end

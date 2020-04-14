@@ -72,6 +72,10 @@ RailsAdmin.config do |config|
     navigation_label "Connections"
     weight -1
   end
+  config.model "Relationship" do
+    navigation_label "Connections"
+    weight -1
+  end
   config.model "WorkRole" do
     navigation_label "Connections"
     weight -1
@@ -100,6 +104,9 @@ RailsAdmin.config do |config|
     navigation_label "Reference Info"
   end
   config.model "Region" do
+    navigation_label "Reference Info"
+  end
+  config.model "RelationshipType" do
     navigation_label "Reference Info"
   end
   config.model "Repository" do

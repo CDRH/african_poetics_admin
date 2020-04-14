@@ -17,6 +17,12 @@ class Person < ApplicationRecord
   has_many :news_item_roles, dependent: :destroy
   has_many :news_items, through: :news_item_roles
 
+  has_many :relationship_objects, foreign_key: :object_id, class_name: "Relationship"
+  has_many :subjects, through: :relationship_objects
+
+  has_many :relationship_subjects, foreign_key: :subject_id, class_name: "Relationship"
+  has_many :objects, through: :relationship_subjects
+
   has_many :work_roles, dependent: :destroy
   has_many :works, through: :work_roles
 
@@ -61,7 +67,9 @@ class Person < ApplicationRecord
                      :bibliography, :notes, :short_biography,
                      # exclude associations
                      :commentaries, :educations, :events, :locations,
-                     :news_item_roles, :news_items, :work_roles, :works
+                     :news_item_roles, :news_items, :objects,
+                     :relationship_objects, :relationship_subjects, :subjects,
+                     :work_roles, :works
     end
 
     show do
@@ -101,7 +109,8 @@ class Person < ApplicationRecord
       field :short_biography
       include_all_fields
       exclude_fields :educations, :events, :news_items, :news_item_roles,
-                     :works, :work_roles
+                     :objects, :relationship_objects, :relationship_subjects,
+                     :subjects, :works, :work_roles
     end
   end
 

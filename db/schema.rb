@@ -10,41 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_06_173902) do
+ActiveRecord::Schema.define(version: 2020_04_14_080912) do
 
-  create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.text "name"
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "commentaries_commentary_authors", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "commentaries_commentary_authors", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.bigint "commentary_id", null: false
     t.bigint "commentary_author_id", null: false
   end
 
-  create_table "commentaries_events", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "commentaries_events", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.bigint "commentary_id", null: false
     t.bigint "event_id", null: false
   end
 
-  create_table "commentaries_news_items", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "commentaries_news_items", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.bigint "commentary_id", null: false
     t.bigint "news_item_id", null: false
   end
 
-  create_table "commentaries_people", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "commentaries_people", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.bigint "commentary_id", null: false
     t.bigint "person_id", null: false
   end
 
-  create_table "commentaries_works", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "commentaries_works", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.bigint "commentary_id", null: false
     t.bigint "work_id", null: false
   end
 
-  create_table "commentary_authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "commentary_authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name_last"
     t.string "name_given"
     t.string "name_title"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2020_04_06_173902) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "educations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "educations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.integer "year_ended"
     t.boolean "graduated"
     t.string "degree"
@@ -65,14 +65,14 @@ ActiveRecord::Schema.define(version: 2020_04_06_173902) do
     t.index ["university_id"], name: "index_educations_on_university_id"
   end
 
-  create_table "event_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "event_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "description"
   end
 
-  create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
     t.datetime "date_not_before"
     t.string "date"
@@ -86,23 +86,23 @@ ActiveRecord::Schema.define(version: 2020_04_06_173902) do
     t.index ["location_id"], name: "index_events_on_location_id"
   end
 
-  create_table "events_news_items", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "events_news_items", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.bigint "event_id", null: false
     t.bigint "news_item_id", null: false
   end
 
-  create_table "events_people", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "events_people", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.bigint "event_id", null: false
     t.bigint "person_id", null: false
   end
 
-  create_table "genders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "genders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "place"
     t.string "city"
     t.string "country"
@@ -113,12 +113,12 @@ ActiveRecord::Schema.define(version: 2020_04_06_173902) do
     t.index ["region_id"], name: "index_locations_on_region_id"
   end
 
-  create_table "locations_people", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "locations_people", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.bigint "person_id", null: false
     t.bigint "location_id", null: false
   end
 
-  create_table "news_item_roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "news_item_roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.bigint "person_id"
     t.bigint "news_item_id"
     t.datetime "created_at", precision: 6, null: false
@@ -129,14 +129,14 @@ ActiveRecord::Schema.define(version: 2020_04_06_173902) do
     t.index ["role_id"], name: "index_news_item_roles_on_role_id"
   end
 
-  create_table "news_item_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "news_item_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "description"
   end
 
-  create_table "news_items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "news_items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "article_title"
     t.datetime "date"
     t.text "excerpt"
@@ -154,22 +154,22 @@ ActiveRecord::Schema.define(version: 2020_04_06_173902) do
     t.index ["publisher_id"], name: "index_news_items_on_publisher_id"
   end
 
-  create_table "news_items_repositories", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "news_items_repositories", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.bigint "repository_id", null: false
     t.bigint "news_item_id", null: false
   end
 
-  create_table "news_items_tags", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "news_items_tags", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.bigint "tag_id", null: false
     t.bigint "news_item_id", null: false
   end
 
-  create_table "news_items_works", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "news_items_works", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.bigint "work_id", null: false
     t.bigint "news_item_id", null: false
   end
 
-  create_table "people", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "people", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name_last"
     t.string "name_given"
     t.string "name_alt"
@@ -186,7 +186,7 @@ ActiveRecord::Schema.define(version: 2020_04_06_173902) do
     t.index ["gender_id"], name: "index_people_on_gender_id"
   end
 
-  create_table "publishers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "publishers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -194,14 +194,29 @@ ActiveRecord::Schema.define(version: 2020_04_06_173902) do
     t.index ["location_id"], name: "index_publishers_on_location_id"
   end
 
-  create_table "regions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "regions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "description"
   end
 
-  create_table "repositories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "relationship_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
+    t.integer "subject_id"
+    t.integer "object_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "relationship_type_id", null: false
+    t.index ["relationship_type_id"], name: "index_relationships_on_relationship_type_id"
+  end
+
+  create_table "repositories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -209,21 +224,21 @@ ActiveRecord::Schema.define(version: 2020_04_06_173902) do
     t.index ["location_id"], name: "index_repositories_on_location_id"
   end
 
-  create_table "roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "description"
   end
 
-  create_table "universities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "universities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -231,7 +246,7 @@ ActiveRecord::Schema.define(version: 2020_04_06_173902) do
     t.index ["location_id"], name: "index_universities_on_location_id"
   end
 
-  create_table "work_roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "work_roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.bigint "person_id"
     t.bigint "work_id"
     t.datetime "created_at", precision: 6, null: false
@@ -242,14 +257,14 @@ ActiveRecord::Schema.define(version: 2020_04_06_173902) do
     t.index ["work_id"], name: "index_work_roles_on_work_id"
   end
 
-  create_table "work_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "work_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "description"
   end
 
-  create_table "works", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "works", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "title"
     t.integer "year"
     t.text "citation"
@@ -261,4 +276,5 @@ ActiveRecord::Schema.define(version: 2020_04_06_173902) do
     t.index ["work_type_id"], name: "index_works_on_work_type_id"
   end
 
+  add_foreign_key "relationships", "relationship_types"
 end

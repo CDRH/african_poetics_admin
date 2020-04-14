@@ -45,20 +45,20 @@ RailsAdmin.config do |config|
   # Navigation
   # Biographic Info
   # Lower weights move this group first
+  config.model "NewsItem" do
+    navigation_label "Biographic Info"
+    weight -4
+  end
+  config.model "Person" do
+    navigation_label "Biographic Info"
+    weight -3
+  end
   config.model "Event" do
     navigation_label "Biographic Info"
     weight -2
   end
-  config.model "NewsItem" do
-    navigation_label "Biographic Info"
-    weight -2
-  end
-  config.model "Person" do
-    navigation_label "Biographic Info"
-    weight -2
-  end
   config.model "Work" do
-    navigation_label "Biographic Info"
+    navigation_label "Reference Info"
     weight -2
   end
 

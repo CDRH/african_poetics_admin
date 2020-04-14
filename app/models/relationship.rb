@@ -14,13 +14,21 @@ class Relationship < ApplicationRecord
   rails_admin do
     list do
       field :subject
-      field :relationship_type
+      field :relationship_type do
+        pretty_value do
+          "#{value.name} to"
+        end
+      end
       field :object
       exclude_fields :created_at, :updated_at
     end
     edit do
       field :subject
-      field :relationship_type
+      field :relationship_type do
+        pretty_value do
+          "#{value.name} to"
+        end
+      end
       field :object
       exclude_fields :created_at, :updated_at
     end

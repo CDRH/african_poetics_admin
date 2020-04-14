@@ -73,9 +73,37 @@ class Person < ApplicationRecord
       configure :locations do
         label "Nationality"
       end
+      configure :objects do
+        label "Relationship Objects"
+        pretty_value do
+          value.map { |person|
+            relations = person.relationship_objects
+              .where(subject_id: bindings[:object].id)
+              .map { |r|
+                "#{r.relationship_type.name}"
+              }
+              .uniq.join(", ")
+            "#{relations} to #{person.name}"
+          }.uniq.join("; ")
+        end
+      end
       configure :news_item_roles do
         pretty_value do
           value.map { |v| v.role }.uniq.join(", ")
+        end
+      end
+      configure :subjects do
+        label "Relationship Subjects"
+        pretty_value do
+          value.map { |person|
+            relations = person.relationship_subjects
+              .where(object_id: bindings[:object].id)
+              .map { |r|
+                "#{r.relationship_type.name}"
+              }
+              .uniq.join(", ")
+            "#{person.name} is #{relations}"
+          }.uniq.join("; ")
         end
       end
       configure :work_roles do
@@ -83,6 +111,7 @@ class Person < ApplicationRecord
           value.map { |v| v.role }.uniq.join(", ")
         end
       end
+      exclude_fields :relationship_objects, :relationship_subjects
     end
 
     edit do

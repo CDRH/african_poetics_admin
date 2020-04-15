@@ -17,11 +17,11 @@ class Person < ApplicationRecord
   has_many :news_item_roles, dependent: :destroy
   has_many :news_items, through: :news_item_roles
 
-  has_many :relationship_objects, foreign_key: :object_id, class_name: "Relationship"
+  has_many :relationship_objects, foreign_key: :rel_object_id, class_name: "Relationship"
   has_many :subjects, through: :relationship_objects
 
   has_many :relationship_subjects, foreign_key: :subject_id, class_name: "Relationship"
-  has_many :objects, through: :relationship_subjects
+  has_many :rel_objects, through: :relationship_subjects
 
   has_many :work_roles, dependent: :destroy
   has_many :works, through: :work_roles
@@ -73,7 +73,7 @@ class Person < ApplicationRecord
       configure :locations do
         label "Nationality"
       end
-      configure :objects do
+      configure :rel_objects do
         label "Relationship Objects"
         pretty_value do
           value.map { |person|
@@ -97,7 +97,7 @@ class Person < ApplicationRecord
         pretty_value do
           value.map { |person|
             relations = person.relationship_subjects
-              .where(object_id: bindings[:object].id)
+              .where(rel_object_id: bindings[:object].id)
               .map { |r|
                 "#{r.relationship_type.name}"
               }
@@ -135,8 +135,8 @@ class Person < ApplicationRecord
       field :short_biography
       include_all_fields
       exclude_fields :educations, :events, :news_items, :news_item_roles,
-                     :objects, :relationship_objects, :relationship_subjects,
-                     :subjects, :works, :work_roles
+                     :rel_objects, :relationship_objects,
+                     :relationship_subjects, :subjects, :works, :work_roles
     end
   end
 

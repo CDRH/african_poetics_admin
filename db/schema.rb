@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_14_080912) do
+ActiveRecord::Schema.define(version: 2020_04_15_222220) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.text "name"
@@ -209,7 +209,7 @@ ActiveRecord::Schema.define(version: 2020_04_14_080912) do
 
   create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.integer "subject_id"
-    t.integer "object_id"
+    t.integer "rel_object_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "relationship_type_id", null: false

@@ -68,6 +68,10 @@ RailsAdmin.config do |config|
     navigation_label "Connections"
     weight -1
   end
+  config.model "MetaCommentary" do
+    navigation_label "Connections"
+    weight -1
+  end
   config.model "NewsItemRole" do
     navigation_label "Connections"
     weight -1

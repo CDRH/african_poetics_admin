@@ -102,6 +102,7 @@ RailsAdmin.config do |config|
     navigation_label "Reference Info"
   end
   config.model "NewsItemType" do
+    label "Document Type"
     navigation_label "Reference Info"
   end
   config.model "Publisher" do
@@ -114,6 +115,7 @@ RailsAdmin.config do |config|
     navigation_label "Reference Info"
   end
   config.model "Repository" do
+    label "Archive"
     navigation_label "Reference Info"
   end
   config.model "Role" do

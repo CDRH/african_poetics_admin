@@ -27,13 +27,17 @@ class NewsItem < ApplicationRecord
       field :article_title do
         search_operator "starts_with"
       end
-      field :news_item_type
+      field :news_item_type do
+        label "Document Type"
+      end
       field :date do
         formatted_value do
           value.strftime("%Y-%m-%d")
         end
       end
-      field :publisher
+      field :publisher do
+        label "Publication"
+      end
       field :complete
     end
 
@@ -42,6 +46,15 @@ class NewsItem < ApplicationRecord
         formatted_value do
           value.strftime("%Y-%m-%d")
         end
+      end
+      configure :news_item_type do
+        label "Document Type"
+      end
+      configure :publisher do
+        label "Publication"
+      end
+      configure :repositories do
+        label "Archive"
       end
       configure :source_link do
         formatted_value do
@@ -57,13 +70,19 @@ class NewsItem < ApplicationRecord
 
     edit do
       field :article_title
-      field :news_item_type
+      field :news_item_type do
+        label "Document Type"
+      end
       field :date
-      field :publisher
+      field :publisher do
+        label "Publication"
+      end
       field :source_page_no
       field :source_link
       field :source_access_date
-      field :repositories
+      field :repositories do
+        label "Archive"
+      end
       include_all_fields
       exclude_fields :people, :news_item_roles
     end

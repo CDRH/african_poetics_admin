@@ -22,7 +22,8 @@ class Work < ApplicationRecord
       end
 
       exclude_fields :created_at, :updated_at,
-                     :citation, :commentaries, :news_items, :people, :work_roles
+                     :citation, :commentaries, :id, :news_items, :people,
+                     :work_roles
     end
     edit do
       field :title

@@ -106,6 +106,7 @@ RailsAdmin.config do |config|
     navigation_label "Reference Info"
   end
   config.model "Publisher" do
+    label "Publication"
     navigation_label "Reference Info"
   end
   config.model "Region" do

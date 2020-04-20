@@ -17,8 +17,24 @@ class Person < ApplicationRecord
   has_many :news_item_roles, dependent: :destroy
   has_many :news_items, through: :news_item_roles
 
+  has_many :relationship_objects, foreign_key: :rel_object_id, class_name: "Relationship"
+  has_many :subjects, through: :relationship_objects
+
+  has_many :relationship_subjects, foreign_key: :subject_id, class_name: "Relationship"
+  has_many :rel_objects, through: :relationship_subjects
+
   has_many :work_roles, dependent: :destroy
   has_many :works, through: :work_roles
+
+#  validates :date_birth, format: {
+#    with: /\A[12]\d{3}(\-(?:0[1-9]|1[0-2])\-(?:0[1-9]|[1-2]a[0-9]|3[01]))?\z/,
+#    message: "YYYY-MM-DD or YYYY allowed"
+#  }
+#  validates :date_death, format: {
+#    with: /\A[12]\d{3}(\-(?:0[1-9]|1[0-2])\-(?:0[1-9]|[1-2][0-9]|3[01]))?\z/,
+#    message: "YYYY-MM-DD or YYYY allowed"
+#  }
+  validates :name_last, presence: true
 
   def name
     str = [ name_last, name_given ].compact.join(", ")
@@ -28,32 +44,65 @@ class Person < ApplicationRecord
 
   rails_admin do
     list do
-      configure :locations do
-        label "Nationality"
+      sort_by :name_last
+
+      configure :name_last do
+        search_operator "starts_with"
+      end
+      configure :name_given do
+        search_operator "starts_with"
+      end
+      configure :name_alt do
+        search_operator "starts_with"
+      end
+      configure :date_birth do
+        queryable false
+      end
+      configure :date_death do
+        queryable false
       end
 
-      exclude_fields :created_at, :updated_at
-      # exclude text fields
-      exclude_fields :bibliography, :short_biography, :notes
-      # exclude associations (except locations)
-      exclude_fields :commentaries, :educations, :events,
-        :news_item_roles, :news_items, :work_roles, :works
+      field :name_last
+      field :name_given
+      field :name_alt
+      field :major_african_poet
+      field :complete
     end
 
     show do
       configure :locations do
         label "Nationality"
       end
-      configure :news_item_roles do
+      configure :rel_objects do
+        label "Relationship Objects"
         pretty_value do
-          value.map { |v| v.role }.uniq.join(", ")
+          value.map { |person|
+            relations = person.relationship_objects
+              .where(subject_id: bindings[:object].id)
+              .map { |r|
+                "#{r.relationship_type.name}"
+              }
+              .uniq.join(", ")
+            "#{relations} to #{person.name}"
+          }.uniq.join("; ")
         end
       end
-      configure :work_roles do
+      configure :subjects do
+        label "Relationship Subjects"
         pretty_value do
-          value.map { |v| v.role }.uniq.join(", ")
+          value.map { |person|
+            relations = person.relationship_subjects
+              .where(rel_object_id: bindings[:object].id)
+              .map { |r|
+                "#{r.relationship_type.name}"
+              }
+              .uniq.join(", ")
+            "#{person.name} is #{relations}"
+          }.uniq.join("; ")
         end
       end
+      exclude_fields :news_item_roles, :relationship_objects,
+                     :relationship_subjects, :work_roles
     end
 
     edit do
@@ -73,28 +122,12 @@ class Person < ApplicationRecord
       field :locations do
         label "Nationality"
       end
-      field :educations
       field :bibliography
       field :short_biography
-      field :news_items do
-        label "News items (add before roles)"
-        help "Optional. Add news items, save, THEN add news item role"
-      end
-      field :news_item_roles do
-        label "News item roles (add after news items)"
-        help "Optional. First add a news item, save, THEN add roles to this field"
-      end
-      field :works do
-        label "Works (add before roles)"
-        help "Optional. Add works, save, THEN add work role"
-      end
-      field :work_roles do
-        label "Work roles (add after works)"
-        help "Optional. First add a news item, save, THEN add roles to this field"
-      end
-      # despite adding a few above here to work with the order,
-      # go ahead and display everything
       include_all_fields
+      exclude_fields :educations, :events, :news_items, :news_item_roles,
+                     :rel_objects, :relationship_objects,
+                     :relationship_subjects, :subjects, :works, :work_roles
     end
   end
 

@@ -87,11 +87,6 @@ class Person < ApplicationRecord
           }.uniq.join("; ")
         end
       end
-      configure :news_item_roles do
-        pretty_value do
-          value.map { |v| v.role }.uniq.join(", ")
-        end
-      end
       configure :subjects do
         label "Relationship Subjects"
         pretty_value do
@@ -106,12 +101,8 @@ class Person < ApplicationRecord
           }.uniq.join("; ")
         end
       end
-      configure :work_roles do
-        pretty_value do
-          value.map { |v| v.role }.uniq.join(", ")
-        end
-      end
-      exclude_fields :relationship_objects, :relationship_subjects
+      exclude_fields :news_item_roles, :relationship_objects,
+                     :relationship_subjects, :work_roles
     end
 
     edit do

@@ -13,7 +13,7 @@ class CommentaryAuthor < ApplicationRecord
       sort_by :name_last
 
       exclude_fields :created_at, :updated_at,
-                     :commentaries
+                     :commentaries, :id
     end
 
     edit do

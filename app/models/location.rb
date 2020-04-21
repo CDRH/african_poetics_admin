@@ -20,7 +20,7 @@ class Location < ApplicationRecord
       end
 
       exclude_fields :created_at, :updated_at,
-                     :events, :people, :universities
+                     :events, :id, :people, :universities
     end
 
     edit do

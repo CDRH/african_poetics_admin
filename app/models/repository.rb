@@ -10,7 +10,7 @@ class Repository < ApplicationRecord
       sort_by :name
 
       exclude_fields :created_at, :updated_at,
-                     :locations, :news_items
+                     :id, :locations, :news_items
     end
 
     edit do

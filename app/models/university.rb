@@ -12,11 +12,8 @@ class University < ApplicationRecord
       configure :name do
         search_operator "starts_with"
       end
-      configure :educations do
-        hide
-      end
 
-      exclude_fields :created_at, :updated_at
+      exclude_fields :created_at, :educations, :id, :updated_at
     end
 
     edit do

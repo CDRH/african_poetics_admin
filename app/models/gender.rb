@@ -9,7 +9,7 @@ class Gender < ApplicationRecord
       sort_by :name
 
       exclude_fields :created_at, :updated_at,
-                     :people
+                     :id, :people
     end
 
     edit do

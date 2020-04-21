@@ -9,7 +9,7 @@ class WorkType < ApplicationRecord
       sort_by :name
 
       exclude_fields :created_at, :updated_at,
-                     :works
+                     :id, :works
     end
   end
 

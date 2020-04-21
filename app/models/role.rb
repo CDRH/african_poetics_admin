@@ -9,8 +9,8 @@ class Role < ApplicationRecord
     list do
       sort_by :name
 
-      exclude_fields :created_at, :updated_at
-      exclude_fields :news_item_roles, :work_roles
+      exclude_fields :created_at, :updated_at,
+                     :id, :news_item_roles, :work_roles
     end
 
     edit do

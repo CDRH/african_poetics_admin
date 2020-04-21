@@ -9,7 +9,7 @@ class Region < ApplicationRecord
       sort_by :name
 
       exclude_fields :created_at, :updated_at,
-                     :locations
+                     :id, :locations
     end
   end
 

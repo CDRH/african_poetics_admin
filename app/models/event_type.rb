@@ -9,7 +9,7 @@ class EventType < ApplicationRecord
       sort_by :name
 
       exclude_fields :created_at, :updated_at,
-                     :events
+                     :events, :id
     end
 
     edit do

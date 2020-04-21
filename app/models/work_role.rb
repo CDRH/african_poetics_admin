@@ -12,7 +12,7 @@ class WorkRole < ApplicationRecord
 
   rails_admin do
     list do
-      exclude_fields :created_at, :updated_at
+      exclude_fields :created_at, :id, :updated_at
     end
   end
 

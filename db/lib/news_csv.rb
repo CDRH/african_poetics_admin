@@ -160,7 +160,7 @@ class NewsCsv
     end
 
     pubs.each do |pub|
-      title = pub[0].strip
+      title = pub[0].present? ? pub[0].strip : ""
       next if title.blank?
 
       work = Work.find_or_create_by(title: title)

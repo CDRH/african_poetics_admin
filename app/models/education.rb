@@ -26,6 +26,22 @@ class Education < ApplicationRecord
       field :graduated
       field :degree
     end
+
+    show do
+      field :person
+      field :university
+      field :year_ended
+      field :graduated
+      field :degree
+    end
+
+    edit do
+      field :person
+      field :university
+      field :year_ended
+      field :graduated
+      field :degree
+    end
    end
 
 end

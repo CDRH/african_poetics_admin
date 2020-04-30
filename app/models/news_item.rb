@@ -47,15 +47,6 @@ class NewsItem < ApplicationRecord
           value.strftime("%Y-%m-%d")
         end
       end
-      configure :news_item_type do
-        label "Document Type"
-      end
-      configure :publisher do
-        label "Publication"
-      end
-      configure :repositories do
-        label "Archive"
-      end
       configure :source_link do
         formatted_value do
           bindings[:view].link_to(value, value)
@@ -66,6 +57,33 @@ class NewsItem < ApplicationRecord
           value.strftime("%Y-%m-%d")
         end
       end
+
+      field :article_title
+      field :complete
+      field :news_item_type do
+        label "Document Type"
+      end
+      field :date
+      field :publisher do
+        label "Publication"
+      end
+      field :source_page_no
+      field :source_link
+      field :source_access_date
+      field :repositories do
+        label "Archive"
+      end
+      field :excerpt
+      field :people
+      field :news_item_roles
+      field :works
+      field :events
+      field :commentaries
+      field :tags
+      field :notes
+
+      #include_all_fields
+      #exclude_fields :summary
     end
 
     edit do
@@ -83,8 +101,18 @@ class NewsItem < ApplicationRecord
       field :repositories do
         label "Archive"
       end
-      include_all_fields
-      exclude_fields :people, :news_item_roles
+      field :excerpt
+      field :people
+      field :news_item_roles
+      field :works
+      field :events
+      field :commentaries
+      field :tags
+      field :notes
+      field :complete
+
+      #include_all_fields
+      #exclude_fields :summary
     end
   end
 end

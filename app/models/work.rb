@@ -25,8 +25,23 @@ class Work < ApplicationRecord
                      :citation, :commentaries, :id, :news_items, :people,
                      :work_roles
     end
+
+    show do
+      field :title
+      field :people
+      field :work_roles
+      field :year
+      field :publisher
+      field :work_type
+      field :citation
+      field :commentaries
+      field :news_items
+    end
+
     edit do
       field :title
+      field :people
+      field :work_roles
       field :year do
         help "Required. YYYY, use 0 if unknown"
       end
@@ -35,11 +50,13 @@ class Work < ApplicationRecord
       field :citation do
         help "This field added because works were imported from nonstandard formats and may require additional information"
       end
+      field :commentaries
+
       include_all_fields
       # NOTE: Lorna said that works will always
       # be entered from a person page or news item
       # not from this interface, so hide news_items
-      exclude_fields :news_items, :people, :work_roles
+      exclude_fields :news_items
     end
   end
 

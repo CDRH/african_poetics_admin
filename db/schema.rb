@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_16_182802) do
+ActiveRecord::Schema.define(version: 2020_05_01_195521) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.text "name"
@@ -198,7 +198,9 @@ ActiveRecord::Schema.define(version: 2020_04_16_182802) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "location_id"
+    t.bigint "repository_id"
     t.index ["location_id"], name: "index_publishers_on_location_id"
+    t.index ["repository_id"], name: "index_publishers_on_repository_id"
   end
 
   create_table "regions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
@@ -283,5 +285,6 @@ ActiveRecord::Schema.define(version: 2020_04_16_182802) do
     t.index ["work_type_id"], name: "index_works_on_work_type_id"
   end
 
+  add_foreign_key "publishers", "repositories"
   add_foreign_key "relationships", "relationship_types"
 end

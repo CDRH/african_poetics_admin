@@ -1,5 +1,6 @@
 class Work < ApplicationRecord
 
+  belongs_to :location, optional: true
   belongs_to :publisher, optional: true
   belongs_to :work_type, optional: true
 
@@ -22,8 +23,8 @@ class Work < ApplicationRecord
       end
 
       exclude_fields :created_at, :updated_at,
-                     :citation, :commentaries, :id, :news_items, :people,
-                     :work_roles
+                     :citation, :commentaries, :id, :location, :news_items,
+                     :people, :work_roles
     end
 
     show do
@@ -33,6 +34,7 @@ class Work < ApplicationRecord
       field :year
       field :publisher
       field :work_type
+      field :location
       field :citation
       field :commentaries
       field :news_items
@@ -47,6 +49,7 @@ class Work < ApplicationRecord
       end
       field :publisher
       field :work_type
+      field :location
       field :citation do
         help "This field added because works were imported from nonstandard formats and may require additional information"
       end

@@ -29,11 +29,11 @@ class Person < ApplicationRecord
   has_many :works, through: :work_roles
 
   validates :date_birth, format: {
-    with: /\A[12]\d{3}(\-(?:0[1-9]|1[0-2])\-(?:0[1-9]|[1-2]a[0-9]|3[01]))?\z/,
+    with: /\A(?:[12]\d{3}(\-(?:0[1-9]|1[0-2])\-(?:0[1-9]|[1-2][0-9]|3[01]))?)?\z/,
     message: "YYYY-MM-DD or YYYY allowed"
   }
   validates :date_death, format: {
-    with: /\A[12]\d{3}(\-(?:0[1-9]|1[0-2])\-(?:0[1-9]|[1-2][0-9]|3[01]))?\z/,
+    with: /\A(?:[12]\d{3}(\-(?:0[1-9]|1[0-2])\-(?:0[1-9]|[1-2][0-9]|3[01]))?)?\z/,
     message: "YYYY-MM-DD or YYYY allowed"
   }
   validates :name_last, presence: true

@@ -11,7 +11,7 @@ class Event < ApplicationRecord
   belongs_to :location, optional: true
 
   validates :date, format: {
-    with: /\A[12]\d{3}(\-(?:0[1-9]|1[0-2])\-(?:0[1-9]|[1-2][0-9]|3[01]))?\z/,
+    with: /\A(?:[12]\d{3}(\-(?:0[1-9]|1[0-2])\-(?:0[1-9]|[1-2][0-9]|3[01]))?)?\z/,
     message: "YYYY-MM-DD or YYYY allowed"
   }
   validates :name, presence: true

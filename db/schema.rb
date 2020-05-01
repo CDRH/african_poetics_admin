@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_01_210633) do
+ActiveRecord::Schema.define(version: 2020_05_01_222434) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.text "name"
@@ -190,7 +190,9 @@ ActiveRecord::Schema.define(version: 2020_05_01_210633) do
     t.boolean "complete"
     t.boolean "major_african_poet"
     t.bigint "gender_id"
+    t.bigint "place_of_birth_id"
     t.index ["gender_id"], name: "index_people_on_gender_id"
+    t.index ["place_of_birth_id"], name: "index_people_on_place_of_birth_id"
   end
 
   create_table "publishers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
@@ -287,6 +289,7 @@ ActiveRecord::Schema.define(version: 2020_05_01_210633) do
     t.index ["work_type_id"], name: "index_works_on_work_type_id"
   end
 
+  add_foreign_key "people", "locations", column: "place_of_birth_id"
   add_foreign_key "publishers", "repositories"
   add_foreign_key "relationships", "relationship_types"
   add_foreign_key "works", "locations"

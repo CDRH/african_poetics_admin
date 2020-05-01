@@ -3,6 +3,8 @@ class Person < ApplicationRecord
   # optional because this information is only collected for
   # major african poets, not all the people in the db
   belongs_to :gender, optional: true
+  belongs_to :place_of_birth, optional: true, foreign_key: :place_of_birth_id,
+    class_name: "Location"
 
   # foreign keys
   has_many :educations, dependent: :destroy
@@ -115,6 +117,7 @@ class Person < ApplicationRecord
       field :date_birth do
         help "YYYY-MM-DD or YYYY. Leave blank if not known."
       end
+      field :place_of_birth
       field :date_death do
         help "YYYY-MM-DD or YYYY. Leave blank if alive or not known."
       end

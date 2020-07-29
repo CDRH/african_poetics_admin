@@ -32,7 +32,7 @@ class NewsItem < ApplicationRecord
       end
       field :date do
         formatted_value do
-          value.strftime("%Y-%m-%d")
+          value.strftime("%Y-%m-%d") if value
         end
       end
       field :publisher do
@@ -44,7 +44,7 @@ class NewsItem < ApplicationRecord
     show do
       configure :date do
         formatted_value do
-          value.strftime("%Y-%m-%d")
+          value.strftime("%Y-%m-%d") if value
         end
       end
       configure :source_link do
@@ -54,7 +54,7 @@ class NewsItem < ApplicationRecord
       end
       configure :source_access_date do
         formatted_value do
-          value.strftime("%Y-%m-%d")
+          value.strftime("%Y-%m-%d") if value
         end
       end
 

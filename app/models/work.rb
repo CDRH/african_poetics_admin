@@ -42,8 +42,6 @@ class Work < ApplicationRecord
 
     edit do
       field :title
-      field :people
-      field :work_roles
       field :year do
         help "Required. YYYY, use 0 if unknown"
       end
@@ -56,10 +54,18 @@ class Work < ApplicationRecord
       field :commentaries
 
       include_all_fields
+
+      field :work_roles do
+        # Pre-populates New Work Role modal with existing Work selected
+        inverse_of :work
+        label "Work Roles — Do not add until Work has been saved once"
+      end
+
       # NOTE: Lorna said that works will always
       # be entered from a person page or news item
       # not from this interface, so hide news_items
-      exclude_fields :news_items
+      # People hidden to reduce confusion with has_many through association
+      exclude_fields :news_items, :people
     end
   end
 

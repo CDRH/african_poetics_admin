@@ -102,14 +102,18 @@ class NewsItem < ApplicationRecord
         label "Archive"
       end
       field :excerpt
-      field :people
-      field :news_item_roles
       field :works
       field :events
       field :commentaries
       field :tags
       field :notes
       field :complete
+
+      field :news_item_roles do
+        # Pre-populates New NewsItem Role modal with existing NewsItem selected
+        inverse_of :news_item
+        label "News Item Roles — Do not add until News Item has been saved once"
+      end
 
       #include_all_fields
       #exclude_fields :summary

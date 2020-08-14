@@ -1,0 +1,11 @@
+/* Clear Rails app tmp cache if not working: `rails tmp:clear` */
+
+/* Hide unwanted multi-select elements on Roles forms */
+.news_item_roles_field,
+.work_roles_field {
+  .ra-multiselect-item-add,
+  .ra-multiselect-left,
+  .ra-multiselect-search {
+    display: none;
+  }
+}

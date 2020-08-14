@@ -53,11 +53,15 @@ class Work < ApplicationRecord
       end
       field :commentaries
 
+      field :people do
+        help ""
+        label "*"
+        partial "warning_and_new_person_link"
+      end
 
       field :work_roles do
         # Pre-populates New Work Role modal with existing Work selected
         inverse_of :work
-        label "Work Roles — Do not add until Work has been saved once"
       end
 
       # NOTE: Lorna said that works will always

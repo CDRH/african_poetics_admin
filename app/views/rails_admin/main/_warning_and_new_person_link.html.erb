@@ -1,0 +1,18 @@
+<p>
+  <strong class="text-danger">Remember:</strong>
+  Do not add people or roles below until the information above has been saved
+</p>
+<hr>
+<p>
+  Open a new tab/window to add new People before adding roles below
+  <br>
+  <% if Rails.application.config.relative_url_root.present? %>
+    <a href="/<%= Rails.application.config.relative_url_root %>/person/new/"
+  <% else %>
+    <a href="../../person/new/"
+  <% end %>
+    class="btn btn-info" target="_blank">
+    <i class="icon-plus icon-white"></i>
+    Add a new Person
+  </a>
+</p>

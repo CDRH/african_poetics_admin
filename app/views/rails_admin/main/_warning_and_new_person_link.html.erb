@@ -7,7 +7,7 @@
   Open a new tab/window to add new People before adding roles below
   <br>
   <% if Rails.application.config.relative_url_root.present? %>
-    <a href="/<%= Rails.application.config.relative_url_root %>/person/new/"
+    <a href="<%= Rails.application.config.relative_url_root %>/person/new/"
   <% else %>
     <a href="../../person/new/"
   <% end %>

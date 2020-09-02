@@ -24,7 +24,7 @@ class Location < ApplicationRecord
     end
 
     edit do
-      configure :latlong do
+      configure :latlng do
         label "Latitude, Longitude"
         help 'Values must be in decimal degrees, e.g. "5.5911921, -0.3198155"'
       end

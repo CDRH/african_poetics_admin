@@ -24,6 +24,11 @@ class Location < ApplicationRecord
     end
 
     edit do
+      configure :latlong do
+        label "Latitude, Longitude"
+        help 'Values must be in decimal degrees, e.g. "5.5911921, -0.3198155"'
+      end
+
       exclude_fields :events, :people, :universities
     end
   end

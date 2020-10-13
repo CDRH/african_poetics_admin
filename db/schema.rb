@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_01_222434) do
+ActiveRecord::Schema.define(version: 2020_10_13_180838) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.text "name"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2020_05_01_222434) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "person_id"
     t.bigint "university_id"
+    t.boolean "complete"
     t.index ["person_id"], name: "index_educations_on_person_id"
     t.index ["university_id"], name: "index_educations_on_university_id"
   end
@@ -284,6 +285,7 @@ ActiveRecord::Schema.define(version: 2020_05_01_222434) do
     t.bigint "publisher_id"
     t.bigint "work_type_id"
     t.bigint "location_id"
+    t.boolean "complete"
     t.index ["location_id"], name: "index_works_on_location_id"
     t.index ["publisher_id"], name: "index_works_on_publisher_id"
     t.index ["work_type_id"], name: "index_works_on_work_type_id"

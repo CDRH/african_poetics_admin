@@ -21,7 +21,7 @@ class Work < ApplicationRecord
       configure :title do
         search_operator "starts_with"
       end
-
+      # do not exclude "complete"
       exclude_fields :created_at, :updated_at,
                      :citation, :commentaries, :id, :location, :news_items,
                      :people, :work_roles
@@ -38,6 +38,7 @@ class Work < ApplicationRecord
       field :citation
       field :commentaries
       field :news_items
+      field :complete
     end
 
     edit do
@@ -63,6 +64,7 @@ class Work < ApplicationRecord
         # Pre-populates New Work Role modal with existing Work selected
         inverse_of :work
       end
+      field :complete
 
       # NOTE: Lorna said that works will always
       # be entered from a person page or news item

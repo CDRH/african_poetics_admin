@@ -12,7 +12,7 @@ class Person < ApplicationRecord
   # join tables
   has_and_belongs_to_many :commentaries
   has_and_belongs_to_many :events
-  # nationality
+  # country of nationality
   has_and_belongs_to_many :locations
 
   # join tables with attributes
@@ -137,7 +137,7 @@ class Person < ApplicationRecord
       end
       field :gender
       field :locations do
-        label "Nationality"
+        label "Country of Nationality"
       end
       field :bibliography
       field :short_biography

@@ -31,9 +31,9 @@ class Work < ApplicationRecord
       field :title
       field :people
       field :work_roles
+      field :work_type
       field :year
       field :publisher
-      field :work_type
       field :location
       field :citation
       field :commentaries
@@ -43,11 +43,11 @@ class Work < ApplicationRecord
 
     edit do
       field :title
+      field :work_type
       field :year do
         help "Required. YYYY, use 0 if unknown"
       end
       field :publisher
-      field :work_type
       field :location
       field :citation do
         help "This field added because works were imported from nonstandard formats and may require additional information"

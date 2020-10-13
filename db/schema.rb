@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_13_185810) do
+ActiveRecord::Schema.define(version: 2020_10_13_191524) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.text "name"
@@ -126,6 +126,12 @@ ActiveRecord::Schema.define(version: 2020_10_13_185810) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "news_item_content_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "news_item_roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.bigint "person_id"
     t.bigint "news_item_id"
@@ -159,6 +165,8 @@ ActiveRecord::Schema.define(version: 2020_10_13_185810) do
     t.text "source_link"
     t.datetime "source_access_date"
     t.text "permissions"
+    t.bigint "news_item_content_type_id"
+    t.index ["news_item_content_type_id"], name: "index_news_items_on_news_item_content_type_id"
     t.index ["news_item_type_id"], name: "index_news_items_on_news_item_type_id"
     t.index ["publisher_id"], name: "index_news_items_on_publisher_id"
   end

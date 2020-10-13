@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_13_180838) do
+ActiveRecord::Schema.define(version: 2020_10_13_185810) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.text "name"
@@ -158,6 +158,7 @@ ActiveRecord::Schema.define(version: 2020_10_13_180838) do
     t.string "source_page_no"
     t.text "source_link"
     t.datetime "source_access_date"
+    t.text "permissions"
     t.index ["news_item_type_id"], name: "index_news_items_on_news_item_type_id"
     t.index ["publisher_id"], name: "index_news_items_on_publisher_id"
   end

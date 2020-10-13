@@ -73,6 +73,7 @@ class NewsItem < ApplicationRecord
       field :repositories do
         label "Archive"
       end
+      field :permissions
       field :excerpt
       field :people
       field :news_item_roles
@@ -101,6 +102,7 @@ class NewsItem < ApplicationRecord
       field :repositories do
         label "Archive"
       end
+      field :permissions
       field :excerpt
       field :works
       field :events

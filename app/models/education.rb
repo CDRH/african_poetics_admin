@@ -25,6 +25,7 @@ class Education < ApplicationRecord
       field :year_ended
       field :graduated
       field :degree
+      field :complete
     end
 
     show do
@@ -33,6 +34,7 @@ class Education < ApplicationRecord
       field :year_ended
       field :graduated
       field :degree
+      field :complete
     end
 
     edit do
@@ -41,6 +43,7 @@ class Education < ApplicationRecord
       field :year_ended
       field :graduated
       field :degree
+      field :complete
     end
    end
 

@@ -21,7 +21,7 @@ class Work < ApplicationRecord
       configure :title do
         search_operator "starts_with"
       end
-
+      # do not exclude "complete"
       exclude_fields :created_at, :updated_at,
                      :citation, :commentaries, :id, :location, :news_items,
                      :people, :work_roles
@@ -31,22 +31,23 @@ class Work < ApplicationRecord
       field :title
       field :people
       field :work_roles
+      field :work_type
       field :year
       field :publisher
-      field :work_type
       field :location
       field :citation
       field :commentaries
       field :news_items
+      field :complete
     end
 
     edit do
       field :title
+      field :work_type
       field :year do
         help "Required. YYYY, use 0 if unknown"
       end
       field :publisher
-      field :work_type
       field :location
       field :citation do
         help "This field added because works were imported from nonstandard formats and may require additional information"
@@ -63,6 +64,7 @@ class Work < ApplicationRecord
         # Pre-populates New Work Role modal with existing Work selected
         inverse_of :work
       end
+      field :complete
 
       # NOTE: Lorna said that works will always
       # be entered from a person page or news item

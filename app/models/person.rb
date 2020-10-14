@@ -12,7 +12,7 @@ class Person < ApplicationRecord
   # join tables
   has_and_belongs_to_many :commentaries
   has_and_belongs_to_many :events
-  # nationality
+  # country of nationality
   has_and_belongs_to_many :locations
 
   # join tables with attributes
@@ -72,10 +72,25 @@ class Person < ApplicationRecord
     end
 
     show do
-      configure :locations do
-        label "Nationality"
+      field :name_last
+      field :name_given
+      field :name_alt
+      field :major_african_poet
+      field :date_birth
+      field :place_of_birth
+      field :date_death
+      field :gender
+      field :locations do
+        label "Country of Nationality"
       end
-      configure :rel_objects do
+      field :bibliography
+      field :short_biography
+      field :notes
+      field :commentaries
+      field :educations
+      field :events
+      field :news_items
+      field :rel_objects do
         label "Relationship Objects"
         pretty_value do
           value.map { |person|
@@ -89,7 +104,7 @@ class Person < ApplicationRecord
           }.uniq.join("; ")
         end
       end
-      configure :subjects do
+      field :subjects do
         label "Relationship Subjects"
         pretty_value do
           value.map { |person|
@@ -103,6 +118,9 @@ class Person < ApplicationRecord
           }.uniq.join("; ")
         end
       end
+      field :works
+      field :complete
+
       exclude_fields :news_item_roles, :relationship_objects,
                      :relationship_subjects, :work_roles
     end
@@ -112,7 +130,6 @@ class Person < ApplicationRecord
       field :name_given
       field :name_alt
       field :major_african_poet
-      field :complete
 
       field :date_birth do
         help "YYYY-MM-DD or YYYY. Leave blank if not known."
@@ -123,11 +140,14 @@ class Person < ApplicationRecord
       end
       field :gender
       field :locations do
-        label "Nationality"
+        label "Country of Nationality"
       end
       field :bibliography
       field :short_biography
-      include_all_fields
+      field :notes
+      field :commentaries
+      field :complete
+
       exclude_fields :educations, :events, :news_items, :news_item_roles,
                      :rel_objects, :relationship_objects,
                      :relationship_subjects, :subjects, :works, :work_roles

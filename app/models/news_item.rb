@@ -2,6 +2,7 @@ class NewsItem < ApplicationRecord
   include Dates
 
   belongs_to :news_item_type
+  belongs_to :news_item_content_type
   belongs_to :publisher
 
   has_and_belongs_to_many :commentaries
@@ -29,6 +30,9 @@ class NewsItem < ApplicationRecord
       end
       field :news_item_type do
         label "Document Type"
+      end
+      field :news_item_content_type do
+        label "Content Type"
       end
       field :date do
         formatted_value do
@@ -63,6 +67,9 @@ class NewsItem < ApplicationRecord
       field :news_item_type do
         label "Document Type"
       end
+      field :news_item_content_type do
+        label "Content Type"
+      end
       field :date
       field :publisher do
         label "Publication"
@@ -73,6 +80,7 @@ class NewsItem < ApplicationRecord
       field :repositories do
         label "Archive"
       end
+      field :permissions
       field :excerpt
       field :people
       field :news_item_roles
@@ -91,6 +99,9 @@ class NewsItem < ApplicationRecord
       field :news_item_type do
         label "Document Type"
       end
+      field :news_item_content_type do
+        label "Content Type"
+      end
       field :date
       field :publisher do
         label "Publication"
@@ -101,6 +112,7 @@ class NewsItem < ApplicationRecord
       field :repositories do
         label "Archive"
       end
+      field :permissions
       field :excerpt
       field :works
       field :events

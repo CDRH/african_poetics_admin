@@ -2,7 +2,7 @@ class Location < ApplicationRecord
 
   belongs_to :region
 
-  # nationality
+  # country of nationality
   has_and_belongs_to_many :people
   has_many :events
   has_many :universities
@@ -15,19 +15,49 @@ class Location < ApplicationRecord
     list do
       sort_by :country
 
-      configure :country do
+      field :place
+      field :local_place do
+        label "Local Place Name"
+      end
+      field :city
+      field :county_township do
+        label "County / Township"
+      end
+      field :state_province_territory do
+        label "State / Province / Territory"
+      end
+      field :country do
         search_operator "starts_with"
       end
+      field :latlng do
+        label "Latitude, Longitude"
+      end
+      field :region
 
       exclude_fields :created_at, :updated_at,
                      :events, :id, :people, :universities
     end
 
     edit do
-      configure :latlng do
+      field :place
+      field :local_place do
+        label "Local Place Name"
+      end
+      field :city
+      field :county_township do
+        label "County / Township"
+      end
+      field :state_province_territory do
+        label "State / Province / Territory"
+      end
+      field :country do
+        search_operator "starts_with"
+      end
+      field :latlng do
         label "Latitude, Longitude"
         help 'Values must be in decimal degrees, e.g. "5.5911921, -0.3198155"'
       end
+      field :region
 
       exclude_fields :events, :people, :universities
     end

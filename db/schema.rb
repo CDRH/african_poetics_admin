@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_14_194006) do
+ActiveRecord::Schema.define(version: 2020_10_14_201157) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.text "name"
@@ -218,6 +218,14 @@ ActiveRecord::Schema.define(version: 2020_10_14_194006) do
     t.index ["repository_id"], name: "index_publications_on_repository_id"
   end
 
+  create_table "publishers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "location_id"
+    t.index ["location_id"], name: "index_publishers_on_location_id"
+  end
+
   create_table "regions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -298,8 +306,10 @@ ActiveRecord::Schema.define(version: 2020_10_14_194006) do
     t.bigint "work_type_id"
     t.bigint "location_id"
     t.boolean "complete"
+    t.bigint "publisher_id"
     t.index ["location_id"], name: "index_works_on_location_id"
     t.index ["publication_id"], name: "index_works_on_publication_id"
+    t.index ["publisher_id"], name: "index_works_on_publisher_id"
     t.index ["work_type_id"], name: "index_works_on_work_type_id"
   end
 

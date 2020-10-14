@@ -75,17 +75,20 @@ class Person < ApplicationRecord
       field :name_last
       field :name_given
       field :name_alt
-      field :date_birth
-      field :date_death
-      field :notes
       field :major_african_poet
+      field :date_birth
+      field :place_of_birth
+      field :date_death
       field :gender
-      field :educations
-      field :commentaries
-      field :events
       field :locations do
         label "Country of Nationality"
       end
+      field :bibliography
+      field :short_biography
+      field :notes
+      field :commentaries
+      field :educations
+      field :events
       field :news_items
       field :rel_objects do
         label "Relationship Objects"

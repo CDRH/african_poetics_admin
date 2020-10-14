@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_13_195347) do
+ActiveRecord::Schema.define(version: 2020_10_14_194006) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.text "name"
@@ -161,7 +161,7 @@ ActiveRecord::Schema.define(version: 2020_10_13_195347) do
     t.text "notes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "publisher_id"
+    t.bigint "publication_id"
     t.bigint "news_item_type_id"
     t.boolean "complete"
     t.string "source_page_no"
@@ -171,7 +171,7 @@ ActiveRecord::Schema.define(version: 2020_10_13_195347) do
     t.bigint "news_item_content_type_id"
     t.index ["news_item_content_type_id"], name: "index_news_items_on_news_item_content_type_id"
     t.index ["news_item_type_id"], name: "index_news_items_on_news_item_type_id"
-    t.index ["publisher_id"], name: "index_news_items_on_publisher_id"
+    t.index ["publication_id"], name: "index_news_items_on_publication_id"
   end
 
   create_table "news_items_repositories", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
@@ -208,14 +208,14 @@ ActiveRecord::Schema.define(version: 2020_10_13_195347) do
     t.index ["place_of_birth_id"], name: "index_people_on_place_of_birth_id"
   end
 
-  create_table "publishers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
+  create_table "publications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "location_id"
     t.bigint "repository_id"
-    t.index ["location_id"], name: "index_publishers_on_location_id"
-    t.index ["repository_id"], name: "index_publishers_on_repository_id"
+    t.index ["location_id"], name: "index_publications_on_location_id"
+    t.index ["repository_id"], name: "index_publications_on_repository_id"
   end
 
   create_table "regions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
@@ -294,17 +294,17 @@ ActiveRecord::Schema.define(version: 2020_10_13_195347) do
     t.text "citation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "publisher_id"
+    t.bigint "publication_id"
     t.bigint "work_type_id"
     t.bigint "location_id"
     t.boolean "complete"
     t.index ["location_id"], name: "index_works_on_location_id"
-    t.index ["publisher_id"], name: "index_works_on_publisher_id"
+    t.index ["publication_id"], name: "index_works_on_publication_id"
     t.index ["work_type_id"], name: "index_works_on_work_type_id"
   end
 
   add_foreign_key "people", "locations", column: "place_of_birth_id"
-  add_foreign_key "publishers", "repositories"
+  add_foreign_key "publications", "repositories"
   add_foreign_key "relationships", "relationship_types"
   add_foreign_key "works", "locations"
 end

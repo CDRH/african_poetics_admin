@@ -1,7 +1,7 @@
 class Work < ApplicationRecord
 
   belongs_to :location, optional: true
-  belongs_to :publisher, optional: true
+  belongs_to :publication, optional: true
   belongs_to :work_type, optional: true
 
   has_many :work_roles, dependent: :destroy
@@ -33,7 +33,7 @@ class Work < ApplicationRecord
       field :work_roles
       field :work_type
       field :year
-      field :publisher
+      field :publication
       field :location
       field :citation
       field :commentaries
@@ -47,7 +47,7 @@ class Work < ApplicationRecord
       field :year do
         help "Required. YYYY, use 0 if unknown"
       end
-      field :publisher
+      field :publication
       field :location
       field :citation do
         help "This field added because works were imported from nonstandard formats and may require additional information"

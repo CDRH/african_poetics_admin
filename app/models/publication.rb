@@ -1,4 +1,4 @@
-class Publisher < ApplicationRecord
+class Publication < ApplicationRecord
 
   belongs_to :location, optional: true
   belongs_to :repository, optional: true

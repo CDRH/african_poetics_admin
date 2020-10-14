@@ -3,7 +3,7 @@ class NewsItem < ApplicationRecord
 
   belongs_to :news_item_type
   belongs_to :news_item_content_type
-  belongs_to :publisher
+  belongs_to :publication
 
   has_and_belongs_to_many :commentaries
   has_and_belongs_to_many :events
@@ -17,7 +17,7 @@ class NewsItem < ApplicationRecord
   validates :article_title, presence: true
 
   def name
-    pub = publisher ? publisher.name : ""
+    pub = publication ? publication.name : ""
     "'#{article_title}', #{pub} (#{year})"
   end
 
@@ -39,9 +39,7 @@ class NewsItem < ApplicationRecord
           value.strftime("%Y-%m-%d") if value
         end
       end
-      field :publisher do
-        label "Publication"
-      end
+      field :publication
       field :complete
     end
 
@@ -71,9 +69,7 @@ class NewsItem < ApplicationRecord
         label "Content Type"
       end
       field :date
-      field :publisher do
-        label "Publication"
-      end
+      field :publication
       field :source_page_no
       field :source_link
       field :source_access_date
@@ -103,9 +99,7 @@ class NewsItem < ApplicationRecord
         label "Content Type"
       end
       field :date
-      field :publisher do
-        label "Publication"
-      end
+      field :publication
       field :source_page_no
       field :source_link
       field :source_access_date

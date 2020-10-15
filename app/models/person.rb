@@ -146,6 +146,11 @@ class Person < ApplicationRecord
       field :short_biography
       field :notes
       field :commentaries
+      field :education do
+        help ""
+        label "*"
+        partial "warning_and_new_education_link"
+      end
       field :complete
 
       exclude_fields :educations, :events, :news_items, :news_item_roles,

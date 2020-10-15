@@ -1,0 +1,27 @@
+<p>
+  <strong class="text-danger">Remember:</strong>
+  Do not add educations below until the information above has been saved
+
+  <br>
+  <button class="btn btn-primary"
+    data-disable-with="Save and edit"
+    name="_add_edit"
+    type="submit">
+    <i class="icon-white icon-ok"></i>
+    Save progress before adding educations
+  </button>
+</p>
+<hr>
+<p>
+  Open a new tab/window to add new People not already in this database before adding educations below
+  <br>
+  <% if Rails.application.config.relative_url_root.present? %>
+    <a href="<%= Rails.application.config.relative_url_root %>/education/new/"
+  <% else %>
+    <a href="../../education/new/"
+  <% end %>
+    class="btn btn-info" target="_blank">
+    <i class="icon-plus icon-white"></i>
+    Add a new Education
+  </a>
+</p>

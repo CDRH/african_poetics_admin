@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_14_201157) do
+ActiveRecord::Schema.define(version: 2020_10_14_202327) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.text "name"
@@ -302,13 +302,11 @@ ActiveRecord::Schema.define(version: 2020_10_14_201157) do
     t.text "citation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "publication_id"
     t.bigint "work_type_id"
     t.bigint "location_id"
     t.boolean "complete"
     t.bigint "publisher_id"
     t.index ["location_id"], name: "index_works_on_location_id"
-    t.index ["publication_id"], name: "index_works_on_publication_id"
     t.index ["publisher_id"], name: "index_works_on_publisher_id"
     t.index ["work_type_id"], name: "index_works_on_work_type_id"
   end

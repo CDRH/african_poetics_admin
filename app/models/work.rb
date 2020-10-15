@@ -1,6 +1,7 @@
 class Work < ApplicationRecord
 
   belongs_to :location, optional: true
+  belongs_to :publication, optional: true
   belongs_to :publisher, optional: true
   belongs_to :work_type, optional: true
 

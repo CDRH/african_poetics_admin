@@ -14,7 +14,7 @@ class Publisher < ApplicationRecord
     end
 
     show do
-      exclude_fields :created_at, :updated_at, :works
+      exclude_fields :created_at, :updated_at
     end
 
     edit do

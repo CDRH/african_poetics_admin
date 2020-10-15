@@ -36,7 +36,10 @@ class Work < ApplicationRecord
       field :year
       field :publisher
       field :location
-      field :citation
+      field :page_no
+      field :issue
+      field :volume
+      field :source_link
       field :commentaries
       field :news_items
       field :complete
@@ -50,9 +53,10 @@ class Work < ApplicationRecord
       end
       field :publisher
       field :location
-      field :citation do
-        help "This field added because works were imported from nonstandard formats and may require additional information"
-      end
+      field :page_no
+      field :issue
+      field :volume
+      field :source_link
       field :commentaries
 
       field :people do

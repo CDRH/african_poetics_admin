@@ -10,3 +10,7 @@ Prepare database
   disabled for seeding with the current versions of the CSV's used for seeding
 - `rails db:seed`
 - Re-enable date validations
+
+## Ingest Locations
+
+rake african_poetics:ingest_location

@@ -1,7 +1,7 @@
 class LatitudeLongitudeLocation < ActiveRecord::Migration[6.0]
   def change
 
-    # remove_column :locations, :latlng, :string
+    remove_column :locations, :latlng, :string
 
     change_table :locations do |t|
       t.decimal :latitude, scale: 7, precision: 10

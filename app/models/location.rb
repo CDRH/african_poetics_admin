@@ -29,9 +29,8 @@ class Location < ApplicationRecord
       field :country do
         search_operator "starts_with"
       end
-      field :latlng do
-        label "Latitude, Longitude"
-      end
+      field :latitude
+      field :longitude
       field :region
 
       exclude_fields :created_at, :updated_at,
@@ -53,9 +52,11 @@ class Location < ApplicationRecord
       field :country do
         search_operator "starts_with"
       end
-      field :latlng do
-        label "Latitude, Longitude"
-        help 'Values must be in decimal degrees, e.g. "5.5911921, -0.3198155"'
+      field :latitude do
+        help 'Use decimal degrees, e.g. "-5.28910" up to 7 decimal places'
+      end
+      field :longitude do
+        help 'Use decimal degrees, e.g. "-5.28910" up to 7 decimal places'
       end
       field :region
 

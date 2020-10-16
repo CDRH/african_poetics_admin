@@ -44,50 +44,41 @@ class NewsItem < ApplicationRecord
     end
 
     show do
-      configure :date do
-        formatted_value do
-          value.strftime("%Y-%m-%d") if value
-        end
-      end
-      configure :source_link do
-        formatted_value do
-          bindings[:view].link_to(value, value)
-        end
-      end
-      configure :source_access_date do
-        formatted_value do
-          value.strftime("%Y-%m-%d") if value
-        end
-      end
-
       field :article_title
-      field :complete
       field :news_item_type do
         label "Document Type"
       end
       field :news_item_content_type do
         label "Content Type"
       end
-      field :date
+      field :date do
+        strftime_format "%Y-%m-%d"
+      end
       field :publication
       field :source_page_no
+      configure :source_link do
+        formatted_value do
+          bindings[:view].link_to(value, value)
+        end
+      end
+      field :source_access_date do
+        strftime_format "%Y-%m-%d"
+      end
       field :source_link
       field :source_access_date
       field :repositories do
         label "Archive"
       end
-      field :permissions
       field :excerpt
-      field :people
-      field :news_item_roles
       field :works
       field :events
       field :commentaries
       field :tags
       field :notes
-
-      #include_all_fields
-      #exclude_fields :summary
+      field :permissions
+      field :people
+      field :news_item_roles
+      field :complete
     end
 
     edit do
@@ -98,21 +89,25 @@ class NewsItem < ApplicationRecord
       field :news_item_content_type do
         label "Content Type"
       end
-      field :date
+      field :date do
+        strftime_format "%Y-%m-%d"
+      end
       field :publication
       field :source_page_no
       field :source_link
-      field :source_access_date
+      field :source_access_date do
+        strftime_format "%Y-%m-%d"
+      end
       field :repositories do
         label "Archive"
       end
-      field :permissions
       field :excerpt
       field :works
       field :events
       field :commentaries
       field :tags
       field :notes
+      field :permissions
 
       field :people do
         help ""

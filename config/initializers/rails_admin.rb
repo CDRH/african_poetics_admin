@@ -43,45 +43,44 @@ RailsAdmin.config do |config|
   config.sidescroll = true
 
   # Navigation
-  # Biographic Info
-  # Lower weights move this group first
+  # Lower weights order groups
   config.model "NewsItem" do
-    navigation_label "Biographic Info"
-    weight -3
+    navigation_label "Add New and Edit"
+    weight -5
+  end
+
+  config.model "Event" do
+    navigation_label "Edit Related Records"
+    weight -4
   end
   config.model "Person" do
-    navigation_label "Biographic Info"
+    navigation_label "Edit Related Records"
     weight -3
   end
-  config.model "Event" do
-    navigation_label "Biographic Info"
-    weight -2
-  end
   config.model "Work" do
-    navigation_label "Biographic Info"
-    weight -2
+    navigation_label "Edit Related Records"
+    weight -3
   end
 
   # Connections
-  # Lower weights move this group second
   config.model "Education" do
-    navigation_label "Connections"
-    weight -1
+    navigation_label "Edit Connections"
+    weight -2
+  end
+  config.model "Relationship" do
+    navigation_label "Edit Connections"
+    weight -2
   end
   config.model "MetaCommentary" do
-    navigation_label "Connections"
+    navigation_label "Edit Connections"
     weight -1
   end
   config.model "NewsItemRole" do
-    navigation_label "Connections"
-    weight -1
-  end
-  config.model "Relationship" do
-    navigation_label "Connections"
+    navigation_label "Edit Connections"
     weight -1
   end
   config.model "WorkRole" do
-    navigation_label "Connections"
+    navigation_label "Edit Connections"
     weight -1
   end
 

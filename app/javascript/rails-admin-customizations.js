@@ -21,6 +21,9 @@ export function start() {
         var filter_toggles = document.querySelectorAll("#filters a");
 
         filter_toggles.forEach(function (toggle) { toggle.click(); });
+
+        // Hide default filter
+        document.querySelector("#remove_filter").parentNode.parentNode.style.visibility = "hidden";
       }
     }
   });

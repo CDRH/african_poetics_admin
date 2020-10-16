@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_15_204040) do
+ActiveRecord::Schema.define(version: 2020_10_16_185749) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.text "name"
@@ -107,13 +107,14 @@ ActiveRecord::Schema.define(version: 2020_10_15_204040) do
     t.string "place"
     t.string "city"
     t.string "country"
-    t.string "latlng"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "region_id"
     t.string "local_place"
     t.string "county_township"
     t.string "state_province_territory"
+    t.decimal "latitude", precision: 10, scale: 7
+    t.decimal "longitude", precision: 10, scale: 7
     t.index ["region_id"], name: "index_locations_on_region_id"
   end
 

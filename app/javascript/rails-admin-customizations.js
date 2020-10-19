@@ -13,17 +13,21 @@ export function start() {
       if (rails_admin_model !== undefined) {
         if (!MODELS_SHOWING_NEW_BUTTON.includes(rails_admin_model)) {
           var new_item_link = document.querySelector(".nav-tabs .new_collection_link");
-
           new_item_link.style.display = "none";
         }
 
         // Open all filters on model index pages
         var filter_toggles = document.querySelectorAll("#filters a");
-
         filter_toggles.forEach(function (toggle) { toggle.click(); });
 
         // Hide default filter
         document.querySelector("#remove_filter").parentNode.parentNode.style.visibility = "hidden";
+
+        // Set filters to 'like' value (Contains / Number…) in selects
+        var contains_options = document.querySelectorAll("#filters_box option[value='like']");
+        contains_options.forEach(function (option) {
+          option.parentNode.value = 'like';
+        });
       }
     }
   });

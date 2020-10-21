@@ -30,7 +30,7 @@ class Event < ApplicationRecord
       configure :date do
         help "YYYY-MM-DD or YYYY. Leave blank if not known"
       end
-      exclude_fields :date_note_before, :news_items, :people
+      exclude_fields :date_note_before, :news_items
     end
   end
 

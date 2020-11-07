@@ -1,5 +1,7 @@
 # African Poets in the News
 
+For production, remember to include `RAILS_ENV=production` before the commands.
+
 ## Setup
 
 Prepare database
@@ -13,4 +15,4 @@ Prepare database
 
 ## Ingest Locations
 
-rake african_poetics:ingest_location
+`rake african_poetics:ingest_location`

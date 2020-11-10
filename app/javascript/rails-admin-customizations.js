@@ -28,6 +28,13 @@ export function start() {
         contains_options.forEach(function (option) {
           option.parentNode.value = 'like';
         });
+
+        // Create links where pjax was required to sort before it was disabled
+        var headers = document.querySelectorAll("#bulk_form .header.pjax");
+        headers.forEach(function (h) {
+          h.innerHTML = '<a href="' + h.dataset.href + '">' + h.innerHTML
+            + '</a>';
+        });
       }
     }
   });

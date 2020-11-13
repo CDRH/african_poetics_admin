@@ -4,7 +4,7 @@ For production, remember to include `RAILS_ENV=production` before the commands.
 
 ## Setup
 
-Prepare database
+### Prepare database
 
 - `rails db:create`
 - `rails db:migrate`
@@ -13,6 +13,12 @@ Prepare database
 - `rails db:seed`
 - Re-enable date validations
 
-## Ingest Locations
+### Ingest Locations
 
 `rake african_poetics:ingest_location`
+
+### Precompile Assets
+
+Production only
+
+`RAILS_ENV=production RAILS_RELATIVE_URL_ROOT="/admin" rails assets:precompile`

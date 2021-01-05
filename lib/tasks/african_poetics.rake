@@ -39,6 +39,17 @@ namespace :african_poetics do
 
   end
 
+  desc "pushes contents of admin DB to frontend website and populates elasticsearch"
+  task publish: :environment do
+    puts "Updating frontend database (this may take a moment to run)"
+
+    location = File.expand_path(File.dirname(__FILE__))
+    script_output = `#{location}/db_dump_admin_create_frontend.sh`
+    puts script_output
+
+    puts "now is when it should call elasticsearch"
+  end
+
   private
 
   def read_csv(file_location, encoding: "utf-8")

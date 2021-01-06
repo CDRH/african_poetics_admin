@@ -1,0 +1,19 @@
+default: &default
+
+  # Settings for "In the News" section of site powered by Elasticsearch
+  #   NOTE: Contemporary African Poetics is populated with a datura
+  #   style repository, and the below settings do not apply to it
+
+  es_category: In the News
+  es_collection: african_poetics
+  es_index: index_name
+  es_path: elasticsearch_posting_path
+
+test:
+  <<: *default
+
+development:
+  <<: *default
+
+production:
+  <<: *default

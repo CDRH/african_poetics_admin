@@ -45,3 +45,4 @@ yarn-debug.log*
 
 # Ignore the database deployment configuration
 /lib/tasks/config.sh
+/config/private.yml

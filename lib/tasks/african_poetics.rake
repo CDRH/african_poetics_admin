@@ -1,3 +1,11 @@
+require "african_poetics/elasticsearch"
+require "african_poetics/index"
+require "african_poetics/index_commentary"
+require "african_poetics/index_event"
+require "african_poetics/index_news_item"
+require "african_poetics/index_person"
+require "african_poetics/index_work"
+
 namespace :african_poetics do
 
   desc "attempts to parse citation field into separate work fields"
@@ -14,7 +22,12 @@ namespace :african_poetics do
         work.save
       end
     end
+  end
 
+  desc "clears Elasticsearch index of this collection + category"
+  task index_clear: :environment do
+    es = Elasticsearch.new()
+    es.clear
   end
 
   desc "ingests latitude and longitude into database"
@@ -45,9 +58,32 @@ namespace :african_poetics do
 
     location = File.expand_path(File.dirname(__FILE__))
     script_output = `#{location}/db_dump_admin_create_frontend.sh`
+    # script_output includes echo statements, etc, so we want to make it available
     puts script_output
 
-    puts "now is when it should call elasticsearch"
+    es = Elasticsearch.new()
+
+    puts "Clearing Elasticsearch index"
+    es.clear
+
+    puts "Creating documents from database and posting to Elasticsearch"
+
+    Commentary.all.each do |comm|
+      IndexCommentary.new(comm, es).post
+    end
+    Event.all.each do |event|
+      IndexEvent.new(event, es).post
+    end
+    NewsItem.all.each do |item|
+      IndexNewsItem.new(item, es).post
+    end
+    Person.poet.each do |person|
+      IndexPerson.new(person, es).post
+    end
+    Work.all.each do |work|
+      IndexWork.new(work, es).post
+    end
+
   end
 
   private

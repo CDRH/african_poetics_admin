@@ -54,13 +54,25 @@ namespace :african_poetics do
 
   desc "pushes contents of admin DB to frontend website and populates elasticsearch"
   task publish: :environment do
+
+    Rake::Task["african_poetics:publish_db"].invoke
+    Rake::Task["african_poetics:publish_es"].invoke
+
+  end
+
+  desc "copies admin DB to frontend DB"
+  task publish_db: :environment do
     puts "Updating frontend database (this may take a moment to run)"
 
     location = File.expand_path(File.dirname(__FILE__))
     script_output = `#{location}/db_dump_admin_create_frontend.sh`
+
     # script_output includes echo statements, etc, so we want to make it available
     puts script_output
+  end
 
+  desc "populates elasticsearch using contents of admin DB"
+  task publish_es: :environment do
     es = Elasticsearch.new()
 
     puts "Clearing Elasticsearch index"
@@ -83,7 +95,6 @@ namespace :african_poetics do
     Work.all.each do |work|
       IndexWork.new(work, es).post
     end
-
   end
 
   private

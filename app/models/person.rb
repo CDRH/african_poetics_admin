@@ -1,5 +1,7 @@
 class Person < ApplicationRecord
 
+  scope :poet, -> { where(major_african_poet: true) }
+
   # optional because this information is only collected for
   # major african poets, not all the people in the db
   belongs_to :gender, optional: true
@@ -14,6 +16,7 @@ class Person < ApplicationRecord
   has_and_belongs_to_many :events
   # country of nationality
   has_and_belongs_to_many :locations
+  has_many :regions, through: :locations
 
   # join tables with attributes
   has_many :news_item_roles, dependent: :destroy

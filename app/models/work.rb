@@ -14,6 +14,18 @@ class Work < ApplicationRecord
   validates :title, presence: true
   validates :year, presence: true
 
+  def authors
+    all_people = Person
+      .joins(work_roles: :role)
+      .where(work_roles: { work_id: id })
+      .where(roles: { name: ["Author", "Poet"]})
+      .distinct
+  end
+
+  def name
+    "#{title} (#{year})"
+  end
+
   rails_admin do
     list do
       items_per_page 150

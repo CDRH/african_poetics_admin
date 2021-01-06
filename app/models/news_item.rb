@@ -16,6 +16,10 @@ class NewsItem < ApplicationRecord
 
   validates :article_title, presence: true
 
+  def authors
+    news_item_roles.joins(:role).where(roles: { name: "Critic" })
+  end
+
   def name
     pub = publication ? publication.name : ""
     "'#{article_title}', #{pub} (#{year})"

@@ -3,7 +3,7 @@
 set -eu
 
 # Options
-PROJECT_DIR="/var/local/www/rails/african_poetics-in_the_news"
+PROJECT_DIR="/var/local/www/rails/african_poetics_admin"
 SUBDIR="db_dump"
 
 # get database configuration

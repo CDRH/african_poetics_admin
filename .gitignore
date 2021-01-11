@@ -17,6 +17,9 @@ config/database.yml
 /db/*.sqlite3-journal
 /db/*.sqlite3-*
 
+# Ignore the mysql database dump
+/db_dump
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -39,3 +42,7 @@ config/database.yml
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Ignore the database deployment configuration
+/lib/tasks/config.sh
+/config/private.yml

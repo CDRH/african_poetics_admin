@@ -9,7 +9,7 @@ class IndexPerson < Index
   # first letter of last name
   # TODO this shouldn't go in this field permanently
   def alternative
-    @record.name_last[0]
+    @record.name_last[0].upcase
   end
 
   # using birthday for now

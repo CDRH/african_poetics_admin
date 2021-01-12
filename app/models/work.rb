@@ -18,12 +18,20 @@ class Work < ApplicationRecord
     all_people = Person
       .joins(work_roles: :role)
       .where(work_roles: { work_id: id })
-      .where(roles: { name: ["Author", "Poet"]})
+      .where(roles: { name: ["Author"]})
       .distinct
   end
 
   def name
     "#{title} (#{year})"
+  end
+
+  def poets
+    all_people = Person
+      .joins(work_roles: :role)
+      .where(work_roles: { work_id: id })
+      .where(roles: { name: ["Poet"]})
+      .distinct
   end
 
   rails_admin do

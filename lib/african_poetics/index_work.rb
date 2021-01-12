@@ -4,6 +4,18 @@ class IndexWork < Index
     "work"
   end
 
+  def contributor
+    if @record.poets
+      @record.poets.map do |a|
+        {
+          name: a.name,
+          id: a.id,
+          role: "Poet"
+        }
+      end
+    end
+  end
+
   def creator
     if @record.authors
       @record.authors.map do |a|

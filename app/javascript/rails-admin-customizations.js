@@ -3,7 +3,8 @@ export function start() {
     var MODELS_SHOWING_NEW_BUTTON = [
       "news_item",
       "event",
-      "commentary"
+      "commentary",
+      "meta_commentary"
     ];
 
     var page_header = document.querySelector(".page-header");

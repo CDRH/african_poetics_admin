@@ -42,49 +42,60 @@ RailsAdmin.config do |config|
   config.default_items_per_page = 50
   config.sidescroll = true
 
-  # Navigation
+  ##############
+  # Navigation #
+  ##############
+
   # Lower weights order groups
+
+  # Add New and Edit
+
   config.model "NewsItem" do
     navigation_label "Add New and Edit"
     weight -5
   end
 
+  # Edit Related Records
+
+  config.model "Education" do
+    navigation_label "Edit Records & Connections"
+    weight -4
+  end
   config.model "Event" do
-    navigation_label "Edit Related Records"
+    navigation_label "Edit Records & Connections"
     weight -4
   end
   config.model "Person" do
-    navigation_label "Edit Related Records"
+    navigation_label "Edit Records & Connections"
+    weight -3
+  end
+  config.model "Relationship" do
+    navigation_label "Edit Records & Connections"
     weight -3
   end
   config.model "Work" do
-    navigation_label "Edit Related Records"
+    navigation_label "Edit Records & Connections"
     weight -3
   end
 
   # Connections
-  config.model "Education" do
-    navigation_label "Edit Connections"
-    weight -2
-  end
-  config.model "Relationship" do
-    navigation_label "Edit Connections"
-    weight -2
-  end
+
   config.model "MetaCommentary" do
-    navigation_label "Edit Connections"
+    label "Related Commentaries"
+    navigation_label "Edit Related Roles"
     weight -1
   end
   config.model "NewsItemRole" do
-    navigation_label "Edit Connections"
+    navigation_label "Edit Related Roles"
     weight -1
   end
   config.model "WorkRole" do
-    navigation_label "Edit Connections"
+    navigation_label "Edit Related Roles"
     weight -1
   end
 
   # Reference Info
+
   config.model "Commentary" do
     navigation_label "Reference Info"
   end
@@ -100,8 +111,12 @@ RailsAdmin.config do |config|
   config.model "Location" do
     navigation_label "Reference Info"
   end
+  config.model "NewsItemContentType" do
+    label "News Item Content Type"
+    navigation_label "Reference Info"
+  end
   config.model "NewsItemType" do
-    label "Document Type"
+    label "News Item Document Type"
     navigation_label "Reference Info"
   end
   config.model "Publication" do

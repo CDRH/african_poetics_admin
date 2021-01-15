@@ -61,6 +61,16 @@ class IndexWork < Index
     end
   end
 
+  def text_additional
+    crt = get_names_from_list(creator)
+    [
+      crt,
+      places,
+      publisher,
+      type,
+    ]
+  end
+
   def type
     if @record.work_type
       t = @record.work_type.name

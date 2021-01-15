@@ -77,10 +77,19 @@ class IndexPerson < Index
   # end
 
   def text_additional
-    # education?
+    comm = get_names_from_list(@record.commentaries)
+    edu = get_names_from_list(keywords)
+    events = get_names_from_list(@record.events)
+    news = get_names_from_list(source)
+    wrk = get_names_from_list(works)
     [
-      source,
-      works
+      alternative,
+      comm,
+      edu,
+      events,
+      places,
+      news,
+      wrk
     ]
   end
 

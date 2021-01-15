@@ -63,9 +63,22 @@ class IndexNewsItem < Index
     @record.source_link
   end
 
+  # in addition to title and description
   def text_additional
+    crt = get_names_from_list(creator)
+    ppl = get_names_from_list(person)
+    events = get_names_from_list(@record.events)
+    wrk = get_names_from_list(works)
     [
-      @record.excerpt
+      crt,
+      events,
+      keywords,
+      places,
+      ppl,
+      publisher,
+      @record.excerpt,
+      type,
+      wrk
     ]
   end
 

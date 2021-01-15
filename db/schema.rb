@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_16_185749) do
+ActiveRecord::Schema.define(version: 2021_01_13_150806) do
 
   create_table "commentaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.text "name"
@@ -142,6 +142,7 @@ ActiveRecord::Schema.define(version: 2020_10_16_185749) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "role_id"
+    t.boolean "author", default: false
     t.index ["news_item_id"], name: "index_news_item_roles_on_news_item_id"
     t.index ["person_id"], name: "index_news_item_roles_on_person_id"
     t.index ["role_id"], name: "index_news_item_roles_on_role_id"
@@ -285,6 +286,7 @@ ActiveRecord::Schema.define(version: 2020_10_16_185749) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "role_id"
+    t.boolean "author", default: false
     t.index ["person_id"], name: "index_work_roles_on_person_id"
     t.index ["role_id"], name: "index_work_roles_on_role_id"
     t.index ["work_id"], name: "index_work_roles_on_work_id"

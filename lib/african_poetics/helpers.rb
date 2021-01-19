@@ -48,4 +48,18 @@ module Helpers
     end
   end
 
+  # for example, get person name from array of hashes returned by "creator" method
+  def get_names_from_list(obj)
+    if obj
+      if obj.class.to_s.include?("ActiveRecord_Associations_CollectionProxy")
+        list = obj.map { |o| o.name if o }
+      else
+        list = obj.map do |o|
+          o.class == Array ? o : o["name"]
+        end
+      end
+      list.join(" ")
+    end
+  end
+
 end

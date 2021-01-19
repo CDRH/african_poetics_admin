@@ -39,17 +39,24 @@ class IndexCommentary < Index
     @record.news_items.map { |ni| ni.name }
   end
 
+  # in addition to title and description
   def text_additional
-    auth = []
-    @record.commentary_authors.each do |a|
-      auth << a.name
-      auth << a.short_biography
-    end
-    auth
+    crt = get_names_from_list(@record.commentary_authors)
+    events = get_names_from_list(keywords)
+    news = get_names_from_list(subjects)
+    ppl = get_names_from_list(person)
+    wrk = get_names_from_list(works)
+    [
+      crt,
+      events,
+      news,
+      ppl,
+      wrk
+    ]
   end
 
   def works
-  @record.works.map { |w| w.name }
+    @record.works.map { |w| w.name }
   end
 
 end

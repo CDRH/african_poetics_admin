@@ -66,6 +66,18 @@ class IndexEvent < Index
     end
   end
 
+  # in addition to title and description
+  def text_additional
+    ppl = get_names_from_list(person)
+    [
+      date,
+      date_display,
+      places,
+      ppl,
+      type
+    ]
+  end
+
   # event type
   def type
     @record.event_type.name

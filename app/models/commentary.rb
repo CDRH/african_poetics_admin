@@ -25,6 +25,7 @@ class Commentary < ApplicationRecord
       end
 
       field :name
+      field :featured
       field :content
       field :commentary_authors
     end
@@ -51,6 +52,7 @@ class Commentary < ApplicationRecord
 
     edit do
       field :name
+      field :featured
       field :content
       field :commentary_authors
     end

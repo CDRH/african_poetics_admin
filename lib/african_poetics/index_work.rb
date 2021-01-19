@@ -4,6 +4,22 @@ class IndexWork < Index
     "work"
   end
 
+  # NOTE poets
+  # will potentially include a repeat of author
+  def contributor
+    poets = @record.people
+      .includes(:work_roles)
+      .where(work_roles: { role: Role.find_by(name: "Poet") })
+      .distinct
+    poets.map do |author|
+      {
+        "name" => author.name,
+        "role" => "Poet",
+        "id" => author.id
+      }
+    end
+  end
+
   def creator
     if @record.authors
       @record.authors.map do |a|

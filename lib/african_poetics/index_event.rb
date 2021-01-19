@@ -35,10 +35,11 @@ class IndexEvent < Index
 
   def person
     @record.people.map do |p|
+      poet = p.major_african_poet ? "Poet" : nil
       {
         "name" => p.name,
         "id" => p.id,
-        "role" => "none"
+        "role" => poet
       }
     end
   end

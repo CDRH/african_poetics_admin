@@ -5,9 +5,13 @@ class WorkRole < ApplicationRecord
   belongs_to :work
 
   def name
-    if person && role
-      "#{person.name} (#{role.name})"
+    name_parts = []
+    name_parts << person.name if person
+    if role
+      name_parts << "(#{role.name})"
+      name_parts << "- author" if author
     end
+    name_parts.compact.join(" ")
   end
 
   rails_admin do

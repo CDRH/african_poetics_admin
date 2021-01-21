@@ -16,8 +16,10 @@ class NewsItem < ApplicationRecord
 
   validates :article_title, presence: true
 
+  # note this behavior differs from that of the admin
+  # page which is interested in the people not the role
   def authors
-    news_item_roles.joins(:role).where(roles: { name: "Critic" })
+    people.where(news_item_roles: { author: true })
   end
 
   def name

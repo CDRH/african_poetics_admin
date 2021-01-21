@@ -8,6 +8,49 @@ require "african_poetics/index_work"
 
 namespace :african_poetics do
 
+  desc "one-time run: best guess assigning 'author' for news roles"
+  task assign_news_item_author: :environment do
+    # for news item roles, assume all critics are authors
+    critic = Role.find_by(name: "Critic")
+    if critic
+      critic_roles = NewsItemRole.joins(:role).where(role: critic)
+      critic_roles.each do |cr|
+        puts "news item role critic: #{cr.id}"
+        cr.update(author: true)
+      end
+    end
+  end
+
+  desc "one-time run: best guess assigning 'author' for work roles"
+  task assign_work_author: :environment do
+    # for work roles, if the work is a single author work
+    #   if single role, assume author
+    #   if multiple roles but same person, delete "author" role and assign other as author
+    types = WorkType.where("name like ?", "Single Author%")
+    works = Work.joins(:work_type).where(work_type: types)
+    works.each do |work|
+      wroles = work.work_roles
+      next if wroles.count == 0
+      if wroles.count == 1
+        wroles.first.update(author: true)
+      else
+        # take note of the people listed as "authors"
+        author_role = Role.find_by(name: "Author")
+        authors = wroles.where(role: author_role)
+        if authors.present?
+          authors.each do |author|
+            multiple_roles = wroles.where(person: author.person).where.not(role: author_role)
+            if multiple_roles.present?
+              multiple_roles.update_all(author: true)
+              puts "work roles deleting #{author.id}"
+              author.destroy
+            end
+          end
+        end
+      end
+    end
+  end
+
   desc "attempts to parse citation field into separate work fields"
   task citation: :environment do
 

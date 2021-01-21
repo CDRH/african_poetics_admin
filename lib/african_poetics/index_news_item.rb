@@ -4,12 +4,27 @@ class IndexNewsItem < Index
     "news"
   end
 
-  def creator
-    @record.authors.map do |a|
+  # NOTE poets
+  def contributor
+    poets = @record.people
+      .includes(:news_item_roles)
+      .where(news_item_roles: { role: Role.find_by(name: "Poet") })
+      .distinct
+    poets.map do |author|
       {
-        "name" => a.person.name,
-        "id" => a.id,
-        "role" => "Creator"
+        "name" => author.name,
+        "role" => "Poet",
+        "id" => author.id
+      }
+    end
+  end
+
+  def creator
+    @record.authors.map do |p|
+      {
+        "name" => p.name,
+        "id" => p.id,
+        "role" => "Author"
       }
     end
   end
@@ -32,21 +47,6 @@ class IndexNewsItem < Index
 
   def keywords
     @record.tags.map { |t| t.name }
-  end
-
-  # NOTE this field is for the poet in the news item
-  def person
-    poets = @record.people
-      .includes(:news_item_roles)
-      .where(news_item_roles: { role: Role.find_by(name: "Poet") })
-      .distinct
-    poets.map do |author|
-      {
-        "name" => author.name,
-        "role" => "Poet",
-        "id" => author.id
-      }
-    end
   end
 
   def places

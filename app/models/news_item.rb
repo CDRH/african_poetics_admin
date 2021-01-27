@@ -4,6 +4,7 @@ class NewsItem < ApplicationRecord
   belongs_to :news_item_type
   belongs_to :news_item_content_type
   belongs_to :publication
+  has_many :locations, through: :publication
 
   has_and_belongs_to_many :commentaries
   has_and_belongs_to_many :events

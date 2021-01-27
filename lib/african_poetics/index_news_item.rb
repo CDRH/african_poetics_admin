@@ -50,8 +50,8 @@ class IndexNewsItem < Index
   end
 
   def places
-    if @record.publication && @record.publication.location
-      @record.publication.location.name
+    if @record.locations
+      @record.locations.map(&:name)
     end
   end
 

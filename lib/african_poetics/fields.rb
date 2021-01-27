@@ -142,7 +142,9 @@ module Fields
     t = title
     if t
       down = t.downcase
-      subbed = down.gsub(/^the |^a |^an /, "")
+      # remove quotation marks, parenthesis, etc at beginning of titles
+      removed = down.gsub(/^"|^'|^\(|^¿/, "")
+      subbed = removed.gsub(/^the |^a |^an /, "")
       # converts characters like ü to u
       I18n.transliterate(subbed)
     end

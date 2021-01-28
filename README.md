@@ -66,3 +66,32 @@ By default, when running the publish script, the Elasticsearch index will be cle
 ```bash
 rake african_poetics:index_clear
 ```
+
+## One-Off Scripts
+
+These scripts were written at specific points in the AP project life and should NOT be re-run without careful consideration of what they do.
+
+You may find that they are helpful for understanding the history of the project or for altering for new purposes.
+
+__`african_poetics:assign_news_item_author`__
+
+After adding the `author` boolean on the `news_item_roles` table, this rake task marked all Critics as an author
+
+__`african_poetics:assign_work_author`__
+
+After adding the `author` boolean on the `work_roles` table, this rake task went through all single-author works and applied the following logic:
+
+- if one person associated, mark as author
+- if a person was associated multiple times, remove the one with role `Author` and mark the rest with boolean `author`
+
+__`african_poetics:citation`__
+
+This script goes through the `Work` table's `citation` field and copies any URIs into the `source_link` field.
+
+__`african_poetics:ingest_location`__
+
+This task reads a file from `lib/assets/locations.csv` and inserts information about latitude and longitude into corresponding database records. Since these have been ingested, future modifications should be done directly through the admin website.
+
+__`african_poetics:set_publication_permissions`__
+
+This script destructively goes through news items from specific publications and assigns permissions text based on that publication.  This script may be valuable in the future if we are adding more such cases, but be warned that if there is custom permission text for some news items which should be preserved, this task will need to be altered as it currently overwrites any existing data.

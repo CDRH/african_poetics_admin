@@ -140,6 +140,26 @@ namespace :african_poetics do
     end
   end
 
+  desc "one-time run: set permissions based on publication"
+  task set_publication_permissions: :environment do
+    # standardize the permissions by publication on each news item
+    # each news item could conceivably have a different permission
+    # but if it seems like in general it always follows the archive
+    # we may want to rethink how the db fields are structured
+    permissions = {
+      "The Times" => "© Times Newspapers Limited.",
+      "The Sunday Times" => "© Times Newspapers Limited.",
+      "Financial Times" => "© The Financial Times Limited. All rights reserved.",
+      "The Listener" => "© BBC logo 1996; BBC & THE LISTENER are trademarks of the British Broadcasting Corporation and are used under license."
+    }
+    permissions.each do |publication, permission|
+      news = NewsItem.where(
+        publication: Publication.where(name: publication)
+      )
+      news.update(permissions: permission)
+    end
+  end
+
   private
 
   def read_csv(file_location, encoding: "utf-8")

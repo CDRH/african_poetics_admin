@@ -3,13 +3,13 @@
 set -eu
 
 # Options
-PROJECT_DIR="/var/local/www/rails/africanpoetics_news_admin"
+TASK_DIR=$(dirname $(realpath $0))
+PROJECT_DIR=$(dirname $(dirname $TASK_DIR))
 SUBDIR="db_dump"
+BACKUP_DIR="${PROJECT_DIR}/${SUBDIR}"
 
 # get database configuration
-source "${PROJECT_DIR}/lib/tasks/config.sh"
-
-readonly BACKUP_DIR="${PROJECT_DIR}/${SUBDIR}"
+source "${TASK_DIR}/config.sh"
 
 echo "Preparing backup directory"
 

@@ -1,5 +1,7 @@
 # African Poets in the News
 
+Issues should go in the main [African Poetics Repository](https://github.com/CDRH/african_poetics)
+
 This Ruby on Rails app hosts a data entry application for the African Poets in the News project.
 
 Occasionally the data in this application will be published in another application which showcases

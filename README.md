@@ -12,8 +12,43 @@ For production, remember to include `RAILS_ENV=production` before the commands.
 
 ## Setup
 
-### Prepare database
+### Install Dependencies
+- Rails 6 (Yarn, Webpack) https://github.com/CDRH/CDRH-General/wiki/Rails#rails-6
+  - For Mac OS development `brew install yarn`
+  - May want to disable yarn integrity check in `config/yarn.yml` if install / updates are a mess
+- MariaDB https://github.com/CDRH/CDRH-General/wiki/MariaDB
+  - For Mac OS development `brew install mariadb`
 
+### Prepare database
+```bash
+# Database config
+cp config/database.example.yml config/database.yml
+vim config/database.yml
+```
+
+Recommend using the repo name `african_poetics_admin` for the user and db names
+with dbs for different environments suffixed `_dev`, `_test`, and `_prod`
+
+Setup database user and privileges (assuming recommended naming)
+
+`mysql -u root -p`:<br>
+```mysql
+CREATE USER 'african_poetics_admin'@localhost IDENTIFIED BY '(passphrase)';
+
+-- Grant permission to databases for all environments
+GRANT ALL PRIVILEGES ON `african_poetics_admin_%`.* TO 'african_poetics_admin'@'localhost';
+```
+
+#### Import existing database
+- Export / copy a backup .sql file from the production or development server.
+  One will need to edit the .sql file
+  - If it begins with `DROP/ADD SCHEMA` commands, delete these lines
+  - Set the same database name as in `config/database.yml` for the
+    `USE (db name);` command
+- `rails db:create`
+- `mysql -u root -p < (export filename).sql`
+
+#### New database using seed data
 - `rails db:create`
 - `rails db:migrate`
 - Date validations on the Event and Person models will need to be temporarily
@@ -21,7 +56,7 @@ For production, remember to include `RAILS_ENV=production` before the commands.
 - `rails db:seed`
 - Re-enable date validations
 
-### Ingest Locations
+##### Ingest Locations
 
 `rake african_poetics:ingest_location`
 
@@ -32,6 +67,12 @@ Production only
 `RAILS_ENV=production RAILS_RELATIVE_URL_ROOT="/admin" rails assets:precompile`
 
 ## How to Publish
+
+```bash
+# Elasticsearch index config
+cp config/private.example.yml config/private.yml
+vim config/private.yml
+```
 
 If you are working on a server, there should be two databases:  the admin database, and a
 frontend database. Additionally, there should be a database user with rights to each of them,
@@ -97,3 +138,4 @@ This task reads a file from `lib/assets/locations.csv` and inserts information a
 __`african_poetics:set_publication_permissions`__
 
 This script destructively goes through news items from specific publications and assigns permissions text based on that publication.  This script may be valuable in the future if we are adding more such cases, but be warned that if there is custom permission text for some news items which should be preserved, this task will need to be altered as it currently overwrites any existing data.
+
